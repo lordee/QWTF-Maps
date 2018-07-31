@@ -1,0 +1,82 @@
+---- qbsp / ericw-tools v0.18.1 ----
+Input file: ../../../working/stag.map
+Output file: stag2.bsp
+
+---- LoadMapFile ----
+         5684 faces
+          939 brushes
+          199 entities
+           27 unique texnames
+          421 texinfo
+
+Opened WAD: /home/danni/Games/QuakeDev/wads/stag.wad
+Processing hull 0...
+---- Brush_LoadEntity ----
+          913 brushes
+          463 planes
+---- CSGFaces ----
+         5528 brushfaces
+         3185 csgfaces
+         2806 mergedfaces
+---- SolidBSP ----
+         3151 split nodes
+         1429 solid leafs
+         1409 empty leafs
+          314 water leafs
+            0 detail leafs
+            0 detail illusionary leafs
+            0 detail fence leafs
+            0 illusionary visblocker leafs
+        10668 leaffaces
+        10215 nodefaces
+---- Portalize ----
+         1723 vis leafs
+         1723 vis clusters
+         4350 vis portals
+---- FillOutside ----
+          475 outleafs
+---- MergeAll ----
+         2726 mergefaces
+---- SolidBSP ----
+         1825 split nodes
+         1009 solid leafs
+          625 empty leafs
+          192 water leafs
+            0 detail leafs
+            0 detail illusionary leafs
+            0 detail fence leafs
+            0 illusionary visblocker leafs
+         6619 leaffaces
+         6040 nodefaces
+---- Portalize ----
+          817 vis leafs
+          817 vis clusters
+         2034 vis portals
+---- Tjunc ----
+         3884 world edges
+        18628 edge points
+         4702 edges added by tjunctions
+            0 faces added by tjunctions
+---- MakeFaceEdges ----
+---- GrowRegions ----
+Processing hull 1...
+Processing hull 2...
+---- WriteBSPFile ----
+Wrote stag2.bsp
+         1130 planes            22600
+         7977 vertexes          95724
+         1981 nodes             47544
+          225 texinfo            9000
+         6284 faces            125680
+         3410 clipnodes         27280
+          974 leafs             27272
+         6863 marksurfaces      13726
+        29806 surfedges        119224
+        14968 edges             59872
+           27 textures         198392
+              lightdata             0
+              visdata               0
+              entdata           22816
+
+0.342 seconds elapsed
+Peak memory usage: 32065494 (30.6M)
