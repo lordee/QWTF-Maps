@@ -1,0 +1,71 @@
+---- qbsp / ericw-tools v0.18.1 ----
+Input file: ./well6small.map
+Output file: ./well6small.bsp
+
+---- LoadMapFile ----
+         9894 faces
+         1647 brushes
+           99 entities
+           41 unique texnames
+          719 texinfo
+
+Opened WAD: /home/danni/Games/QuakeDev/wads/well6-aus.wad
+Processing hull 0...
+---- Brush_LoadEntity ----
+         1521 brushes
+          831 planes
+---- CSGFaces ----
+         9146 brushfaces
+         6320 csgfaces
+         5149 mergedfaces
+---- SolidBSP ----
+         8144 split nodes
+         3669 solid leafs
+         3856 empty leafs
+          620 water leafs
+            0 detail leafs
+            0 detail illusionary leafs
+            0 detail fence leafs
+            0 illusionary visblocker leafs
+        17330 leaffaces
+        15866 nodefaces
+---- Portalize ----
+         4476 vis leafs
+         4476 vis clusters
+        11941 vis portals
+---- FillOutside ----
+*** WARNING 10: Reached occupant at (-1464 -534 -232), no filling performed.
+Leak file written to ./well6small.pts
+---- MakeFaceEdges ----
+---- GrowRegions ----
+Processing hull 1...
+*** WARNING 10: Reached occupant at (-0 -1744 368), no filling performed.
+*** WARNING 08: Point (-1518.000 -446.086 -353.978) off plane by 0.0003
+*** WARNING 08: Point (-1391.047 -438.151 -353.978) off plane by 0.0003
+*** WARNING 08: Point (-1391.047 -438.151 -409.978) off plane by 0.0003
+*** WARNING 08: Point (-1518.000 -446.086 -409.978) off plane by 0.0003
+Processing hull 2...
+*** WARNING 10: Reached occupant at (-12 -2029 -207), no filling performed.
+*** WARNING 08: Point (-1502.000 -462.086 -353.978) off plane by 0.0003
+*** WARNING 08: Point (-1375.047 -454.151 -353.978) off plane by 0.0003
+*** WARNING 08: Point (-1375.047 -454.151 -441.978) off plane by 0.0003
+*** WARNING 08: Point (-1502.000 -462.086 -441.978) off plane by 0.0003
+---- WriteBSPFile ----
+Wrote ./well6small.bsp
+         2873 planes            57460
+        19998 vertexes         239976
+         8708 nodes            208992
+          553 texinfo           22120
+        16714 faces            334280
+        14166 clipnodes        113328
+         4962 leafs            138936
+        18287 marksurfaces      36574
+        66651 surfedges        266604
+        44121 edges            176484
+           44 textures         368460
+              lightdata             0
+              visdata               0
+              entdata           20234
+
+0.723 seconds elapsed
+Peak memory usage: 77989090 (74.4M)
