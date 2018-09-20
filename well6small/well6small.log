@@ -84,7 +84,7 @@ Wrote /home/danni/Games/QuakeDev/working/well6small/well6small.bsp
            44 textures         368460
               lightdata             0
               visdata               0
-              entdata           37213
+              entdata           37194
 
-0.755 seconds elapsed
+0.768 seconds elapsed
 Peak memory usage: 53431746 (51.0M)
