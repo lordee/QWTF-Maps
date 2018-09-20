@@ -3,59 +3,59 @@ Input file: /home/danni/Games/QuakeDev/working/well6small/well6small.map
 Output file: /home/danni/Games/QuakeDev/working/well6small/well6small.bsp
 
 ---- LoadMapFile ----
-         9281 faces
-         1545 brushes
+         9247 faces
+         1539 brushes
           278 entities
            41 unique texnames
-          738 texinfo
+          744 texinfo
 
 Opened WAD: /home/danni/Games/QuakeDev/wads/well6-aus.wad
 Processing hull 0...
 ---- Brush_LoadEntity ----
-         1432 brushes
-          845 planes
+         1426 brushes
+          856 planes
 ---- CSGFaces ----
-         8611 brushfaces
-         6204 csgfaces
-         4929 mergedfaces
+         8577 brushfaces
+         6228 csgfaces
+         4948 mergedfaces
 ---- SolidBSP ----
-         8056 split nodes
-         3671 solid leafs
-         3786 empty leafs
-          600 water leafs
+         8070 split nodes
+         3665 solid leafs
+         3805 empty leafs
+          601 water leafs
             0 detail leafs
             0 detail illusionary leafs
             0 detail fence leafs
             0 illusionary visblocker leafs
-        16472 leaffaces
-        15087 nodefaces
+        16520 leaffaces
+        15121 nodefaces
 ---- Portalize ----
-         4386 vis leafs
-         4386 vis clusters
-        11569 vis portals
+         4406 vis leafs
+         4406 vis clusters
+        11615 vis portals
 ---- FillOutside ----
-         1584 outleafs
+         1597 outleafs
 ---- MergeAll ----
-         3998 mergefaces
+         4001 mergefaces
 ---- SolidBSP ----
-         2679 split nodes
-         1473 solid leafs
-         1003 empty leafs
+         2686 split nodes
+         1474 solid leafs
+         1009 empty leafs
           204 water leafs
             0 detail leafs
             0 detail illusionary leafs
             0 detail fence leafs
             0 illusionary visblocker leafs
-         8327 leaffaces
-         6984 nodefaces
+         8334 leaffaces
+         6981 nodefaces
 ---- Portalize ----
-         1207 vis leafs
-         1207 vis clusters
-         3066 vis portals
+         1213 vis leafs
+         1213 vis clusters
+         3077 vis portals
 ---- Tjunc ----
-         5589 world edges
-        23733 edge points
-         6930 edges added by tjunctions
+         5594 world edges
+        23701 edge points
+         6904 edges added by tjunctions
             0 faces added by tjunctions
 ---- MakeFaceEdges ----
 ---- GrowRegions ----
@@ -71,20 +71,20 @@ Processing hull 2...
 *** WARNING 08: Point (-1502.000 -462.086 -441.978) off plane by 0.0003
 ---- WriteBSPFile ----
 Wrote /home/danni/Games/QuakeDev/working/well6small/well6small.bsp
-         2526 planes            50520
-        10585 vertexes         127020
-         3177 nodes             76248
-          488 texinfo           19520
-         7754 faces            155080
-         8507 clipnodes         68056
-         1639 leafs             45892
-         9206 marksurfaces      18412
-        37821 surfedges        151284
-        19422 edges             77688
+         2537 planes            50740
+        10564 vertexes         126768
+         3184 nodes             76416
+          492 texinfo           19680
+         7751 faces            155020
+         8497 clipnodes         67976
+         1645 leafs             46060
+         9213 marksurfaces      18426
+        37773 surfedges        151092
+        19398 edges             77592
            44 textures         368460
               lightdata             0
               visdata               0
               entdata           37213
 
-0.756 seconds elapsed
-Peak memory usage: 53556876 (51.1M)
+0.754 seconds elapsed
+Peak memory usage: 53431746 (51.0M)
