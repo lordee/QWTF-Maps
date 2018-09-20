@@ -1,61 +1,82 @@
 ---- qbsp / ericw-tools v0.18.1 ----
-Input file: /home/danni/Games/QuakeDev/working/stag2/stag2.map
-Output file: /home/danni/Games/QuakeDev/working/stag2/stag2.bsp
+Input file: /home/danni/Games/QuakeDev/working/stag2r/stag2r.map
+Output file: /home/danni/Games/QuakeDev/working/stag2r/stag2r.bsp
 
 ---- LoadMapFile ----
-         4529 faces
-          753 brushes
-          188 entities
+         4523 faces
+          752 brushes
+          182 entities
            27 unique texnames
           458 texinfo
 
 Opened WAD: /home/danni/Games/QuakeDev/wads/stag.wad
 Processing hull 0...
 ---- Brush_LoadEntity ----
-          717 brushes
-          445 planes
+          716 brushes
+          444 planes
 ---- CSGFaces ----
-         4313 brushfaces
-         3247 csgfaces
-         3040 mergedfaces
+         4307 brushfaces
+         3201 csgfaces
+         2987 mergedfaces
 ---- SolidBSP ----
-         3434 split nodes
-         1530 solid leafs
-         1704 empty leafs
-          201 water leafs
+         3333 split nodes
+         1488 solid leafs
+         1669 empty leafs
+          177 water leafs
             0 detail leafs
             0 detail illusionary leafs
             0 detail fence leafs
             0 illusionary visblocker leafs
-         8661 leaffaces
-         8238 nodefaces
+         8474 leaffaces
+         8070 nodefaces
 ---- Portalize ----
-         1905 vis leafs
-         1905 vis clusters
-         5109 vis portals
+         1846 vis leafs
+         1846 vis clusters
+         4969 vis portals
 ---- FillOutside ----
-*** WARNING 10: Reached occupant at (-464 224 -3888), no filling performed.
-Leak file written to /home/danni/Games/QuakeDev/working/stag2/stag2.pts
+          769 outleafs
+---- MergeAll ----
+         2526 mergefaces
+---- SolidBSP ----
+         1615 split nodes
+          919 solid leafs
+          562 empty leafs
+          135 water leafs
+            0 detail leafs
+            0 detail illusionary leafs
+            0 detail fence leafs
+            0 illusionary visblocker leafs
+         4848 leaffaces
+         4396 nodefaces
+---- Portalize ----
+          697 vis leafs
+          697 vis clusters
+         1731 vis portals
+---- Tjunc ----
+         3022 world edges
+        13930 edge points
+         3528 edges added by tjunctions
+            0 faces added by tjunctions
 ---- MakeFaceEdges ----
 ---- GrowRegions ----
 Processing hull 1...
 Processing hull 2...
 ---- WriteBSPFile ----
-Wrote /home/danni/Games/QuakeDev/working/stag2/stag2.bsp
-          967 planes            19340
-         9929 vertexes         119148
-         3542 nodes             85008
-          305 texinfo           12200
-         8354 faces            167080
-         3110 clipnodes         24880
-         2014 leafs             56392
-         8777 marksurfaces      17554
-        33386 surfedges        133544
-        21284 edges             85136
+Wrote /home/danni/Games/QuakeDev/working/stag2r/stag2r.bsp
+          920 planes            18400
+         5607 vertexes          67284
+         1723 nodes             41352
+          216 texinfo            8640
+         4512 faces             90240
+         3149 clipnodes         25192
+          806 leafs             22568
+         4964 marksurfaces       9928
+        21548 surfedges         86192
+        10791 edges             43164
            27 textures         198392
               lightdata             0
               visdata               0
-              entdata           21371
+              entdata           21330
 
-0.280 seconds elapsed
-Peak memory usage: 35639522 (34.0M)
+0.284 seconds elapsed
+Peak memory usage: 28041932 (26.7M)
