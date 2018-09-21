@@ -1,7 +1,17 @@
 ---- vis / ericw-tools v0.18.1 ----
 running with 8 threads
 testlevel = 4
-LoadBSPFile: './well6small.bsp'
+LoadBSPFile: '/home/danni/Games/QuakeDev/working/well6small/well6small.bsp'
 BSP is version 29
-LoadPortals: couldn't read ./well6small.prt
-No vising performed.
+  1202 leafs
+  3033 portals
+Calculating Base Vis:
+0....1....2....3....4....5....6....7....8....9....
+Calculating Full Vis:
+0....1....2....3....4....5....6....7....8....9....
+average leafs visible: 113
+c_noclip: 0
+c_chains: 2215948
+visdatasize:50729  compressed from 181502
+Writing /home/danni/Games/QuakeDev/working/well6small/well6small.bsp as BSP version 29
+  1.1 seconds elapsed
