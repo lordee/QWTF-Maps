@@ -35,7 +35,7 @@ Lighting Completed.
 lightdatasize: 342098
 1 switchable light styles (32 max)
 Writing /home/danni/Games/QuakeDev/working/well6small/well6small.bsp as BSP version 29
-1.368 seconds elapsed
+1.372 seconds elapsed
 
 stats:
 1.470160 lights tested, 0.959351 hits per sample point

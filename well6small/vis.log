@@ -11,7 +11,7 @@ Calculating Full Vis:
 0....1....2....3....4....5....6....7....8....9....
 average leafs visible: 113
 c_noclip: 0
-c_chains: 2215948
+c_chains: 2217466
 visdatasize:50729  compressed from 181502
 Writing /home/danni/Games/QuakeDev/working/well6small/well6small.bsp as BSP version 29
   1.1 seconds elapsed
