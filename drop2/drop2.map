@@ -2,7 +2,7 @@
 // Format: Standard
 // entity 0
 {
-"message" "drop2 by lordy\nreleased 5 august 2018"
+"message" "drop2 by lordy\n"
 "classname" "worldspawn"
 "wad" "/home/danni/Games/QuakeDev/wads/impact1.wad"
 // brush 0
@@ -3044,7 +3044,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "ramp"
-"_tb_id" "1489"
+"_tb_id" "1515"
 // brush 0
 {
 ( 144 848 -3952 ) ( 144 752 -3856 ) ( 144 848 -3936 ) mmetal1_6 -0 0 180 1 -1
@@ -3108,7 +3108,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "light"
-"_tb_id" "1490"
+"_tb_id" "1516"
 // brush 0
 {
 ( -1728 1328 -3436 ) ( -1728 1472 -3420 ) ( -1728 1472 -3436 ) sfloor4_4 -48 0 -0 1 1
@@ -3124,14 +3124,14 @@
 "origin" "-1792 1408 -3436"
 "light" "500"
 "classname" "light"
-"_tb_group" "1490"
+"_tb_group" "1516"
 }
 // entity 22
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "light"
-"_tb_id" "1491"
+"_tb_id" "1517"
 // brush 0
 {
 ( -1440 384 -3436 ) ( -1440 528 -3420 ) ( -1440 528 -3436 ) sfloor4_4 -0 0 -0 1 1
@@ -3147,14 +3147,14 @@
 "origin" "-1504 464 -3436"
 "light" "500"
 "classname" "light"
-"_tb_group" "1491"
+"_tb_group" "1517"
 }
 // entity 24
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "light"
-"_tb_id" "1492"
+"_tb_id" "1518"
 // brush 0
 {
 ( -2256 -112 -3500 ) ( -2256 32 -3484 ) ( -2256 32 -3500 ) sfloor4_4 48 0 -0 1 1
@@ -3170,7 +3170,7 @@
 "origin" "-2320 -32 -3500"
 "light" "500"
 "classname" "light"
-"_tb_group" "1492"
+"_tb_group" "1518"
 }
 // entity 26
 {
@@ -3183,7 +3183,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "light slim"
-"_tb_id" "1493"
+"_tb_id" "1519"
 // brush 0
 {
 ( 432 712 -3680 ) ( 432 696 -3792 ) ( 432 696 -3680 ) sfloor4_4 30 0 270 1 -1
@@ -3200,7 +3200,7 @@
 "light" "500"
 "classname" "light"
 "angle" "180"
-"_tb_group" "1493"
+"_tb_group" "1519"
 }
 // entity 29
 {
@@ -3213,7 +3213,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "light slim"
-"_tb_id" "1494"
+"_tb_id" "1520"
 // brush 0
 {
 ( -1032 432 -3484 ) ( -1032 576 -3468 ) ( -1032 576 -3484 ) sfloor4_4 30 -32 -0 1 1
@@ -3230,14 +3230,14 @@
 "light" "500"
 "classname" "light"
 "angle" "-0"
-"_tb_group" "1494"
+"_tb_group" "1520"
 }
 // entity 32
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "light slim"
-"_tb_id" "1495"
+"_tb_id" "1521"
 // brush 0
 {
 ( -1032 1408 -3484 ) ( -1032 1552 -3468 ) ( -1032 1552 -3484 ) sfloor4_4 -50 -32 -0 1 1
@@ -3254,14 +3254,14 @@
 "light" "500"
 "classname" "light"
 "angle" "-0"
-"_tb_group" "1495"
+"_tb_group" "1521"
 }
 // entity 34
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "light slim"
-"_tb_id" "1496"
+"_tb_id" "1522"
 // brush 0
 {
 ( -1616 380 -3072 ) ( -1616 364 -3184 ) ( -1616 364 -3072 ) sfloor4_4 62 0 270 1 -1
@@ -3278,14 +3278,14 @@
 "light" "500"
 "classname" "light"
 "angle" "180"
-"_tb_group" "1496"
+"_tb_group" "1522"
 }
 // entity 36
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "light slim"
-"_tb_id" "1497"
+"_tb_id" "1523"
 // brush 0
 {
 ( -896 492 -3072 ) ( -896 476 -3184 ) ( -896 476 -3072 ) sfloor4_4 62 -0 270 1 -1
@@ -3302,14 +3302,14 @@
 "light" "500"
 "classname" "light"
 "angle" "180"
-"_tb_group" "1497"
+"_tb_group" "1523"
 }
 // entity 38
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "light slim"
-"_tb_id" "1498"
+"_tb_id" "1524"
 // brush 0
 {
 ( 48 764 -3024 ) ( 48 748 -3136 ) ( 48 748 -3024 ) sfloor4_4 46 0 270 1 -1
@@ -3326,7 +3326,7 @@
 "light" "500"
 "classname" "light"
 "angle" "180"
-"_tb_group" "1498"
+"_tb_group" "1524"
 }
 // entity 40
 {
@@ -3648,7 +3648,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "ladder plat"
-"_tb_id" "1499"
+"_tb_id" "1525"
 // brush 0
 {
 ( -136 783 -3336 ) ( -136 767 -3320 ) ( -136 783 -3320 ) clip 31 -0 180 1 -1
@@ -3862,7 +3862,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "ladder plat"
-"_tb_id" "1500"
+"_tb_id" "1526"
 // brush 0
 {
 ( -752 783 -3336 ) ( -752 767 -3320 ) ( -752 783 -3320 ) clip 31 -0 180 1 -1
@@ -4076,7 +4076,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "ladder plat"
-"_tb_id" "1501"
+"_tb_id" "1527"
 // brush 0
 {
 ( -1296 511 -3336 ) ( -1296 495 -3320 ) ( -1296 511 -3320 ) clip -49 -0 180 1 -1

@@ -76,7 +76,7 @@ Wrote /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp
            11 textures         190888
               lightdata             0
               visdata               0
-              entdata            9446
+              entdata            9424
 
-0.177 seconds elapsed
+0.191 seconds elapsed
 Peak memory usage: 19235470 (18.3M)
