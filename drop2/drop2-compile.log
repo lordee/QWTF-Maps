@@ -1,0 +1,82 @@
+---- qbsp / ericw-tools v0.18.1 ----
+Input file: /home/danni/Games/QuakeDev/working/drop2/drop2-compile.map
+Output file: /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp
+
+---- LoadMapFile ----
+         2432 faces
+          405 brushes
+           85 entities
+           11 unique texnames
+          356 texinfo
+
+Opened WAD: /home/danni/Games/QuakeDev/wads/impact1.wad
+Processing hull 0...
+---- Brush_LoadEntity ----
+          342 brushes
+          419 planes
+---- CSGFaces ----
+         2054 brushfaces
+         2303 csgfaces
+         1966 mergedfaces
+---- SolidBSP ----
+         3129 split nodes
+         1291 solid leafs
+         1737 empty leafs
+          102 water leafs
+            0 detail leafs
+            0 detail illusionary leafs
+            0 detail fence leafs
+            0 illusionary visblocker leafs
+         6051 leaffaces
+         5814 nodefaces
+---- Portalize ----
+         1839 vis leafs
+         1839 vis clusters
+         5300 vis portals
+---- FillOutside ----
+          941 outleafs
+---- MergeAll ----
+         1384 mergefaces
+---- SolidBSP ----
+          904 split nodes
+          471 solid leafs
+          422 empty leafs
+           12 water leafs
+            0 detail leafs
+            0 detail illusionary leafs
+            0 detail fence leafs
+            0 illusionary visblocker leafs
+         2577 leaffaces
+         2085 nodefaces
+---- Portalize ----
+          434 vis leafs
+          434 vis clusters
+         1209 vis portals
+---- Tjunc ----
+         2014 world edges
+         7397 edge points
+         1977 edges added by tjunctions
+            0 faces added by tjunctions
+---- MakeFaceEdges ----
+---- GrowRegions ----
+Processing hull 1...
+Processing hull 2...
+---- WriteBSPFile ----
+Wrote /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp
+          641 planes            12820
+         2975 vertexes          35700
+          940 nodes             22560
+          234 texinfo            9360
+         2121 faces             42420
+         2455 clipnodes         19640
+          471 leafs             13188
+         2613 marksurfaces       5226
+        10448 surfedges         41792
+         5225 edges             20900
+           11 textures         190888
+              lightdata             0
+              visdata               0
+              entdata            9446
+
+0.177 seconds elapsed
+Peak memory usage: 19235470 (18.3M)

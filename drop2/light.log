@@ -1,0 +1,35 @@
+---- light / ericw-tools v0.18.1 ----
+extra 4x4 sampling enabled
+Raytracing backend: Embree
+running with 8 threads
+LoadBSPFile: '/home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp'
+BSP is version 29
+--- LoadEntities ---
+WARNING: entity at (-440 800 -3312) (info_tfgoal) has unmatched "target" (cap1)
+72 entities read, 42 are lights.
+--- OptionsSummary ---
+Embree_TraceInit: Embree version: 2.15.0
+Embree_TraceInit:
+	99 sky faces
+	1986 solid faces
+	0 filtered faces
+	0 shadow-casting skip faces
+SetupLights: 42 initial lights
+SetupLights: 42 after surface lights
+SetupLights: 42 after jittering
+--- EstimateLightVisibility ---
+0....1....2....3....4....5....6....7....8....9...
+Final count: 42 lights 0 suns in use.
+--- LightWorld ---
+0....1....2....3....4....5....6....7....8....9....
+Lighting Completed.
+
+lightdatasize: 101564
+0 switchable light styles (32 max)
+Writing /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp as BSP version 29
+0.376 seconds elapsed
+
+stats:
+1.813920 lights tested, 1.186279 hits per sample point
+0.000000 bounce lights tested, 0.000000 hits per sample point
+0 empty lightmaps
