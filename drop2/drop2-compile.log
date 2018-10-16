@@ -8,7 +8,7 @@ Output file: /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp
           807 brushes
           167 entities
            13 unique texnames
-          633 texinfo
+          634 texinfo
 
 Opened WAD: /home/danni/Games/QuakeDev/wads/impact1.wad
 Processing hull 0...
@@ -79,5 +79,5 @@ Wrote /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp
               visdata               0
               entdata           19325
 
-0.411 seconds elapsed
-Peak memory usage: 38450820 (36.7M)
+0.408 seconds elapsed
+Peak memory usage: 38450860 (36.7M)

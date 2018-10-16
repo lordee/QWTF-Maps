@@ -11,7 +11,7 @@ Calculating Full Vis:
 0....1....2....3....4....5....6....7....8....9....
 average leafs visible: 120
 c_noclip: 0
-c_chains: 4890488
-visdatasize:35068  compressed from 98346
+c_chains: 4892001
+visdatasize:35065  compressed from 98346
 Writing /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp as BSP version 29
-  2.3 seconds elapsed
+  2.2 seconds elapsed
