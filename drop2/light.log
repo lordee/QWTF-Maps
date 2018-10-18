@@ -5,32 +5,32 @@ running with 8 threads
 LoadBSPFile: '/home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp'
 BSP is version 29
 --- LoadEntities ---
-WARNING: entity at (-440 800 -3312) (info_tfgoal) has unmatched "target" (cap1)
-WARNING: entity at (-1528 -1568 -3312) (info_tfgoal) has unmatched "target" (cap2)
-143 entities read, 84 are lights.
+WARNING: entity at (-1248 1024 -3584) (info_tfgoal) has unmatched "target" (cap1)
+WARNING: entity at (-720 -1792 -3584) (info_tfgoal) has unmatched "target" (cap2)
+147 entities read, 88 are lights.
 --- OptionsSummary ---
 Embree_TraceInit: Embree version: 2.15.0
 Embree_TraceInit:
-	191 sky faces
-	3899 solid faces
+	180 sky faces
+	3906 solid faces
 	0 filtered faces
 	0 shadow-casting skip faces
-SetupLights: 84 initial lights
-SetupLights: 84 after surface lights
-SetupLights: 84 after jittering
+SetupLights: 88 initial lights
+SetupLights: 88 after surface lights
+SetupLights: 88 after jittering
 --- EstimateLightVisibility ---
 0....1....2....3....4....5....6....7....8....9....
-Final count: 84 lights 0 suns in use.
+Final count: 88 lights 0 suns in use.
 --- LightWorld ---
 0....1....2....3....4....5....6....7....8....9....
 Lighting Completed.
 
-lightdatasize: 195916
+lightdatasize: 194997
 0 switchable light styles (32 max)
 Writing /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp as BSP version 29
-0.721 seconds elapsed
+0.696 seconds elapsed
 
 stats:
-1.901617 lights tested, 1.226875 hits per sample point
+1.889504 lights tested, 1.221255 hits per sample point
 0.000000 bounce lights tested, 0.000000 hits per sample point
 0 empty lightmaps
