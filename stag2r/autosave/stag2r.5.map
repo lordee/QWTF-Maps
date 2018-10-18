@@ -5031,6 +5031,7 @@
 "message" "You have their flag.\nTake it home!\n"
 "noise" "ogre/ogwake.wav"
 "n_b" " picked up blue's flag.\n"
+"d_n_t" " dropped blue's flag.\n"
 "items" "131072"
 "noise3" "Your flag returned.\n"
 "goal_no" "1"
@@ -5044,7 +5045,6 @@
 "classname" "item_tfgoal"
 "team_broadcast" "Your team got their flag.\n"
 "non_team_broadcast" "Your flag has been taken!\n"
-"d_n_n" " dropped blue's flag.\n"
 }
 // entity 69
 {
@@ -5324,7 +5324,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "tower"
-"_tb_id" "253"
+"_tb_id" "109"
 // brush 0
 {
 ( 560 -63999 65535 ) ( 560 67071 65535 ) ( 560 67071 -65535 ) wiz1_4 -0 -0 180 1 1
@@ -5373,15 +5373,15 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "top spawn"
-"_tb_id" "254"
+"_tb_id" "110"
 }
 // entity 87
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "top spawn"
-"_tb_id" "255"
-"_tb_group" "254"
+"_tb_id" "111"
+"_tb_group" "110"
 // brush 0
 {
 ( 704 -63119 65535 ) ( 704 67951 65535 ) ( 704 67951 -65535 ) mmetal1_8 32 -48 180 1 1
@@ -5397,8 +5397,8 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "top spawn"
-"_tb_id" "256"
-"_tb_group" "255"
+"_tb_id" "112"
+"_tb_group" "111"
 // brush 0
 {
 ( 704 -63119 65535 ) ( 704 67951 65535 ) ( 704 67951 -65535 ) city4_7 32 -48 180 1 1
@@ -5414,8 +5414,8 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "top spawn"
-"_tb_id" "257"
-"_tb_group" "256"
+"_tb_id" "113"
+"_tb_group" "112"
 // brush 0
 {
 ( 1312 -63119 65535 ) ( 1312 67951 65535 ) ( 1312 67951 -65535 ) city4_7 32 -48 180 1 1
@@ -5527,7 +5527,7 @@
 "speed" "200"
 "angle" "180"
 "classname" "func_door"
-"_tb_group" "257"
+"_tb_group" "113"
 // brush 0
 {
 ( 1128 -63119 65535 ) ( 1128 67951 65535 ) ( 1128 67951 -65535 ) adoor03_3 -0 -0 -0 1 1
@@ -5548,7 +5548,7 @@
 "sounds" "1"
 "speed" "200"
 "classname" "func_door"
-"_tb_group" "257"
+"_tb_group" "113"
 // brush 0
 {
 ( 1200 -63119 65535 ) ( 1200 67951 65535 ) ( 1200 67951 -65535 ) adoor03_3 -0 -0 -0 1 1
@@ -5577,7 +5577,7 @@
 "netname" "blue_pak1"
 "armortype" "0.8"
 "classname" "info_tfgoal"
-"_tb_group" "257"
+"_tb_group" "113"
 }
 // entity 93
 {
@@ -5597,7 +5597,7 @@
 "netname" "blue_pak1"
 "armortype" "0.8"
 "classname" "info_tfgoal"
-"_tb_group" "257"
+"_tb_group" "113"
 }
 // entity 94
 {
@@ -5617,7 +5617,7 @@
 "netname" "blue_pak1"
 "armortype" "0.8"
 "classname" "info_tfgoal"
-"_tb_group" "257"
+"_tb_group" "113"
 }
 // entity 95
 {
@@ -5637,7 +5637,7 @@
 "netname" "blue_pak1"
 "armortype" "0.8"
 "classname" "info_tfgoal"
-"_tb_group" "257"
+"_tb_group" "113"
 }
 // entity 96
 {
@@ -5657,7 +5657,7 @@
 "netname" "blue_pak1"
 "armortype" "0.8"
 "classname" "info_tfgoal"
-"_tb_group" "257"
+"_tb_group" "113"
 }
 // entity 97
 {
@@ -5677,63 +5677,63 @@
 "netname" "blue_pak1"
 "armortype" "0.8"
 "classname" "info_tfgoal"
-"_tb_group" "257"
+"_tb_group" "113"
 }
 // entity 98
 {
 "origin" "1232 -177 -2960"
 "team_no" "2"
 "classname" "info_player_teamspawn"
-"_tb_group" "257"
+"_tb_group" "113"
 }
 // entity 99
 {
 "origin" "1216 -241 -2960"
 "team_no" "2"
 "classname" "info_player_teamspawn"
-"_tb_group" "257"
+"_tb_group" "113"
 }
 // entity 100
 {
 "origin" "1136 -241 -2960"
 "team_no" "2"
 "classname" "info_player_teamspawn"
-"_tb_group" "257"
+"_tb_group" "113"
 }
 // entity 101
 {
 "origin" "1056 -241 -2960"
 "team_no" "2"
 "classname" "info_player_teamspawn"
-"_tb_group" "257"
+"_tb_group" "113"
 }
 // entity 102
 {
 "origin" "976 -241 -2960"
 "team_no" "2"
 "classname" "info_player_teamspawn"
-"_tb_group" "257"
+"_tb_group" "113"
 }
 // entity 103
 {
 "origin" "1008 -177 -2960"
 "team_no" "2"
 "classname" "info_player_teamspawn"
-"_tb_group" "257"
+"_tb_group" "113"
 }
 // entity 104
 {
 "origin" "1120 -161 -2896"
 "light" "500"
 "classname" "light"
-"_tb_group" "257"
+"_tb_group" "113"
 }
 // entity 105
 {
 "origin" "1120 239 -2896"
 "light" "500"
 "classname" "light"
-"_tb_group" "254"
+"_tb_group" "110"
 }
 // entity 106
 {
@@ -5746,7 +5746,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "blue tower"
-"_tb_id" "258"
+"_tb_id" "114"
 // brush 0
 {
 ( 73739 -17772 52575 ) ( -18941 74908 52575 ) ( -72450 21399 -54442 ) wiz1_4 -33 16 180 1 1
@@ -5824,7 +5824,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "ladder"
-"_tb_id" "259"
+"_tb_id" "115"
 // brush 0
 {
 ( -2824 -65527 65535 ) ( -2824 65543 65535 ) ( -2824 65543 -65535 ) clip -23 -0 -0 1 1
@@ -5924,7 +5924,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "side"
-"_tb_id" "260"
+"_tb_id" "116"
 // brush 0
 {
 ( 1584 -63119 65535 ) ( 1584 67951 65535 ) ( 1584 67951 -65535 ) metal4_4 -32 -0 180 1 1
@@ -6039,8 +6039,8 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "test"
-"_tb_id" "261"
-"_tb_group" "260"
+"_tb_id" "117"
+"_tb_group" "116"
 // brush 0
 {
 ( 3328 -63119 65535 ) ( 3328 67951 65535 ) ( 3328 67951 -65535 ) metal4_4 -32 -0 180 1 1
@@ -6074,8 +6074,8 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "test"
-"_tb_id" "262"
-"_tb_group" "261"
+"_tb_id" "118"
+"_tb_group" "117"
 // brush 0
 {
 ( 2848 -63119 65535 ) ( 2848 67951 65535 ) ( 2848 67951 -65535 ) metal1_4 -32 -48 180 1 1
@@ -6127,7 +6127,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "wdrop"
-"_tb_id" "263"
+"_tb_id" "119"
 // brush 0
 {
 ( 2976 -63119 65535 ) ( 2976 67951 65535 ) ( 2976 67951 -65535 ) metal1_4 -32 -48 180 1 1
@@ -6230,14 +6230,14 @@
 "origin" "2912 1839 -3248"
 "light" "1000"
 "classname" "light"
-"_tb_group" "263"
+"_tb_group" "119"
 }
 // entity 121
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "fs"
-"_tb_id" "264"
+"_tb_id" "120"
 // brush 0
 {
 ( -44060 -46380 65535 ) ( 48620 46300 65535 ) ( 48620 46300 -65535 ) metal5r8 32 -0 180 1 1
@@ -6293,22 +6293,22 @@
 "origin" "3840 575 -3080"
 "light" "1000"
 "classname" "light"
-"_tb_group" "264"
+"_tb_group" "120"
 }
 // entity 123
 {
 "origin" "3840 1631 -3080"
 "light" "1000"
 "classname" "light"
-"_tb_group" "264"
+"_tb_group" "120"
 }
 // entity 124
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "ladder"
-"_tb_id" "265"
-"_tb_group" "264"
+"_tb_id" "121"
+"_tb_group" "120"
 // brush 0
 {
 ( 2752 66487 -72055 ) ( 2752 -64583 -72055 ) ( 2752 66487 59015 ) clip -7 -8 -0 1 -1
@@ -6494,8 +6494,7 @@
 "classname" "item_tfgoal"
 "team_broadcast" "Your team got their flag.\n"
 "non_team_broadcast" "Your flag was taken.\n"
-"n_b" " picked up red's flag.\n"
-"d_n_n" " dropped red's flag.\n"
+"property 1" ""
 }
 // entity 136
 {
@@ -6514,7 +6513,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "flag"
-"_tb_id" "266"
+"_tb_id" "122"
 // brush 0
 {
 ( 2640 -63119 65535 ) ( 2640 67951 65535 ) ( 2640 67951 -65535 ) city4_7 -0 -0 -0 1 1
@@ -6603,8 +6602,8 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "flag"
-"_tb_id" "267"
-"_tb_group" "266"
+"_tb_id" "123"
+"_tb_group" "122"
 // brush 0
 {
 ( 2512 -63119 65535 ) ( 2512 67951 65535 ) ( 2512 67951 -65535 ) city4_7 -0 -0 -0 1 1
@@ -6737,14 +6736,14 @@
 "origin" "2256 927 -3216"
 "light" "500"
 "classname" "light"
-"_tb_group" "267"
+"_tb_group" "123"
 }
 // entity 141
 {
 "origin" "2528 575 -3088"
 "light" "500"
 "classname" "light"
-"_tb_group" "267"
+"_tb_group" "123"
 }
 // entity 142
 {
@@ -6757,7 +6756,7 @@
 "speed" "200"
 "angle" "90"
 "classname" "func_door"
-"_tb_group" "267"
+"_tb_group" "123"
 // brush 0
 {
 ( 2511 -63119 65535 ) ( 2511 67951 65535 ) ( 2511 67951 -65535 ) adoor03_3 -0 -0 -0 1 1
@@ -6779,7 +6778,7 @@
 "speed" "200"
 "angle" "270"
 "classname" "func_door"
-"_tb_group" "267"
+"_tb_group" "123"
 // brush 0
 {
 ( 2511 -63119 65535 ) ( 2511 67951 65535 ) ( 2511 67951 -65535 ) adoor03_3 -0 -0 -0 1 1
@@ -6795,14 +6794,14 @@
 "origin" "2528 575 -2896"
 "light" "500"
 "classname" "light"
-"_tb_group" "267"
+"_tb_group" "123"
 }
 // entity 145
 {
 "origin" "2528 1631 -3088"
 "light" "500"
 "classname" "light"
-"_tb_group" "266"
+"_tb_group" "122"
 }
 // entity 146
 {
@@ -6839,7 +6838,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "frontred"
-"_tb_id" "268"
+"_tb_id" "124"
 // brush 0
 {
 ( 703 -63119 65535 ) ( 703 67951 65535 ) ( 703 67951 -65535 ) mmetal1_8 32 -48 180 1 1
@@ -6939,7 +6938,7 @@
 "target" "cap2"
 "g_a" "1"
 "classname" "info_tfgoal"
-"_tb_group" "268"
+"_tb_group" "124"
 }
 // entity 153
 {
@@ -7002,15 +7001,15 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "ramps"
-"_tb_id" "269"
+"_tb_id" "125"
 }
 // entity 163
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "ramps"
-"_tb_id" "270"
-"_tb_group" "269"
+"_tb_id" "126"
+"_tb_group" "125"
 // brush 0
 {
 ( 2496 -63119 65535 ) ( 2496 67951 65535 ) ( 2496 67951 -65535 ) city4_7 32 -0 180 1 1
@@ -8132,7 +8131,7 @@
 {
 "height" "154"
 "classname" "func_plat"
-"_tb_group" "270"
+"_tb_group" "126"
 // brush 0
 {
 ( 1744 -63119 65535 ) ( 1744 67951 65535 ) ( 1744 67951 -65535 ) sfloor4_6 -0 -0 -0 1 1
@@ -8148,42 +8147,42 @@
 "origin" "1728 655 -3088"
 "light" "500"
 "classname" "light"
-"_tb_group" "270"
+"_tb_group" "126"
 }
 // entity 166
 {
 "origin" "1984 927 -3088"
 "light" "500"
 "classname" "light"
-"_tb_group" "269"
+"_tb_group" "125"
 }
 // entity 167
 {
 "origin" "1648 927 -3088"
 "light" "500"
 "classname" "light"
-"_tb_group" "269"
+"_tb_group" "125"
 }
 // entity 168
 {
 "origin" "2256 1503 -3216"
 "light" "500"
 "classname" "light"
-"_tb_group" "269"
+"_tb_group" "125"
 }
 // entity 169
 {
 "origin" "2480 1503 -2896"
 "light" "500"
 "classname" "light"
-"_tb_group" "269"
+"_tb_group" "125"
 }
 // entity 170
 {
 "origin" "2480 927 -2912"
 "light" "500"
 "classname" "light"
-"_tb_group" "269"
+"_tb_group" "125"
 }
 // entity 171
 {

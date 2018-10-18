@@ -28,7 +28,7 @@ Lighting Completed.
 lightdatasize: 195245
 0 switchable light styles (32 max)
 Writing /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp as BSP version 29
-0.734 seconds elapsed
+0.720 seconds elapsed
 
 stats:
 1.880518 lights tested, 1.221259 hits per sample point
