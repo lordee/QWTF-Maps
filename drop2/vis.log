@@ -3,15 +3,15 @@ running with 8 threads
 testlevel = 4
 LoadBSPFile: '/home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp'
 BSP is version 29
-   917 leafs
-  2641 portals
+   877 leafs
+  2480 portals
 Calculating Base Vis:
 0....1....2....3....4....5....6....7....8....9....
 Calculating Full Vis:
 0....1....2....3....4....5....6....7....8....9....
-average leafs visible: 116
+average leafs visible: 111
 c_noclip: 0
-c_chains: 4889517
-visdatasize:36234  compressed from 105455
+c_chains: 3471892
+visdatasize:34042  compressed from 96470
 Writing /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp as BSP version 29
-  2.2 seconds elapsed
+  1.6 seconds elapsed
