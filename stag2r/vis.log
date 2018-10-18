@@ -11,7 +11,7 @@ Calculating Full Vis:
 0....1....2....3....4....5....6....7....8....9....
 average leafs visible: 97
 c_noclip: 0
-c_chains: 1513102
+c_chains: 1505575
 visdatasize:21392  compressed from 60378
 Writing /home/danni/Games/QuakeDev/working/stag2r/stag2r-compile.bsp as BSP version 29
-  0.8 seconds elapsed
+  0.7 seconds elapsed

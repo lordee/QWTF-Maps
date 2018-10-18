@@ -52,12 +52,12 @@
 }
 // brush 5
 {
-( -224 -65535 65535 ) ( -224 65535 65535 ) ( -224 65535 -65535 ) wiz1_4 -16 -2 90 1 1
-( -448 65535 65535 ) ( -448 -65535 65535 ) ( -448 65535 -65535 ) wiz1_4 -16 -2 90 1 1
-( 65247 1680 65535 ) ( -65823 1680 65535 ) ( -65823 1680 -65535 ) wiz1_4 -48 -2 180 1 1
-( -65823 1648 65535 ) ( 65247 1648 65535 ) ( -65823 1648 -65535 ) wiz1_4 -48 -2 180 1 1
-( 65247 65535 -2864 ) ( 65247 -65535 -2864 ) ( -65823 -65535 -2864 ) wiz1_4 -47 -2 180 1 1
-( 65247 -65535 -4000 ) ( 65247 65535 -4000 ) ( -65823 -65535 -4000 ) wiz1_4 -48 -2 180 1 1
+( -224 -65535 65535 ) ( -224 65535 65535 ) ( -224 65535 -65535 ) wiz1_4 -16 -0 90 1 1
+( -448 65535 65535 ) ( -448 -65535 65535 ) ( -448 65535 -65535 ) wiz1_4 -16 -0 90 1 1
+( 65247 1680 65535 ) ( -65823 1680 65535 ) ( -65823 1680 -65535 ) wiz1_4 -48 -0 180 1 1
+( -65823 1648 65535 ) ( 65247 1648 65535 ) ( -65823 1648 -65535 ) wiz1_4 -48 -0 180 1 1
+( 65247 65535 -2864 ) ( 65247 -65535 -2864 ) ( -65823 -65535 -2864 ) wiz1_4 -47 -0 180 1 1
+( 65247 -65535 -4000 ) ( 65247 65535 -4000 ) ( -65823 -65535 -4000 ) wiz1_4 -48 -0 180 1 1
 }
 // brush 6
 {
@@ -3744,12 +3744,12 @@
 }
 // brush 415
 {
-( 560 -66751 65535 ) ( 560 64319 65535 ) ( 560 64319 -65535 ) wiz1_4 -16 -2 90 1 1
-( 48 64319 65535 ) ( 48 -66751 65535 ) ( 48 64319 -65535 ) wiz1_4 -16 -2 90 1 1
-( 66047 464 65535 ) ( -65023 464 65535 ) ( -65023 464 -65535 ) wiz1_4 -16 -2 180 1 1
-( -65023 432 65535 ) ( 66047 432 65535 ) ( -65023 432 -65535 ) wiz1_4 -16 -2 180 1 1
-( 66047 64319 -2864 ) ( 66047 -66751 -2864 ) ( -65023 -66751 -2864 ) wiz1_4 -15 -2 180 1 1
-( 66047 -66751 -4000 ) ( 66047 64319 -4000 ) ( -65023 -66751 -4000 ) wiz1_4 -16 -2 180 1 1
+( 560 -66751 65535 ) ( 560 64319 65535 ) ( 560 64319 -65535 ) wiz1_4 -16 1 90 1 1
+( 48 64319 65535 ) ( 48 -66751 65535 ) ( 48 64319 -65535 ) wiz1_4 -16 1 90 1 1
+( 66047 464 65535 ) ( -65023 464 65535 ) ( -65023 464 -65535 ) wiz1_4 -16 1 180 1 1
+( -65023 432 65535 ) ( 66047 432 65535 ) ( -65023 432 -65535 ) wiz1_4 -16 1 180 1 1
+( 66047 64319 -2864 ) ( 66047 -66751 -2864 ) ( -65023 -66751 -2864 ) wiz1_4 -15 1 180 1 1
+( 66047 -66751 -4000 ) ( 66047 64319 -4000 ) ( -65023 -66751 -4000 ) wiz1_4 -16 1 180 1 1
 }
 // brush 416
 {
@@ -5324,7 +5324,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "tower"
-"_tb_id" "361"
+"_tb_id" "307"
 // brush 0
 {
 ( 560 -63999 65535 ) ( 560 67071 65535 ) ( 560 67071 -65535 ) wiz1_4 -0 -0 180 1 1
@@ -5373,15 +5373,15 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "top spawn"
-"_tb_id" "362"
+"_tb_id" "308"
 }
 // entity 87
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "top spawn"
-"_tb_id" "363"
-"_tb_group" "362"
+"_tb_id" "309"
+"_tb_group" "308"
 // brush 0
 {
 ( 704 -63119 65535 ) ( 704 67951 65535 ) ( 704 67951 -65535 ) mmetal1_8 32 -48 180 1 1
@@ -5397,8 +5397,8 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "top spawn"
-"_tb_id" "364"
-"_tb_group" "363"
+"_tb_id" "310"
+"_tb_group" "309"
 // brush 0
 {
 ( 704 -63119 65535 ) ( 704 67951 65535 ) ( 704 67951 -65535 ) city4_7 32 -48 180 1 1
@@ -5414,8 +5414,8 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "top spawn"
-"_tb_id" "365"
-"_tb_group" "364"
+"_tb_id" "311"
+"_tb_group" "310"
 // brush 0
 {
 ( 1312 -63119 65535 ) ( 1312 67951 65535 ) ( 1312 67951 -65535 ) city4_7 32 -48 180 1 1
@@ -5527,7 +5527,7 @@
 "speed" "200"
 "angle" "180"
 "classname" "func_door"
-"_tb_group" "365"
+"_tb_group" "311"
 // brush 0
 {
 ( 1128 -63119 65535 ) ( 1128 67951 65535 ) ( 1128 67951 -65535 ) adoor03_3 -0 -0 -0 1 1
@@ -5548,7 +5548,7 @@
 "sounds" "1"
 "speed" "200"
 "classname" "func_door"
-"_tb_group" "365"
+"_tb_group" "311"
 // brush 0
 {
 ( 1200 -63119 65535 ) ( 1200 67951 65535 ) ( 1200 67951 -65535 ) adoor03_3 -0 -0 -0 1 1
@@ -5577,7 +5577,7 @@
 "netname" "blue_pak1"
 "armortype" "0.8"
 "classname" "info_tfgoal"
-"_tb_group" "365"
+"_tb_group" "311"
 }
 // entity 93
 {
@@ -5597,7 +5597,7 @@
 "netname" "blue_pak1"
 "armortype" "0.8"
 "classname" "info_tfgoal"
-"_tb_group" "365"
+"_tb_group" "311"
 }
 // entity 94
 {
@@ -5617,7 +5617,7 @@
 "netname" "blue_pak1"
 "armortype" "0.8"
 "classname" "info_tfgoal"
-"_tb_group" "365"
+"_tb_group" "311"
 }
 // entity 95
 {
@@ -5637,7 +5637,7 @@
 "netname" "blue_pak1"
 "armortype" "0.8"
 "classname" "info_tfgoal"
-"_tb_group" "365"
+"_tb_group" "311"
 }
 // entity 96
 {
@@ -5657,7 +5657,7 @@
 "netname" "blue_pak1"
 "armortype" "0.8"
 "classname" "info_tfgoal"
-"_tb_group" "365"
+"_tb_group" "311"
 }
 // entity 97
 {
@@ -5677,63 +5677,63 @@
 "netname" "blue_pak1"
 "armortype" "0.8"
 "classname" "info_tfgoal"
-"_tb_group" "365"
+"_tb_group" "311"
 }
 // entity 98
 {
 "origin" "1232 -177 -2960"
 "team_no" "2"
 "classname" "info_player_teamspawn"
-"_tb_group" "365"
+"_tb_group" "311"
 }
 // entity 99
 {
 "origin" "1216 -241 -2960"
 "team_no" "2"
 "classname" "info_player_teamspawn"
-"_tb_group" "365"
+"_tb_group" "311"
 }
 // entity 100
 {
 "origin" "1136 -241 -2960"
 "team_no" "2"
 "classname" "info_player_teamspawn"
-"_tb_group" "365"
+"_tb_group" "311"
 }
 // entity 101
 {
 "origin" "1056 -241 -2960"
 "team_no" "2"
 "classname" "info_player_teamspawn"
-"_tb_group" "365"
+"_tb_group" "311"
 }
 // entity 102
 {
 "origin" "976 -241 -2960"
 "team_no" "2"
 "classname" "info_player_teamspawn"
-"_tb_group" "365"
+"_tb_group" "311"
 }
 // entity 103
 {
 "origin" "1008 -177 -2960"
 "team_no" "2"
 "classname" "info_player_teamspawn"
-"_tb_group" "365"
+"_tb_group" "311"
 }
 // entity 104
 {
 "origin" "1120 -161 -2896"
 "light" "500"
 "classname" "light"
-"_tb_group" "365"
+"_tb_group" "311"
 }
 // entity 105
 {
 "origin" "1120 239 -2896"
 "light" "500"
 "classname" "light"
-"_tb_group" "362"
+"_tb_group" "308"
 }
 // entity 106
 {
@@ -5746,7 +5746,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "blue tower"
-"_tb_id" "366"
+"_tb_id" "312"
 // brush 0
 {
 ( 73739 -17772 52575 ) ( -18941 74908 52575 ) ( -72450 21399 -54442 ) wiz1_4 -33 16 180 1 1
@@ -5824,7 +5824,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "ladder"
-"_tb_id" "367"
+"_tb_id" "313"
 // brush 0
 {
 ( -2824 -65527 65535 ) ( -2824 65543 65535 ) ( -2824 65543 -65535 ) clip -23 -0 -0 1 1
@@ -5924,7 +5924,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "side"
-"_tb_id" "368"
+"_tb_id" "314"
 // brush 0
 {
 ( 1584 -63119 65535 ) ( 1584 67951 65535 ) ( 1584 67951 -65535 ) metal4_4 -32 -0 180 1 1
@@ -6039,8 +6039,8 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "test"
-"_tb_id" "369"
-"_tb_group" "368"
+"_tb_id" "315"
+"_tb_group" "314"
 // brush 0
 {
 ( 3328 -63119 65535 ) ( 3328 67951 65535 ) ( 3328 67951 -65535 ) metal4_4 -32 -0 180 1 1
@@ -6074,8 +6074,8 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "test"
-"_tb_id" "370"
-"_tb_group" "369"
+"_tb_id" "316"
+"_tb_group" "315"
 // brush 0
 {
 ( 2848 -63119 65535 ) ( 2848 67951 65535 ) ( 2848 67951 -65535 ) metal1_4 -32 -48 180 1 1
@@ -6127,7 +6127,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "wdrop"
-"_tb_id" "371"
+"_tb_id" "317"
 // brush 0
 {
 ( 2976 -63119 65535 ) ( 2976 67951 65535 ) ( 2976 67951 -65535 ) metal1_4 -32 -48 180 1 1
@@ -6230,14 +6230,14 @@
 "origin" "2912 1839 -3248"
 "light" "1000"
 "classname" "light"
-"_tb_group" "371"
+"_tb_group" "317"
 }
 // entity 121
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "fs"
-"_tb_id" "372"
+"_tb_id" "318"
 // brush 0
 {
 ( -44060 -46380 65535 ) ( 48620 46300 65535 ) ( 48620 46300 -65535 ) metal5r8 32 -0 180 1 1
@@ -6293,22 +6293,22 @@
 "origin" "3840 575 -3080"
 "light" "1000"
 "classname" "light"
-"_tb_group" "372"
+"_tb_group" "318"
 }
 // entity 123
 {
 "origin" "3840 1631 -3080"
 "light" "1000"
 "classname" "light"
-"_tb_group" "372"
+"_tb_group" "318"
 }
 // entity 124
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "ladder"
-"_tb_id" "373"
-"_tb_group" "372"
+"_tb_id" "319"
+"_tb_group" "318"
 // brush 0
 {
 ( 2752 66487 -72055 ) ( 2752 -64583 -72055 ) ( 2752 66487 59015 ) clip -7 -8 -0 1 -1
@@ -6514,7 +6514,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "flag"
-"_tb_id" "374"
+"_tb_id" "320"
 // brush 0
 {
 ( 2640 -63119 65535 ) ( 2640 67951 65535 ) ( 2640 67951 -65535 ) city4_7 -0 -0 -0 1 1
@@ -6603,8 +6603,8 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "flag"
-"_tb_id" "375"
-"_tb_group" "374"
+"_tb_id" "321"
+"_tb_group" "320"
 // brush 0
 {
 ( 2512 -63119 65535 ) ( 2512 67951 65535 ) ( 2512 67951 -65535 ) city4_7 -0 -0 -0 1 1
@@ -6737,14 +6737,14 @@
 "origin" "2256 927 -3216"
 "light" "500"
 "classname" "light"
-"_tb_group" "375"
+"_tb_group" "321"
 }
 // entity 141
 {
 "origin" "2528 575 -3088"
 "light" "500"
 "classname" "light"
-"_tb_group" "375"
+"_tb_group" "321"
 }
 // entity 142
 {
@@ -6757,7 +6757,7 @@
 "speed" "200"
 "angle" "90"
 "classname" "func_door"
-"_tb_group" "375"
+"_tb_group" "321"
 // brush 0
 {
 ( 2511 -63119 65535 ) ( 2511 67951 65535 ) ( 2511 67951 -65535 ) adoor03_3 -0 -0 -0 1 1
@@ -6779,7 +6779,7 @@
 "speed" "200"
 "angle" "270"
 "classname" "func_door"
-"_tb_group" "375"
+"_tb_group" "321"
 // brush 0
 {
 ( 2511 -63119 65535 ) ( 2511 67951 65535 ) ( 2511 67951 -65535 ) adoor03_3 -0 -0 -0 1 1
@@ -6795,14 +6795,14 @@
 "origin" "2528 575 -2896"
 "light" "500"
 "classname" "light"
-"_tb_group" "375"
+"_tb_group" "321"
 }
 // entity 145
 {
 "origin" "2528 1631 -3088"
 "light" "500"
 "classname" "light"
-"_tb_group" "374"
+"_tb_group" "320"
 }
 // entity 146
 {
@@ -6839,7 +6839,7 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "frontred"
-"_tb_id" "376"
+"_tb_id" "322"
 // brush 0
 {
 ( 703 -63119 65535 ) ( 703 67951 65535 ) ( 703 67951 -65535 ) mmetal1_8 32 -48 180 1 1
@@ -6939,7 +6939,7 @@
 "target" "cap2"
 "g_a" "1"
 "classname" "info_tfgoal"
-"_tb_group" "376"
+"_tb_group" "322"
 }
 // entity 153
 {
@@ -7002,15 +7002,15 @@
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "ramps"
-"_tb_id" "377"
+"_tb_id" "323"
 }
 // entity 163
 {
 "classname" "func_group"
 "_tb_type" "_tb_group"
 "_tb_name" "ramps"
-"_tb_id" "378"
-"_tb_group" "377"
+"_tb_id" "324"
+"_tb_group" "323"
 // brush 0
 {
 ( 2496 -63119 65535 ) ( 2496 67951 65535 ) ( 2496 67951 -65535 ) city4_7 32 -0 180 1 1
@@ -8132,7 +8132,7 @@
 {
 "height" "154"
 "classname" "func_plat"
-"_tb_group" "378"
+"_tb_group" "324"
 // brush 0
 {
 ( 1744 -63119 65535 ) ( 1744 67951 65535 ) ( 1744 67951 -65535 ) sfloor4_6 -0 -0 -0 1 1
@@ -8148,42 +8148,42 @@
 "origin" "1728 655 -3088"
 "light" "500"
 "classname" "light"
-"_tb_group" "378"
+"_tb_group" "324"
 }
 // entity 166
 {
 "origin" "1984 927 -3088"
 "light" "500"
 "classname" "light"
-"_tb_group" "377"
+"_tb_group" "323"
 }
 // entity 167
 {
 "origin" "1648 927 -3088"
 "light" "500"
 "classname" "light"
-"_tb_group" "377"
+"_tb_group" "323"
 }
 // entity 168
 {
 "origin" "2256 1503 -3216"
 "light" "500"
 "classname" "light"
-"_tb_group" "377"
+"_tb_group" "323"
 }
 // entity 169
 {
 "origin" "2480 1503 -2896"
 "light" "500"
 "classname" "light"
-"_tb_group" "377"
+"_tb_group" "323"
 }
 // entity 170
 {
 "origin" "2480 927 -2912"
 "light" "500"
 "classname" "light"
-"_tb_group" "377"
+"_tb_group" "323"
 }
 // entity 171
 {

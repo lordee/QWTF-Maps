@@ -26,12 +26,12 @@ Final count: 95 lights 0 suns in use.
 0....1....2....3....4....5....6....7....8....9....
 Lighting Completed.
 
-lightdatasize: 276462
+lightdatasize: 276662
 0 switchable light styles (32 max)
 Writing /home/danni/Games/QuakeDev/working/stag2r/stag2r-compile.bsp as BSP version 29
-0.985 seconds elapsed
+0.980 seconds elapsed
 
 stats:
-2.686748 lights tested, 1.268916 hits per sample point
+2.685528 lights tested, 1.268360 hits per sample point
 0.000000 bounce lights tested, 0.000000 hits per sample point
 0 empty lightmaps
