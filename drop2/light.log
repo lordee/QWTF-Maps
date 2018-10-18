@@ -7,7 +7,7 @@ BSP is version 29
 --- LoadEntities ---
 WARNING: entity at (-1248 1024 -3584) (info_tfgoal) has unmatched "target" (cap1)
 WARNING: entity at (-720 -1792 -3584) (info_tfgoal) has unmatched "target" (cap2)
-147 entities read, 88 are lights.
+145 entities read, 88 are lights.
 --- OptionsSummary ---
 Embree_TraceInit: Embree version: 2.15.0
 Embree_TraceInit:
@@ -28,7 +28,7 @@ Lighting Completed.
 lightdatasize: 195657
 0 switchable light styles (32 max)
 Writing /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp as BSP version 29
-0.707 seconds elapsed
+0.701 seconds elapsed
 
 stats:
 1.883249 lights tested, 1.218538 hits per sample point

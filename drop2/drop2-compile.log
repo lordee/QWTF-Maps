@@ -6,7 +6,7 @@ Output file: /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp
 *** WARNING 02: Multiple info_player_start entities
          4966 faces
           827 brushes
-          172 entities
+          170 entities
            13 unique texnames
           665 texinfo
 
@@ -77,7 +77,7 @@ Wrote /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp
            13 textures         245376
               lightdata             0
               visdata               0
-              entdata           18744
+              entdata           17663
 
-0.419 seconds elapsed
-Peak memory usage: 39552996 (37.7M)
+0.413 seconds elapsed
+Peak memory usage: 39552348 (37.7M)
