@@ -4,59 +4,59 @@ Output file: /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp
 
 ---- LoadMapFile ----
 *** WARNING 02: Multiple info_player_start entities
-         4918 faces
-          819 brushes
-          171 entities
+         4966 faces
+          827 brushes
+          172 entities
            13 unique texnames
-          656 texinfo
+          665 texinfo
 
 Opened WAD: /home/danni/Games/QuakeDev/wads/impact1.wad
 Processing hull 0...
 ---- Brush_LoadEntity ----
-          703 brushes
-          695 planes
+          711 brushes
+          697 planes
 ---- CSGFaces ----
-         4222 brushfaces
-         4788 csgfaces
-         4077 mergedfaces
+         4270 brushfaces
+         4859 csgfaces
+         4130 mergedfaces
 ---- SolidBSP ----
-         6475 split nodes
-         2700 solid leafs
-         3595 empty leafs
+         6561 split nodes
+         2734 solid leafs
+         3647 empty leafs
           181 water leafs
             0 detail leafs
             0 detail illusionary leafs
             0 detail fence leafs
             0 illusionary visblocker leafs
-        12240 leaffaces
-        11649 nodefaces
+        12339 leaffaces
+        11743 nodefaces
 ---- Portalize ----
-         3776 vis leafs
-         3776 vis clusters
-        10937 vis portals
+         3828 vis leafs
+         3828 vis clusters
+        11128 vis portals
 ---- FillOutside ----
-         1953 outleafs
+         1979 outleafs
 ---- MergeAll ----
-         2862 mergefaces
+         2914 mergefaces
 ---- SolidBSP ----
-         1787 split nodes
-          895 solid leafs
-          867 empty leafs
+         1822 split nodes
+          906 solid leafs
+          891 empty leafs
            26 water leafs
             0 detail leafs
             0 detail illusionary leafs
             0 detail fence leafs
             0 illusionary visblocker leafs
-         5106 leaffaces
-         4086 nodefaces
+         5186 leaffaces
+         4138 nodefaces
 ---- Portalize ----
-          893 vis leafs
-          893 vis clusters
-         2548 vis portals
+          917 vis leafs
+          917 vis clusters
+         2641 vis portals
 ---- Tjunc ----
-         4049 world edges
-        14723 edge points
-         3943 edges added by tjunctions
+         4114 world edges
+        14934 edge points
+         3987 edges added by tjunctions
             0 faces added by tjunctions
 ---- MakeFaceEdges ----
 ---- GrowRegions ----
@@ -65,19 +65,19 @@ Processing hull 2...
 ---- WriteBSPFile ----
 Wrote /home/danni/Games/QuakeDev/working/drop2/drop2-compile.bsp
          1021 planes            20420
-         5932 vertexes          71184
-         1883 nodes             45192
-          426 texinfo           17040
-         4182 faces             83640
-         4645 clipnodes         37160
-          990 leafs             27720
-         5202 marksurfaces      10404
-        20652 surfedges         82608
-        10327 edges             41308
+         6006 vertexes          72072
+         1918 nodes             46032
+          435 texinfo           17400
+         4234 faces             84680
+         4742 clipnodes         37936
+         1014 leafs             28392
+         5282 marksurfaces      10564
+        20904 surfedges         83616
+        10453 edges             41812
            13 textures         245376
               lightdata             0
               visdata               0
               entdata           18744
 
-0.400 seconds elapsed
-Peak memory usage: 39040152 (37.2M)
+0.419 seconds elapsed
+Peak memory usage: 39552996 (37.7M)
