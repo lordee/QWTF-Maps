@@ -1,0 +1,82 @@
+---- qbsp / ericw-tools v0.18.1 ----
+Input file: /home/danni/Games/QuakeDev/working/opposesmall/opposesmall-compile.map
+Output file: /home/danni/Games/QuakeDev/working/opposesmall/opposesmall-compile.bsp
+
+---- LoadMapFile ----
+         3332 faces
+          551 brushes
+          100 entities
+           43 unique texnames
+          813 texinfo
+
+Opened WAD: /home/danni/Games/QuakeDev/working/opposesmall/oppose2.wad
+Processing hull 0...
+---- Brush_LoadEntity ----
+          545 brushes
+          382 planes
+---- CSGFaces ----
+         3296 brushfaces
+         2754 csgfaces
+         2429 mergedfaces
+---- SolidBSP ----
+         3485 split nodes
+         1494 solid leafs
+         1932 empty leafs
+           60 water leafs
+            0 detail leafs
+            0 detail illusionary leafs
+            0 detail fence leafs
+            0 illusionary visblocker leafs
+         6407 leaffaces
+         5886 nodefaces
+---- Portalize ----
+         1992 vis leafs
+         1992 vis clusters
+         5930 vis portals
+---- FillOutside ----
+         1043 outleafs
+---- MergeAll ----
+         1596 mergefaces
+---- SolidBSP ----
+          959 split nodes
+          510 solid leafs
+          428 empty leafs
+           22 water leafs
+            0 detail leafs
+            0 detail illusionary leafs
+            0 detail fence leafs
+            0 illusionary visblocker leafs
+         2812 leaffaces
+         2250 nodefaces
+---- Portalize ----
+          450 vis leafs
+          450 vis clusters
+         1290 vis portals
+---- Tjunc ----
+         2129 world edges
+         7967 edge points
+         2030 edges added by tjunctions
+            0 faces added by tjunctions
+---- MakeFaceEdges ----
+---- GrowRegions ----
+Processing hull 1...
+Processing hull 2...
+---- WriteBSPFile ----
+Wrote /home/danni/Games/QuakeDev/working/opposesmall/opposesmall-compile.bsp
+          664 planes            13280
+         3185 vertexes          38220
+          995 nodes             23880
+          431 texinfo           17240
+         2294 faces             45880
+         2739 clipnodes         21912
+          487 leafs             13636
+         2856 marksurfaces       5712
+        11190 surfedges         44760
+         5598 edges             22392
+           45 textures         411684
+              lightdata             0
+              visdata               0
+              entdata            7974
+
+0.223 seconds elapsed
+Peak memory usage: 23547292 (22.5M)

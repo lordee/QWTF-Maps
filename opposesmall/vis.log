@@ -1,0 +1,17 @@
+---- vis / ericw-tools v0.18.1 ----
+running with 8 threads
+testlevel = 4
+LoadBSPFile: '/home/danni/Games/QuakeDev/working/opposesmall/opposesmall-compile.bsp'
+BSP is version 29
+   450 leafs
+  1290 portals
+Calculating Base Vis:
+0....1....2....3....4....5....6....7....8....9....
+Calculating Full Vis:
+0....1....2....3....4....5....6....7....8....9....
+average leafs visible: 109
+c_noclip: 0
+c_chains: 1448159
+visdatasize:12927  compressed from 25650
+Writing /home/danni/Games/QuakeDev/working/opposesmall/opposesmall-compile.bsp as BSP version 29
+  0.7 seconds elapsed
