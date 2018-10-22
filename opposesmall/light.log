@@ -7,12 +7,12 @@ BSP is version 29
 --- LoadEntities ---
 WARNING: brush entity with mins (2257.00 1025.00 -38) maxs (2351.00 1119.00 -36) (trigger_multiple) has unmatched "target" (bwtdet)
 WARNING: couldn't parse 'd' as number for key 'delay'
-100 entities read, 76 are lights.
+101 entities read, 76 are lights.
 --- OptionsSummary ---
 Embree_TraceInit: Embree version: 2.15.0
 Embree_TraceInit:
 	0 sky faces
-	2204 solid faces
+	2213 solid faces
 	0 filtered faces
 	0 shadow-casting skip faces
 SetupLights: 76 initial lights
@@ -26,12 +26,12 @@ Final count: 76 lights 0 suns in use.
 0....1....2....3....4....5....6....7....8....9....
 Lighting Completed.
 
-lightdatasize: 99456
+lightdatasize: 99416
 0 switchable light styles (32 max)
 Writing /home/danni/Games/QuakeDev/working/opposesmall/opposesmall-compile.bsp as BSP version 29
-0.377 seconds elapsed
+0.411 seconds elapsed
 
 stats:
-1.689195 lights tested, 1.241866 hits per sample point
+1.690868 lights tested, 1.245425 hits per sample point
 0.000000 bounce lights tested, 0.000000 hits per sample point
 0 empty lightmaps

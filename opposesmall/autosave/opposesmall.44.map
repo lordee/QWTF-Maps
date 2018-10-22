@@ -5716,8 +5716,8 @@
 "axhitme" "0"
 "goal_activation" "1"
 "goal_effects" "1"
-"armorvalue" "200"
-"health" "100"
+"armorvalue" "100"
+"health" "75"
 "ammo_shells" "120"
 "ammo_nails" "100"
 "ammo_rockets" "30"
@@ -5728,6 +5728,6 @@
 "team_no" "1"
 "wait" "2"
 "noise" "weapons/pkup.wav"
-"netname" "Blue Resup #1"
+"netname" "Blue Resup #3"
 "classname" "info_tfgoal"
 }

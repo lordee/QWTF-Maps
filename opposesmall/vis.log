@@ -3,15 +3,15 @@ running with 8 threads
 testlevel = 4
 LoadBSPFile: '/home/danni/Games/QuakeDev/working/opposesmall/opposesmall-compile.bsp'
 BSP is version 29
-   450 leafs
-  1290 portals
+   449 leafs
+  1272 portals
 Calculating Base Vis:
 0....1....2....3....4....5....6....7....8....9....
 Calculating Full Vis:
 0....1....2....3....4....5....6....7....8....9....
 average leafs visible: 109
 c_noclip: 0
-c_chains: 1448159
-visdatasize:12927  compressed from 25650
+c_chains: 1457714
+visdatasize:12876  compressed from 25593
 Writing /home/danni/Games/QuakeDev/working/opposesmall/opposesmall-compile.bsp as BSP version 29
   0.7 seconds elapsed
