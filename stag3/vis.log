@@ -1,0 +1,17 @@
+---- vis / ericw-tools v0.18.1 ----
+running with 8 threads
+testlevel = 4
+LoadBSPFile: '/home/danni/Games/QuakeDev/working/stag3/stag3-compile.bsp'
+BSP is version 29
+   629 leafs
+  1602 portals
+Calculating Base Vis:
+0....1....2....3....4....5....6....7....8....9....
+Calculating Full Vis:
+0....1....2....3....4....5....6....7....8....9....
+average leafs visible: 94
+c_noclip: 0
+c_chains: 831864
+visdatasize:19065  compressed from 49691
+Writing /home/danni/Games/QuakeDev/working/stag3/stag3-compile.bsp as BSP version 29
+  0.4 seconds elapsed

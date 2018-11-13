@@ -1,0 +1,16 @@
+Stag3 by lordy
+Released 13th November 2018
+Widen the lava grate at spawn to slow down bunnyhopping soldiers just rjing past at speed
+Add some boxes to flag room because it looks better
+
+Stag2r by lordy
+Released 08th August 2018
+
+Stag2r was released due to some servers not supporting BSP2 etc.  It was slightly too long.
+
+Stag2 by lordy
+
+Released 31st July 2018, about 15 years since I first released stag.  This was decompiled from .bsp so the brushes are messy.  I had to delete 500 (about half) of the brushes.  Feel free to clean up or reuse.
+
+Stag2 was changed to make it smaller/easier for travel between bases to try to get the game tempo up.  A flag cap bug was also fixed.
+
