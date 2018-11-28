@@ -13,7 +13,7 @@ WARNING: entity at (608 1056 -3040) (info_tfgoal) has unmatched "target" (cap2)
 Embree_TraceInit: Embree version: 2.15.0
 Embree_TraceInit:
 	56 sky faces
-	3935 solid faces
+	3916 solid faces
 	0 filtered faces
 	0 shadow-casting skip faces
 SetupLights: 99 initial lights
@@ -27,12 +27,12 @@ Final count: 99 lights 0 suns in use.
 0....1....2....3....4....5....6....7....8....9....
 Lighting Completed.
 
-lightdatasize: 289691
+lightdatasize: 289591
 0 switchable light styles (32 max)
 Writing /home/danni/Games/QuakeDev/working/stag3/stag3-compile.bsp as BSP version 29
-0.957 seconds elapsed
+0.974 seconds elapsed
 
 stats:
-2.560646 lights tested, 1.238739 hits per sample point
+2.560200 lights tested, 1.238946 hits per sample point
 0.000000 bounce lights tested, 0.000000 hits per sample point
 0 empty lightmaps
