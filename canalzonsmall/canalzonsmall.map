@@ -12627,36 +12627,6 @@
 }
 // entity 15
 {
-"target" "fish"
-"classname" "trigger_teleport"
-"targetname" "rfish"
-// brush 0
-{
-( 1312 -65535 65535 ) ( 1312 65535 65535 ) ( 1312 65535 -65535 ) light1_3 0 0 0 1 1
-( 1184 65535 65535 ) ( 1184 -65535 65535 ) ( 1184 65535 -65535 ) light1_3 0 0 0 1 1
-( 65535 2912 65535 ) ( -65535 2912 65535 ) ( -65535 2912 -65535 ) light1_3 0 0 0 1 1
-( -65535 2784 65535 ) ( 65535 2784 65535 ) ( -65535 2784 -65535 ) light1_3 0 0 0 1 1
-( 65535 65535 -0 ) ( 65535 -65535 -0 ) ( -65535 -65535 -0 ) light1_3 0 0 0 1 1
-( 65535 -65535 -32 ) ( 65535 65535 -32 ) ( -65535 -65535 -32 ) light1_3 0 0 0 1 1
-}
-}
-// entity 16
-{
-"target" "fish"
-"classname" "trigger_teleport"
-"targetname" "bfish"
-// brush 0
-{
-( 1312 -65535 65535 ) ( 1312 65535 65535 ) ( 1312 65535 -65535 ) light1_3 0 0 0 1 1
-( 1184 65535 65535 ) ( 1184 -65535 65535 ) ( 1184 65535 -65535 ) light1_3 0 0 0 1 1
-( 65535 -2176 65535 ) ( -65535 -2176 65535 ) ( -65535 -2176 -65535 ) light1_3 0 0 0 1 1
-( -65535 -2304 65535 ) ( 65535 -2304 65535 ) ( -65535 -2304 -65535 ) light1_3 0 0 0 1 1
-( 65535 65535 -0 ) ( 65535 -65535 -0 ) ( -65535 -65535 -0 ) light1_3 0 0 0 1 1
-( 65535 -65535 -32 ) ( 65535 65535 -32 ) ( -65535 -65535 -32 ) light1_3 0 0 0 1 1
-}
-}
-// entity 17
-{
 "speed" "100"
 "spawnflags" "4"
 "classname" "func_door"
@@ -12674,7 +12644,7 @@
 ( -65535 2658 65535 ) ( 65535 2658 65535 ) ( -65535 2658 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 18
+// entity 16
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12693,7 +12663,7 @@
 ( -65535 2656 65535 ) ( 65535 2656 65535 ) ( -65535 2656 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 19
+// entity 17
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12712,7 +12682,7 @@
 ( -65535 2658 65535 ) ( 65535 2658 65535 ) ( -65535 2658 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 20
+// entity 18
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12731,7 +12701,7 @@
 ( -65535 2656 65535 ) ( 65535 2656 65535 ) ( -65535 2656 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 21
+// entity 19
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12750,7 +12720,7 @@
 ( -65535 2656 65535 ) ( 65535 2656 65535 ) ( -65535 2656 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 22
+// entity 20
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12769,7 +12739,7 @@
 ( -65535 2658 65535 ) ( 65535 2658 65535 ) ( -65535 2658 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 23
+// entity 21
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12788,7 +12758,7 @@
 ( -65535 2656 65535 ) ( 65535 2656 65535 ) ( -65535 2656 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 24
+// entity 22
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12807,7 +12777,7 @@
 ( -65535 2658 65535 ) ( 65535 2658 65535 ) ( -65535 2658 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 25
+// entity 23
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12826,7 +12796,7 @@
 ( -65535 2658 65535 ) ( 65535 2658 65535 ) ( -65535 2658 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 26
+// entity 24
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12845,7 +12815,7 @@
 ( -65535 2656 65535 ) ( 65535 2656 65535 ) ( -65535 2656 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 27
+// entity 25
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12864,7 +12834,7 @@
 ( -65535 2658 65535 ) ( 65535 2658 65535 ) ( -65535 2658 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 28
+// entity 26
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12883,7 +12853,7 @@
 ( -65535 2656 65535 ) ( 65535 2656 65535 ) ( -65535 2656 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 29
+// entity 27
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12902,7 +12872,7 @@
 ( -65535 2656 65535 ) ( 65535 2656 65535 ) ( -65535 2656 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 30
+// entity 28
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12921,7 +12891,7 @@
 ( -65535 2658 65535 ) ( 65535 2658 65535 ) ( -65535 2658 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 31
+// entity 29
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12940,7 +12910,7 @@
 ( -65535 2656 65535 ) ( 65535 2656 65535 ) ( -65535 2656 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 32
+// entity 30
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12959,7 +12929,7 @@
 ( -65535 2658 65535 ) ( 65535 2658 65535 ) ( -65535 2658 -65535 ) emetal1_3 0 0 0 1 1
 }
 }
-// entity 33
+// entity 31
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12978,7 +12948,7 @@
 ( -65535 -2050 65535 ) ( 65535 -2050 65535 ) ( -65535 -2050 -65535 ) rednums -17 16 0 0.5 0.5
 }
 }
-// entity 34
+// entity 32
 {
 "speed" "100"
 "spawnflags" "4"
@@ -12997,7 +12967,7 @@
 ( -65535 -2052 65535 ) ( 65535 -2052 65535 ) ( -65535 -2052 -65535 ) bluenums -17 16 0 0.5 0.5
 }
 }
-// entity 35
+// entity 33
 {
 "speed" "100"
 "spawnflags" "4"
@@ -13016,7 +12986,7 @@
 ( -65535 -2050 65535 ) ( 65535 -2050 65535 ) ( -65535 -2050 -65535 ) rednums 22 15 0 0.5 0.5
 }
 }
-// entity 36
+// entity 34
 {
 "speed" "100"
 "spawnflags" "4"
@@ -13035,7 +13005,7 @@
 ( -65535 -2052 65535 ) ( 65535 -2052 65535 ) ( -65535 -2052 -65535 ) bluenums 22 15 0 0.5 0.5
 }
 }
-// entity 37
+// entity 35
 {
 "speed" "100"
 "spawnflags" "4"
@@ -13054,7 +13024,7 @@
 ( -65535 -2052 65535 ) ( 65535 -2052 65535 ) ( -65535 -2052 -65535 ) bluenums -21 15 0 0.5 0.5
 }
 }
-// entity 38
+// entity 36
 {
 "speed" "100"
 "spawnflags" "4"
@@ -13073,7 +13043,7 @@
 ( -65535 -2050 65535 ) ( 65535 -2050 65535 ) ( -65535 -2050 -65535 ) rednums -21 15 0 0.5 0.5
 }
 }
-// entity 39
+// entity 37
 {
 "speed" "100"
 "spawnflags" "4"
@@ -13092,7 +13062,7 @@
 ( -65535 -2050 65535 ) ( 65535 -2050 65535 ) ( -65535 -2050 -65535 ) rednums 16 23 0 0.5 0.5
 }
 }
-// entity 40
+// entity 38
 {
 "speed" "100"
 "spawnflags" "4"
@@ -13111,7 +13081,7 @@
 ( -65535 -2052 65535 ) ( 65535 -2052 65535 ) ( -65535 -2052 -65535 ) bluenums 16 23 0 0.5 0.5
 }
 }
-// entity 41
+// entity 39
 {
 "speed" "100"
 "spawnflags" "4"
@@ -13130,7 +13100,7 @@
 ( -65535 -2050 65535 ) ( 65535 -2050 65535 ) ( -65535 -2050 -65535 ) rednums 39 53 0 0.5 0.5
 }
 }
-// entity 42
+// entity 40
 {
 "speed" "100"
 "spawnflags" "4"
@@ -13149,7 +13119,7 @@
 ( -65535 -2052 65535 ) ( 65535 -2052 65535 ) ( -65535 -2052 -65535 ) bluenums 39 53 0 0.5 0.5
 }
 }
-// entity 43
+// entity 41
 {
 "speed" "100"
 "spawnflags" "4"
@@ -13168,7 +13138,7 @@
 ( -65535 -2050 65535 ) ( 65535 -2050 65535 ) ( -65535 -2050 -65535 ) rednums -36 5 0 0.5 0.5
 }
 }
-// entity 44
+// entity 42
 {
 "speed" "100"
 "spawnflags" "4"
@@ -13187,7 +13157,7 @@
 ( -65535 -2052 65535 ) ( 65535 -2052 65535 ) ( -65535 -2052 -65535 ) bluenums -36 5 0 0.5 0.5
 }
 }
-// entity 45
+// entity 43
 {
 "speed" "100"
 "spawnflags" "4"
@@ -13206,7 +13176,7 @@
 ( -65535 -2052 65535 ) ( 65535 -2052 65535 ) ( -65535 -2052 -65535 ) bluenums -17 -21 0 0.5 0.5
 }
 }
-// entity 46
+// entity 44
 {
 "speed" "100"
 "spawnflags" "4"
@@ -13225,7 +13195,7 @@
 ( -65535 -2050 65535 ) ( 65535 -2050 65535 ) ( -65535 -2050 -65535 ) rednums -17 -21 0 0.5 0.5
 }
 }
-// entity 47
+// entity 45
 {
 "speed" "100"
 "spawnflags" "4"
@@ -13244,7 +13214,7 @@
 ( -65535 -2050 65535 ) ( 65535 -2050 65535 ) ( -65535 -2050 -65535 ) rednums 6 12 0 0.5 0.5
 }
 }
-// entity 48
+// entity 46
 {
 "speed" "100"
 "spawnflags" "4"
@@ -13263,7 +13233,7 @@
 ( -65535 -2052 65535 ) ( 65535 -2052 65535 ) ( -65535 -2052 -65535 ) bluenums 6 12 0 0.5 0.5
 }
 }
-// entity 49
+// entity 47
 {
 "speed" "400"
 "sounds" "2"
@@ -13282,7 +13252,7 @@
 ( 65535 -65535 -64 ) ( 65535 65535 -64 ) ( -65535 -65535 -64 ) twall5_3 0 0 0 1 1
 }
 }
-// entity 50
+// entity 48
 {
 "speed" "400"
 "sounds" "2"
@@ -13301,63 +13271,63 @@
 ( 65535 -65535 -64 ) ( 65535 65535 -64 ) ( -65535 -65535 -64 ) twall5_3 0 0 0 1 1
 }
 }
-// entity 51
+// entity 49
 {
 "classname" "light"
 "origin" "152 2104 -224"
 "style" "0"
 "light" "300"
 }
-// entity 52
+// entity 50
 {
 "classname" "light"
 "origin" "152 2504 -224"
 "style" "0"
 "light" "300"
 }
-// entity 53
+// entity 51
 {
 "classname" "light"
 "origin" "880 -32 -57"
 "style" "0"
 "light" "200"
 }
-// entity 54
+// entity 52
 {
 "classname" "light"
 "origin" "248 1144 -208"
 "style" "0"
 "light" "300"
 }
-// entity 55
+// entity 53
 {
 "classname" "light"
 "origin" "422 576 -183"
 "style" "0"
 "light" "175"
 }
-// entity 56
+// entity 54
 {
 "classname" "light"
 "origin" "848 2816 76"
 "style" "0"
 "light" "300"
 }
-// entity 57
+// entity 55
 {
 "classname" "light"
 "origin" "848 -2208 76"
 "style" "0"
 "light" "300"
 }
-// entity 58
+// entity 56
 {
 "classname" "light"
 "origin" "848 -2272 76"
 "style" "0"
 "light" "300"
 }
-// entity 59
+// entity 57
 {
 "g_a" "4"
 "h_i_g" "100"
@@ -13368,7 +13338,7 @@
 "goal_no" "145"
 "rv_g" "144"
 }
-// entity 60
+// entity 58
 {
 "g_a" "31"
 "impulse" "116"
@@ -13379,7 +13349,7 @@
 "goal_no" "1"
 "group_no" "100"
 }
-// entity 61
+// entity 59
 {
 "g_a" "31"
 "impulse" "126"
@@ -13390,483 +13360,483 @@
 "goal_no" "2"
 "group_no" "100"
 }
-// entity 62
+// entity 60
 {
 "classname" "light"
 "origin" "1356 2176 -128"
 "style" "0"
 "light" "300"
 }
-// entity 63
+// entity 61
 {
 "classname" "light"
 "origin" "-620 -576 128"
 "style" "0"
 "light" "300"
 }
-// entity 64
+// entity 62
 {
 "classname" "light"
 "origin" "592 1324 -112"
 "style" "0"
 "light" "300"
 }
-// entity 65
+// entity 63
 {
 "classname" "light"
 "origin" "448 2612 96"
 "style" "0"
 "light" "300"
 }
-// entity 66
+// entity 64
 {
 "classname" "light"
 "origin" "864 2156 -32"
 "style" "0"
 "light" "300"
 }
-// entity 67
+// entity 65
 {
 "classname" "light"
 "origin" "1196 2240 64"
 "style" "0"
 "light" "300"
 }
-// entity 68
+// entity 66
 {
 "classname" "light"
 "origin" "652 2528 -128"
 "style" "0"
 "light" "300"
 }
-// entity 69
+// entity 67
 {
 "classname" "light"
 "origin" "596 2880 96"
 "style" "0"
 "light" "300"
 }
-// entity 70
+// entity 68
 {
 "classname" "light"
 "origin" "1196 2528 -128"
 "style" "0"
 "light" "300"
 }
-// entity 71
+// entity 69
 {
 "classname" "light"
 "origin" "864 2100 -32"
 "style" "0"
 "light" "300"
 }
-// entity 72
+// entity 70
 {
 "classname" "light"
 "origin" "652 2528 80"
 "style" "0"
 "light" "300"
 }
-// entity 73
+// entity 71
 {
 "classname" "light"
 "origin" "1072 2156 64"
 "style" "0"
 "light" "300"
 }
-// entity 74
+// entity 72
 {
 "classname" "light"
 "origin" "-784 256 -176"
 "style" "0"
 "light" "300"
 }
-// entity 75
+// entity 73
 {
 "classname" "light"
 "origin" "1140 2528 -128"
 "style" "0"
 "light" "300"
 }
-// entity 76
+// entity 74
 {
 "classname" "light"
 "origin" "612 2528 80"
 "style" "0"
 "light" "300"
 }
-// entity 77
+// entity 75
 {
 "classname" "light"
 "origin" "760 1992 -64"
 "style" "0"
 "light" "300"
 }
-// entity 78
+// entity 76
 {
 "classname" "light"
 "origin" "448 2668 96"
 "style" "0"
 "light" "300"
 }
-// entity 79
+// entity 77
 {
 "classname" "light"
 "origin" "-16 492 -80"
 "style" "0"
 "light" "300"
 }
-// entity 80
+// entity 78
 {
 "classname" "light"
 "origin" "460 992 -112"
 "style" "0"
 "light" "300"
 }
-// entity 81
+// entity 79
 {
 "classname" "light"
 "origin" "1168 1940 -128"
 "style" "0"
 "light" "300"
 }
-// entity 82
+// entity 80
 {
 "classname" "light"
 "origin" "1072 2100 64"
 "style" "0"
 "light" "300"
 }
-// entity 83
+// entity 81
 {
 "classname" "light"
 "origin" "108 -608 96"
 "style" "0"
 "light" "300"
 }
-// entity 84
+// entity 82
 {
 "classname" "light"
 "origin" "288 -396 144"
 "style" "0"
 "light" "300"
 }
-// entity 85
+// entity 83
 {
 "classname" "light"
 "origin" "-140 -528 -112"
 "style" "0"
 "light" "300"
 }
-// entity 86
+// entity 84
 {
 "classname" "light"
 "origin" "80 1024 76"
 "style" "0"
 "light" "300"
 }
-// entity 87
+// entity 85
 {
 "classname" "light"
 "origin" "672 -340 0"
 "style" "0"
 "light" "300"
 }
-// entity 88
+// entity 86
 {
 "classname" "light"
 "origin" "288 -240 -44"
 "style" "0"
 "light" "300"
 }
-// entity 89
+// entity 87
 {
 "classname" "light"
 "origin" "288 -116 144"
 "style" "0"
 "light" "300"
 }
-// entity 90
+// entity 88
 {
 "classname" "light"
 "origin" "672 -396 0"
 "style" "0"
 "light" "300"
 }
-// entity 91
+// entity 89
 {
 "classname" "light"
 "origin" "288 -172 144"
 "style" "0"
 "light" "300"
 }
-// entity 92
+// entity 90
 {
 "classname" "light"
 "origin" "-184 2104 -224"
 "style" "0"
 "light" "300"
 }
-// entity 93
+// entity 91
 {
 "classname" "light"
 "origin" "52 -608 96"
 "style" "0"
 "light" "300"
 }
-// entity 94
+// entity 92
 {
 "classname" "light"
 "origin" "288 -340 144"
 "style" "0"
 "light" "300"
 }
-// entity 95
+// entity 93
 {
 "classname" "light"
 "origin" "-784 1600 -176"
 "style" "0"
 "light" "300"
 }
-// entity 96
+// entity 94
 {
 "classname" "light"
 "origin" "404 992 -112"
 "style" "0"
 "light" "300"
 }
-// entity 97
+// entity 95
 {
 "classname" "light"
 "origin" "-448 -688 148"
 "style" "0"
 "light" "300"
 }
-// entity 98
+// entity 96
 {
 "classname" "light"
 "origin" "-496 800 4"
 "style" "0"
 "light" "300"
 }
-// entity 99
+// entity 97
 {
 "classname" "light"
 "origin" "-620 224 128"
 "style" "0"
 "light" "300"
 }
-// entity 100
+// entity 98
 {
 "classname" "light"
 "origin" "1584 944 -92"
 "style" "0"
 "light" "300"
 }
-// entity 101
+// entity 99
 {
 "classname" "light"
 "origin" "-784 -176 -176"
 "style" "0"
 "light" "300"
 }
-// entity 102
+// entity 100
 {
 "classname" "light"
 "origin" "-784 -600 -176"
 "style" "0"
 "light" "300"
 }
-// entity 103
+// entity 101
 {
 "classname" "light"
 "origin" "304 960 76"
 "style" "0"
 "light" "300"
 }
-// entity 104
+// entity 102
 {
 "classname" "light"
 "origin" "1868 -416 -128"
 "style" "0"
 "light" "300"
 }
-// entity 105
+// entity 103
 {
 "classname" "light"
 "origin" "-948 32 128"
 "style" "0"
 "light" "300"
 }
-// entity 106
+// entity 104
 {
 "classname" "light"
 "origin" "1632 748 -128"
 "style" "0"
 "light" "300"
 }
-// entity 107
+// entity 105
 {
 "classname" "light"
 "origin" "1868 944 -128"
 "style" "0"
 "light" "300"
 }
-// entity 108
+// entity 106
 {
 "classname" "light"
 "origin" "1664 1152 148"
 "style" "0"
 "light" "300"
 }
-// entity 109
+// entity 107
 {
 "classname" "light"
 "origin" "876 768 128"
 "style" "0"
 "light" "300"
 }
-// entity 110
+// entity 108
 {
 "classname" "light"
 "origin" "80 960 76"
 "style" "0"
 "light" "300"
 }
-// entity 111
+// entity 109
 {
 "classname" "light"
 "origin" "432 2112 76"
 "style" "0"
 "light" "300"
 }
-// entity 112
+// entity 110
 {
 "classname" "light"
 "origin" "432 2176 76"
 "style" "0"
 "light" "300"
 }
-// entity 113
+// entity 111
 {
 "classname" "light"
 "origin" "-696 1176 -96"
 "style" "0"
 "light" "300"
 }
-// entity 114
+// entity 112
 {
 "classname" "light"
 "origin" "1936 716 128"
 "style" "0"
 "light" "300"
 }
-// entity 115
+// entity 113
 {
 "classname" "light"
 "origin" "972 288 128"
 "style" "0"
 "light" "300"
 }
-// entity 116
+// entity 114
 {
 "classname" "light"
 "origin" "172 160 -112"
 "style" "0"
 "light" "300"
 }
-// entity 117
+// entity 115
 {
 "classname" "light"
 "origin" "724 992 -112"
 "style" "0"
 "light" "300"
 }
-// entity 118
+// entity 116
 {
 "classname" "light"
 "origin" "-256 896 148"
 "style" "0"
 "light" "300"
 }
-// entity 119
+// entity 117
 {
 "classname" "light"
 "origin" "784 820 128"
 "style" "0"
 "light" "300"
 }
-// entity 120
+// entity 118
 {
 "classname" "light"
 "origin" "424 840 48"
 "style" "0"
 "light" "300"
 }
-// entity 121
+// entity 119
 {
 "classname" "light"
 "origin" "40 1144 -96"
 "style" "0"
 "light" "300"
 }
-// entity 122
+// entity 120
 {
 "classname" "light"
 "origin" "916 288 128"
 "style" "0"
 "light" "300"
 }
-// entity 123
+// entity 121
 {
 "classname" "light"
 "origin" "432 2400 76"
 "style" "0"
 "light" "300"
 }
-// entity 124
+// entity 122
 {
 "classname" "light"
 "origin" "432 2464 76"
 "style" "0"
 "light" "300"
 }
-// entity 125
+// entity 123
 {
 "classname" "light"
 "origin" "304 1024 76"
 "style" "0"
 "light" "300"
 }
-// entity 126
+// entity 124
 {
 "classname" "light"
 "origin" "592 660 -112"
 "style" "0"
 "light" "300"
 }
-// entity 127
+// entity 125
 {
 "classname" "light"
 "origin" "-256 784 4"
 "style" "0"
 "light" "300"
 }
-// entity 128
+// entity 126
 {
 "classname" "light"
 "origin" "-696 808 -96"
 "style" "0"
 "light" "300"
 }
-// entity 129
+// entity 127
 {
 "classname" "light"
 "origin" "-16 -172 -80"
 "style" "0"
 "light" "300"
 }
-// entity 130
+// entity 128
 {
 "classname" "light"
 "origin" "-280 1448 -224"
@@ -13874,7 +13844,7 @@
 "light" "300"
 "wait" ".8"
 }
-// entity 131
+// entity 129
 {
 "classname" "light"
 "origin" "72 1448 -224"
@@ -13882,84 +13852,84 @@
 "light" "300"
 "wait" ".8"
 }
-// entity 132
+// entity 130
 {
 "classname" "light"
 "origin" "848 2816 -152"
 "style" "0"
 "light" "300"
 }
-// entity 133
+// entity 131
 {
 "classname" "light"
 "origin" "848 2880 -152"
 "style" "0"
 "light" "300"
 }
-// entity 134
+// entity 132
 {
 "classname" "light"
 "origin" "1920 -84 -128"
 "style" "0"
 "light" "300"
 }
-// entity 135
+// entity 133
 {
 "classname" "light"
 "origin" "-448 -336 148"
 "style" "0"
 "light" "300"
 }
-// entity 136
+// entity 134
 {
 "classname" "light"
 "origin" "-948 -384 128"
 "style" "0"
 "light" "300"
 }
-// entity 137
+// entity 135
 {
 "classname" "light"
 "origin" "544 992 99"
 "style" "0"
 "light" "350"
 }
-// entity 138
+// entity 136
 {
 "classname" "light"
 "origin" "-304 368 148"
 "style" "0"
 "light" "300"
 }
-// entity 139
+// entity 137
 {
 "classname" "light"
 "origin" "-16 160 148"
 "style" "0"
 "light" "300"
 }
-// entity 140
+// entity 138
 {
 "classname" "light"
 "origin" "40 840 -96"
 "style" "0"
 "light" "300"
 }
-// entity 141
+// entity 139
 {
 "classname" "light"
 "origin" "280 2808 0"
 "style" "0"
 "light" "300"
 }
-// entity 142
+// entity 140
 {
 "classname" "light"
 "origin" "280 2952 0"
 "style" "0"
 "light" "300"
 }
-// entity 143
+// entity 141
 {
 "g_a" "4"
 "h_i_g" "100"
@@ -13970,154 +13940,154 @@
 "goal_no" "135"
 "rv_g" "134"
 }
-// entity 144
+// entity 142
 {
 "classname" "light"
 "origin" "612 -1920 80"
 "style" "0"
 "light" "300"
 }
-// entity 145
+// entity 143
 {
 "classname" "light"
 "origin" "760 -1384 -64"
 "style" "0"
 "light" "300"
 }
-// entity 146
+// entity 144
 {
 "classname" "light"
 "origin" "652 -1920 -128"
 "style" "0"
 "light" "300"
 }
-// entity 147
+// entity 145
 {
 "classname" "light"
 "origin" "596 -2272 96"
 "style" "0"
 "light" "300"
 }
-// entity 148
+// entity 146
 {
 "classname" "light"
 "origin" "960 2288 76"
 "style" "0"
 "light" "300"
 }
-// entity 149
+// entity 147
 {
 "classname" "light"
 "origin" "1024 2288 76"
 "style" "0"
 "light" "300"
 }
-// entity 150
+// entity 148
 {
 "classname" "light"
 "origin" "1136 2816 -152"
 "style" "0"
 "light" "300"
 }
-// entity 151
+// entity 149
 {
 "classname" "light"
 "origin" "1136 2880 -152"
 "style" "0"
 "light" "300"
 }
-// entity 152
+// entity 150
 {
 "classname" "light"
 "origin" "880 2528 76"
 "style" "0"
 "light" "300"
 }
-// entity 153
+// entity 151
 {
 "classname" "light"
 "origin" "944 2528 76"
 "style" "0"
 "light" "300"
 }
-// entity 154
+// entity 152
 {
 "classname" "light"
 "origin" "864 -1548 -32"
 "style" "0"
 "light" "300"
 }
-// entity 155
+// entity 153
 {
 "classname" "light"
 "origin" "1196 -1632 64"
 "style" "0"
 "light" "300"
 }
-// entity 156
+// entity 154
 {
 "classname" "light"
 "origin" "1196 -1920 -128"
 "style" "0"
 "light" "300"
 }
-// entity 157
+// entity 155
 {
 "classname" "light"
 "origin" "1356 -1568 -128"
 "style" "0"
 "light" "300"
 }
-// entity 158
+// entity 156
 {
 "classname" "light"
 "origin" "864 -1492 -32"
 "style" "0"
 "light" "300"
 }
-// entity 159
+// entity 157
 {
 "classname" "light"
 "origin" "652 -1920 80"
 "style" "0"
 "light" "300"
 }
-// entity 160
+// entity 158
 {
 "classname" "light"
 "origin" "1072 -1548 64"
 "style" "0"
 "light" "300"
 }
-// entity 161
+// entity 159
 {
 "classname" "light"
 "origin" "448 -2004 96"
 "style" "0"
 "light" "300"
 }
-// entity 162
+// entity 160
 {
 "classname" "light"
 "origin" "1140 -1920 -128"
 "style" "0"
 "light" "300"
 }
-// entity 163
+// entity 161
 {
 "classname" "light"
 "origin" "848 -2208 -152"
 "style" "0"
 "light" "300"
 }
-// entity 164
+// entity 162
 {
 "classname" "light"
 "origin" "936 1944 -96"
 "style" "0"
 "light" "300"
 }
-// entity 165
+// entity 163
 {
 "message" "bf\n"
 "impulse" "24"
@@ -14128,731 +14098,731 @@
 "ammo_medikit" "16"
 "ammo_detpack" "16"
 }
-// entity 166
+// entity 164
 {
 "classname" "light"
 "origin" "448 -2060 96"
 "style" "0"
 "light" "300"
 }
-// entity 167
+// entity 165
 {
 "classname" "light"
 "origin" "432 -1504 76"
 "style" "0"
 "light" "300"
 }
-// entity 168
+// entity 166
 {
 "classname" "light"
 "origin" "432 -1568 76"
 "style" "0"
 "light" "300"
 }
-// entity 169
+// entity 167
 {
 "classname" "light"
 "origin" "1168 -1332 -128"
 "style" "0"
 "light" "300"
 }
-// entity 170
+// entity 168
 {
 "classname" "light"
 "origin" "1072 -1492 64"
 "style" "0"
 "light" "300"
 }
-// entity 171
+// entity 169
 {
 "classname" "light"
 "origin" "432 -1792 76"
 "style" "0"
 "light" "300"
 }
-// entity 172
+// entity 170
 {
 "classname" "light"
 "origin" "432 -1856 76"
 "style" "0"
 "light" "300"
 }
-// entity 173
+// entity 171
 {
 "classname" "light"
 "origin" "792 1944 -96"
 "style" "0"
 "light" "300"
 }
-// entity 174
+// entity 172
 {
 "classname" "light"
 "origin" "848 -2272 -152"
 "style" "0"
 "light" "300"
 }
-// entity 175
+// entity 173
 {
 "classname" "light"
 "origin" "960 -1680 76"
 "style" "0"
 "light" "300"
 }
-// entity 176
+// entity 174
 {
 "classname" "light"
 "origin" "1024 -1680 76"
 "style" "0"
 "light" "300"
 }
-// entity 177
+// entity 175
 {
 "classname" "light"
 "origin" "1136 -2208 -152"
 "style" "0"
 "light" "300"
 }
-// entity 178
+// entity 176
 {
 "classname" "light"
 "origin" "1136 -2272 -152"
 "style" "0"
 "light" "300"
 }
-// entity 179
+// entity 177
 {
 "classname" "light"
 "origin" "880 -1920 76"
 "style" "0"
 "light" "300"
 }
-// entity 180
+// entity 178
 {
 "classname" "light"
 "origin" "944 -1920 76"
 "style" "0"
 "light" "300"
 }
-// entity 181
+// entity 179
 {
 "classname" "light"
 "origin" "-784 712 -376"
 "style" "0"
 "light" "300"
 }
-// entity 182
+// entity 180
 {
 "classname" "light"
 "origin" "-784 1248 -376"
 "style" "0"
 "light" "300"
 }
-// entity 183
+// entity 181
 {
 "classname" "light"
 "origin" "-704 -928 -376"
 "style" "0"
 "light" "300"
 }
-// entity 184
+// entity 182
 {
 "classname" "light"
 "origin" "-784 -792 -376"
 "style" "0"
 "light" "300"
 }
-// entity 185
+// entity 183
 {
 "classname" "light"
 "origin" "-784 -512 -376"
 "style" "0"
 "light" "300"
 }
-// entity 186
+// entity 184
 {
 "classname" "light"
 "origin" "-784 -216 -376"
 "style" "0"
 "light" "300"
 }
-// entity 187
+// entity 185
 {
 "classname" "light"
 "origin" "-784 56 -376"
 "style" "0"
 "light" "300"
 }
-// entity 188
+// entity 186
 {
 "classname" "light"
 "origin" "-784 256 -376"
 "style" "0"
 "light" "300"
 }
-// entity 189
+// entity 187
 {
 "classname" "light"
 "origin" "-784 448 -376"
 "style" "0"
 "light" "300"
 }
-// entity 190
+// entity 188
 {
 "classname" "light"
 "origin" "-512 928 148"
 "style" "0"
 "light" "300"
 }
-// entity 191
+// entity 189
 {
 "classname" "light"
 "origin" "-784 1024 -376"
 "style" "0"
 "light" "300"
 }
-// entity 192
+// entity 190
 {
 "classname" "light"
 "origin" "-184 2504 -224"
 "style" "0"
 "light" "300"
 }
-// entity 193
+// entity 191
 {
 "classname" "light"
 "origin" "-784 1584 -376"
 "style" "0"
 "light" "300"
 }
-// entity 194
+// entity 192
 {
 "classname" "light"
 "origin" "864 1120 -74"
 "style" "0"
 "light" "200"
 }
-// entity 195
+// entity 193
 {
 "classname" "light"
 "origin" "1051 864 -128"
 "style" "0"
 "light" "200"
 }
-// entity 196
+// entity 194
 {
 "classname" "light"
 "origin" "288 160 99"
 "style" "0"
 "light" "350"
 }
-// entity 197
+// entity 195
 {
 "classname" "light"
 "origin" "936 1320 -96"
 "style" "0"
 "light" "300"
 }
-// entity 198
+// entity 196
 {
 "classname" "light"
 "origin" "792 1320 -96"
 "style" "0"
 "light" "300"
 }
-// entity 199
+// entity 197
 {
 "classname" "light"
 "origin" "792 -1336 -96"
 "style" "0"
 "light" "300"
 }
-// entity 200
+// entity 198
 {
 "classname" "light"
 "origin" "1836 384 128"
 "style" "0"
 "light" "300"
 }
-// entity 201
+// entity 199
 {
 "classname" "light"
 "origin" "160 576 48"
 "style" "0"
 "light" "175"
 }
-// entity 202
+// entity 200
 {
 "classname" "light"
 "origin" "352 576 48"
 "style" "0"
 "light" "175"
 }
-// entity 203
+// entity 201
 {
 "classname" "light"
 "origin" "1836 384 -128"
 "style" "0"
 "light" "300"
 }
-// entity 204
+// entity 202
 {
 "classname" "light"
 "origin" "-148 160 -112"
 "style" "0"
 "light" "300"
 }
-// entity 205
+// entity 203
 {
 "classname" "light"
 "origin" "-204 160 -112"
 "style" "0"
 "light" "300"
 }
-// entity 206
+// entity 204
 {
 "classname" "i_p_t"
 "origin" "704 -2368 -240"
 "team_no" "1"
 }
-// entity 207
+// entity 205
 {
 "classname" "i_p_t"
 "origin" "704 -2112 -240"
 "team_no" "1"
 }
-// entity 208
+// entity 206
 {
 "classname" "i_p_t"
 "origin" "560 -2384 -16"
 "team_no" "1"
 "angle" "180"
 }
-// entity 209
+// entity 207
 {
 "classname" "i_p_t"
 "origin" "1248 -2112 -240"
 "team_no" "1"
 "angle" "180"
 }
-// entity 210
+// entity 208
 {
 "classname" "i_p_t"
 "origin" "1248 2848 -240"
 "team_no" "2"
 "angle" "180"
 }
-// entity 211
+// entity 209
 {
 "classname" "i_p_t"
 "origin" "560 2992 -16"
 "team_no" "2"
 "angle" "180"
 }
-// entity 212
+// entity 210
 {
 "classname" "i_p_t"
 "origin" "1248 2976 -240"
 "team_no" "2"
 "angle" "180"
 }
-// entity 213
+// entity 211
 {
 "classname" "i_p_t"
 "origin" "1248 2720 -240"
 "team_no" "2"
 "angle" "180"
 }
-// entity 214
+// entity 212
 {
 "classname" "light"
 "origin" "-512 -64 -160"
 "style" "0"
 "light" "200"
 }
-// entity 215
+// entity 213
 {
 "classname" "light"
 "origin" "-564 160 -112"
 "style" "0"
 "light" "300"
 }
-// entity 216
+// entity 214
 {
 "classname" "light"
 "origin" "-512 352 -160"
 "style" "0"
 "light" "200"
 }
-// entity 217
+// entity 215
 {
 "classname" "light"
 "origin" "1136 -2208 76"
 "style" "0"
 "light" "300"
 }
-// entity 218
+// entity 216
 {
 "classname" "light"
 "origin" "848 2880 76"
 "style" "0"
 "light" "300"
 }
-// entity 219
+// entity 217
 {
 "classname" "i_p_t"
 "origin" "1248 -2368 -240"
 "team_no" "1"
 "angle" "180"
 }
-// entity 220
+// entity 218
 {
 "classname" "i_p_t"
 "origin" "1248 -2240 -240"
 "team_no" "1"
 "angle" "180"
 }
-// entity 221
+// entity 219
 {
 "classname" "i_p_t"
 "origin" "704 -2240 -240"
 "team_no" "1"
 }
-// entity 222
+// entity 220
 {
 "classname" "i_p_t"
 "origin" "560 2768 -16"
 "team_no" "2"
 "angle" "180"
 }
-// entity 223
+// entity 221
 {
 "classname" "i_p_t"
 "origin" "704 2720 -240"
 "team_no" "2"
 }
-// entity 224
+// entity 222
 {
 "classname" "i_p_t"
 "origin" "704 2848 -240"
 "team_no" "2"
 }
-// entity 225
+// entity 223
 {
 "classname" "i_p_t"
 "origin" "704 2976 -240"
 "team_no" "2"
 }
-// entity 226
+// entity 224
 {
 "classname" "light"
 "origin" "1136 -2272 76"
 "style" "0"
 "light" "300"
 }
-// entity 227
+// entity 225
 {
 "classname" "item_health"
 "origin" "1688 1232 -192"
 }
-// entity 228
+// entity 226
 {
 "classname" "light"
 "origin" "1136 2816 76"
 "style" "0"
 "light" "300"
 }
-// entity 229
+// entity 227
 {
 "classname" "light"
 "origin" "1136 2880 76"
 "style" "0"
 "light" "300"
 }
-// entity 230
+// entity 228
 {
 "message" "Kevlar/Flame-retardant armor"
 "armorclass" "17"
 "classname" "item_armor2"
 "origin" "-536 -200 64"
 }
-// entity 231
+// entity 229
 {
 "classname" "item_health"
 "origin" "-480 400 -224"
 }
-// entity 232
+// entity 230
 {
 "message" "Flame-retardant armor"
 "armorclass" "16"
 "classname" "item_armorInv"
 "origin" "1056 1184 32"
 }
-// entity 233
+// entity 231
 {
 "classname" "item_health"
 "origin" "1736 1232 -192"
 }
-// entity 234
+// entity 232
 {
 "classname" "light"
 "origin" "936 -712 -96"
 "style" "0"
 "light" "300"
 }
-// entity 235
+// entity 233
 {
 "classname" "light"
 "origin" "792 -712 -96"
 "style" "0"
 "light" "300"
 }
-// entity 236
+// entity 234
 {
 "classname" "light"
 "origin" "288 160 288"
 }
-// entity 237
+// entity 235
 {
 "classname" "light"
 "origin" "480 352 288"
 "style" "0"
 "light" "100"
 }
-// entity 238
+// entity 236
 {
 "classname" "light"
 "origin" "936 -1336 -96"
 "style" "0"
 "light" "300"
 }
-// entity 239
+// entity 237
 {
 "classname" "light"
 "origin" "116 160 -112"
 "style" "0"
 "light" "300"
 }
-// entity 240
+// entity 238
 {
 "classname" "light"
 "origin" "104 -32 288"
 "style" "0"
 "light" "100"
 }
-// entity 241
+// entity 239
 {
 "g_a" "2"
 "killtarget" "wal"
 "classname" "i_t_g"
 "origin" "122 160 -222"
 }
-// entity 242
+// entity 240
 {
 "classname" "light"
 "origin" "572 -35 -164"
 }
-// entity 243
+// entity 241
 {
 "classname" "light"
 "origin" "672 -64 112"
 "style" "0"
 "light" "200"
 }
-// entity 244
+// entity 242
 {
 "classname" "light"
 "origin" "96 352 288"
 "style" "0"
 "light" "100"
 }
-// entity 245
+// entity 243
 {
 "classname" "light"
 "origin" "672 -35 256"
 }
-// entity 246
+// entity 244
 {
 "classname" "i_p_t"
 "origin" "560 -2160 -16"
 "team_no" "1"
 "angle" "180"
 }
-// entity 247
+// entity 245
 {
 "classname" "light"
 "origin" "-944 832 64"
 "style" "0"
 "light" "200"
 }
-// entity 248
+// entity 246
 {
 "classname" "light"
 "origin" "-1200 832 64"
 "style" "0"
 "light" "200"
 }
-// entity 249
+// entity 247
 {
 "classname" "light"
 "origin" "-496 1088 4"
 "style" "0"
 "light" "300"
 }
-// entity 250
+// entity 248
 {
 "classname" "item_health"
 "origin" "-48 -448 0"
 }
-// entity 251
+// entity 249
 {
 "classname" "light"
 "origin" "-584 504 -64"
 "style" "0"
 "light" "200"
 }
-// entity 252
+// entity 250
 {
 "classname" "light"
 "origin" "-584 648 -64"
 "style" "0"
 "light" "200"
 }
-// entity 253
+// entity 251
 {
 "classname" "light"
 "origin" "-496 192 72"
 "style" "0"
 "light" "200"
 }
-// entity 254
+// entity 252
 {
 "classname" "light"
 "origin" "-368 -544 64"
 "style" "0"
 "light" "150"
 }
-// entity 255
+// entity 253
 {
 "classname" "light"
 "origin" "-512 -576 64"
 "style" "0"
 "light" "150"
 }
-// entity 256
+// entity 254
 {
 "classname" "item_health"
 "origin" "0 -448 0"
 }
-// entity 257
+// entity 255
 {
 "classname" "light"
 "origin" "-784 -992 -176"
 "style" "0"
 "light" "300"
 }
-// entity 258
+// entity 256
 {
 "classname" "light"
 "origin" "-256 1152 148"
 "style" "0"
 "light" "300"
 }
-// entity 259
+// entity 257
 {
 "classname" "item_health"
 "origin" "-528 400 -224"
 }
-// entity 260
+// entity 258
 {
 "classname" "light"
 "origin" "784 876 128"
 "style" "0"
 "light" "300"
 }
-// entity 261
+// entity 259
 {
 "classname" "light"
 "origin" "-432 1184 96"
 "style" "0"
 "light" "150"
 }
-// entity 262
+// entity 260
 {
 "classname" "light"
 "origin" "-304 -48 148"
 "style" "0"
 "light" "300"
 }
-// entity 263
+// entity 261
 {
 "classname" "light"
 "origin" "608 272 148"
 "style" "0"
 "light" "300"
 }
-// entity 264
+// entity 262
 {
 "classname" "light"
 "origin" "784 400 64"
 "style" "0"
 "light" "150"
 }
-// entity 265
+// entity 263
 {
 "classname" "light"
 "origin" "512 -16 64"
 "style" "0"
 "light" "150"
 }
-// entity 266
+// entity 264
 {
 "message" "Kevlar armor"
 "armorclass" "1"
 "classname" "item_armor2"
 "origin" "544 1232 60"
 }
-// entity 267
+// entity 265
 {
 "message" "Flame-retardant Blast armor"
 "armorclass" "20"
 "classname" "item_armorInv"
 "origin" "-1120 832 56"
 }
-// entity 268
+// entity 266
 {
 "classname" "light"
 "origin" "912 -2416 48"
 "style" "0"
 "light" "150"
 }
-// entity 269
+// entity 267
 {
 "classname" "light"
 "origin" "1232 -2416 48"
 "style" "0"
 "light" "150"
 }
-// entity 270
+// entity 268
 {
 "classname" "light"
 "origin" "1232 3024 48"
 "style" "0"
 "light" "150"
 }
-// entity 271
+// entity 269
 {
 "classname" "light"
 "origin" "912 3024 48"
 "style" "0"
 "light" "150"
 }
-// entity 272
+// entity 270
 {
 "spawnflags" "2"
 "classname" "item_health"
 "origin" "-384 736 96"
 }
-// entity 273
+// entity 271
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -14866,7 +14836,7 @@
 "goal_state" "3"
 "group_no" "15"
 }
-// entity 274
+// entity 272
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -14880,13 +14850,13 @@
 "goal_state" "3"
 "group_no" "16"
 }
-// entity 275
+// entity 273
 {
 "classname" "info_player_start"
 "origin" "1888 -800 -160"
 "angle" "215"
 }
-// entity 276
+// entity 274
 {
 "g_a" "1"
 "message" "Marker remover\n"
@@ -14897,7 +14867,7 @@
 "team_no" "2"
 "r_i_g" "200"
 }
-// entity 277
+// entity 275
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -14912,7 +14882,7 @@
 "angle" "180"
 "ammo_detpack" "1"
 }
-// entity 278
+// entity 276
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -14928,7 +14898,7 @@
 "mdl" "progs/backpack.mdl"
 "a_c" "20"
 }
-// entity 279
+// entity 277
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -14940,7 +14910,7 @@
 "goal_result" "2"
 "mdl" "progs/backpack.mdl"
 }
-// entity 280
+// entity 278
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -14956,7 +14926,7 @@
 "mdl" "progs/armor.mdl"
 "a_c" "20"
 }
-// entity 281
+// entity 279
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -14972,7 +14942,7 @@
 "mdl" "progs/armor.mdl"
 "a_c" "20"
 }
-// entity 282
+// entity 280
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -14983,7 +14953,7 @@
 "health" "50"
 "team_no" "2"
 }
-// entity 283
+// entity 281
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -14999,14 +14969,14 @@
 "mdl" "progs/backpack.mdl"
 "a_c" "20"
 }
-// entity 284
+// entity 282
 {
 "message" "You can't use that without\ncontrol of the command point."
 "classname" "i_t_g"
 "origin" "896 -2176 128"
 "goal_no" "702"
 }
-// entity 285
+// entity 283
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15021,7 +14991,7 @@
 "angle" "180"
 "ammo_detpack" "1"
 }
-// entity 286
+// entity 284
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15032,7 +15002,7 @@
 "health" "50"
 "team_no" "1"
 }
-// entity 287
+// entity 285
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15048,7 +15018,7 @@
 "mdl" "progs/armor.mdl"
 "a_c" "20"
 }
-// entity 288
+// entity 286
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15059,7 +15029,7 @@
 "team_no" "2"
 "health" "50"
 }
-// entity 289
+// entity 287
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15071,14 +15041,14 @@
 "goal_result" "2"
 "mdl" "progs/backpack.mdl"
 }
-// entity 290
+// entity 288
 {
 "message" "Nail-resistant armor"
 "armorclass" "2"
 "classname" "item_armor2"
 "origin" "80 400 64"
 }
-// entity 291
+// entity 289
 {
 "g_a" "1"
 "message" "Marker Remover\n"
@@ -15089,7 +15059,7 @@
 "team_no" "1"
 "r_i_g" "100"
 }
-// entity 292
+// entity 290
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15104,7 +15074,7 @@
 "group_no" "13"
 "mdl" "progs/backpack.mdl"
 }
-// entity 293
+// entity 291
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15119,7 +15089,7 @@
 "group_no" "23"
 "mdl" "progs/backpack.mdl"
 }
-// entity 294
+// entity 292
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15133,7 +15103,7 @@
 "goal_state" "3"
 "group_no" "13"
 }
-// entity 295
+// entity 293
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15147,7 +15117,7 @@
 "group_no" "23"
 "goal_state" "3"
 }
-// entity 296
+// entity 294
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15161,7 +15131,7 @@
 "goal_state" "3"
 "group_no" "25"
 }
-// entity 297
+// entity 295
 {
 "g_a" "4"
 "h_i_g" "200"
@@ -15172,7 +15142,7 @@
 "goal_no" "225"
 "rv_g" "224"
 }
-// entity 298
+// entity 296
 {
 "g_a" "31"
 "impulse" "216"
@@ -15183,14 +15153,14 @@
 "goal_no" "5"
 "group_no" "200"
 }
-// entity 299
+// entity 297
 {
 "classname" "i_t_g"
 "origin" "744 3048 120"
 "rs_g" "214"
 "goal_no" "216"
 }
-// entity 300
+// entity 298
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15200,7 +15170,7 @@
 "team_no" "1"
 "mdl" "progs/w_s_key.mdl"
 }
-// entity 301
+// entity 299
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15214,7 +15184,7 @@
 "goal_state" "3"
 "group_no" "26"
 }
-// entity 302
+// entity 300
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15229,7 +15199,7 @@
 "group_no" "26"
 "mdl" "progs/backpack.mdl"
 }
-// entity 303
+// entity 301
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15244,14 +15214,14 @@
 "group_no" "16"
 "mdl" "progs/backpack.mdl"
 }
-// entity 304
+// entity 302
 {
 "classname" "i_t_g"
 "origin" "904 3048 120"
 "rs_g" "224"
 "goal_no" "226"
 }
-// entity 305
+// entity 303
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15261,7 +15231,7 @@
 "team_no" "1"
 "mdl" "progs/w_s_key.mdl"
 }
-// entity 306
+// entity 304
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15271,7 +15241,7 @@
 "team_no" "1"
 "mdl" "progs/w_s_key.mdl"
 }
-// entity 307
+// entity 305
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15281,7 +15251,7 @@
 "team_no" "1"
 "mdl" "progs/w_s_key.mdl"
 }
-// entity 308
+// entity 306
 {
 "g_a" "31"
 "impulse" "136"
@@ -15292,7 +15262,7 @@
 "goal_no" "3"
 "group_no" "100"
 }
-// entity 309
+// entity 307
 {
 "g_a" "31"
 "impulse" "146"
@@ -15303,21 +15273,21 @@
 "goal_no" "4"
 "group_no" "100"
 }
-// entity 310
+// entity 308
 {
 "classname" "i_t_g"
 "origin" "1064 -2464 120"
 "rs_g" "134"
 "goal_no" "136"
 }
-// entity 311
+// entity 309
 {
 "classname" "i_t_g"
 "origin" "1224 -2464 120"
 "rs_g" "144"
 "goal_no" "146"
 }
-// entity 312
+// entity 310
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15328,7 +15298,7 @@
 "team_no" "2"
 "mdl" "progs/w_g_key.mdl"
 }
-// entity 313
+// entity 311
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15339,7 +15309,7 @@
 "health" "50"
 "team_no" "1"
 }
-// entity 314
+// entity 312
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15355,7 +15325,7 @@
 "mdl" "progs/backpack.mdl"
 "a_c" "20"
 }
-// entity 315
+// entity 313
 {
 "g_a" "4"
 "h_i_g" "200"
@@ -15366,14 +15336,14 @@
 "goal_no" "245"
 "rv_g" "244"
 }
-// entity 316
+// entity 314
 {
 "classname" "i_t_g"
 "origin" "744 -2464 120"
 "rs_g" "114"
 "goal_no" "116"
 }
-// entity 317
+// entity 315
 {
 "g_a" "4"
 "h_i_g" "100"
@@ -15384,7 +15354,7 @@
 "goal_no" "115"
 "rv_g" "114"
 }
-// entity 318
+// entity 316
 {
 "g_a" "4"
 "h_i_g" "100"
@@ -15395,7 +15365,7 @@
 "goal_no" "125"
 "rv_g" "124"
 }
-// entity 319
+// entity 317
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15406,7 +15376,7 @@
 "team_no" "2"
 "mdl" "progs/w_g_key.mdl"
 }
-// entity 320
+// entity 318
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15417,7 +15387,7 @@
 "team_no" "2"
 "mdl" "progs/w_g_key.mdl"
 }
-// entity 321
+// entity 319
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15433,7 +15403,7 @@
 "mdl" "progs/backpack.mdl"
 "a_c" "20"
 }
-// entity 322
+// entity 320
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15444,7 +15414,7 @@
 "team_no" "2"
 "mdl" "progs/w_g_key.mdl"
 }
-// entity 323
+// entity 321
 {
 "g_a" "31"
 "impulse" "246"
@@ -15455,21 +15425,21 @@
 "goal_no" "8"
 "group_no" "200"
 }
-// entity 324
+// entity 322
 {
 "classname" "i_t_g"
 "origin" "1224 3048 120"
 "rs_g" "244"
 "goal_no" "246"
 }
-// entity 325
+// entity 323
 {
 "classname" "i_t_g"
 "origin" "904 -2464 121"
 "rs_g" "124"
 "goal_no" "126"
 }
-// entity 326
+// entity 324
 {
 "g_a" "4"
 "h_i_g" "200"
@@ -15480,14 +15450,14 @@
 "goal_no" "235"
 "rv_g" "234"
 }
-// entity 327
+// entity 325
 {
 "classname" "i_t_g"
 "origin" "1064 3048 120"
 "rs_g" "234"
 "goal_no" "236"
 }
-// entity 328
+// entity 326
 {
 "g_a" "31"
 "impulse" "236"
@@ -15498,7 +15468,7 @@
 "goal_no" "7"
 "group_no" "200"
 }
-// entity 329
+// entity 327
 {
 "g_a" "31"
 "impulse" "226"
@@ -15509,7 +15479,7 @@
 "goal_no" "6"
 "group_no" "200"
 }
-// entity 330
+// entity 328
 {
 "rv_gr" "23"
 "g_a" "1"
@@ -15527,7 +15497,7 @@
 "r_i_g" "100"
 "team_no" "1"
 }
-// entity 331
+// entity 329
 {
 "g_a" "1"
 "message" "You open the Blue doors.\n"
@@ -15539,7 +15509,7 @@
 "frags" "2"
 "team_no" "2"
 }
-// entity 332
+// entity 330
 {
 "g_a" "1"
 "target" "bd2"
@@ -15548,7 +15518,7 @@
 "team_no" "1"
 "group_no" "888"
 }
-// entity 333
+// entity 331
 {
 "rv_gr" "25"
 "g_a" "1"
@@ -15566,7 +15536,7 @@
 "r_i_g" "100"
 "team_no" "1"
 }
-// entity 334
+// entity 332
 {
 "target" "b3"
 "increase_team1" "1"
@@ -15579,7 +15549,7 @@
 "goal_state" "3"
 "mdl" "progs/w_s_key.mdl"
 }
-// entity 335
+// entity 333
 {
 "target" "r3"
 "increase_team2" "1"
@@ -15592,7 +15562,7 @@
 "goal_state" "3"
 "mdl" "progs/w_g_key.mdl"
 }
-// entity 336
+// entity 334
 {
 "rv_gr" "13"
 "g_a" "1"
@@ -15610,7 +15580,7 @@
 "r_i_g" "200"
 "team_no" "2"
 }
-// entity 337
+// entity 335
 {
 "rv_gr" "15"
 "g_a" "1"
@@ -15628,7 +15598,7 @@
 "r_i_g" "200"
 "team_no" "2"
 }
-// entity 338
+// entity 336
 {
 "g_a" "1"
 "target" "bd4"
@@ -15637,7 +15607,7 @@
 "team_no" "1"
 "group_no" "888"
 }
-// entity 339
+// entity 337
 {
 "target" "b5"
 "increase_team1" "1"
@@ -15650,7 +15620,7 @@
 "goal_state" "3"
 "mdl" "progs/w_s_key.mdl"
 }
-// entity 340
+// entity 338
 {
 "target" "r5"
 "increase_team2" "1"
@@ -15663,7 +15633,7 @@
 "goal_state" "3"
 "mdl" "progs/w_g_key.mdl"
 }
-// entity 341
+// entity 339
 {
 "rv_gr" "26"
 "g_a" "1"
@@ -15681,7 +15651,7 @@
 "r_i_g" "100"
 "team_no" "1"
 }
-// entity 342
+// entity 340
 {
 "rv_gr" "16"
 "g_a" "1"
@@ -15699,7 +15669,7 @@
 "r_i_g" "200"
 "team_no" "2"
 }
-// entity 343
+// entity 341
 {
 "target" "r6"
 "increase_team2" "1"
@@ -15712,7 +15682,7 @@
 "goal_state" "3"
 "mdl" "progs/w_g_key.mdl"
 }
-// entity 344
+// entity 342
 {
 "target" "b6"
 "increase_team1" "1"
@@ -15725,58 +15695,36 @@
 "goal_state" "3"
 "mdl" "progs/w_s_key.mdl"
 }
-// entity 345
+// entity 343
 {
 "classname" "info_intermission"
 "origin" "628 272 -680"
 }
-// entity 346
-{
-"g_a" "2"
-"classname" "i_t_g"
-"origin" "984 2672 0"
-"n_b" " destroys the Red Command Center!\n"
-"remove_group_no" "201"
-"g_e" "1"
-"b_b" "Red's Command Center\nhas been destroyed!"
-"frags" "5"
-}
-// entity 347
-{
-"g_a" "2"
-"classname" "i_t_g"
-"n_b" " destroys the Blue Command Center!\n"
-"origin" "992 -2072 0"
-"remove_group_no" "101"
-"b_b" "Blue's Command Center\nhas been destroyed!"
-"g_e" "1"
-"frags" "5"
-}
-// entity 348
+// entity 344
 {
 "spawnflags" "2"
 "classname" "item_health"
 "origin" "-368 -208 64"
 }
-// entity 349
+// entity 345
 {
 "message" "That door won't open\nfor your team."
 "classname" "i_t_g"
 "origin" "896 -2200 128"
 "goal_no" "701"
 }
-// entity 350
+// entity 346
 {
 "classname" "air_bubbles"
 "origin" "692 292 -688"
 }
-// entity 351
+// entity 347
 {
 "classname" "light"
 "origin" "628 293 -688"
 "light" "500"
 }
-// entity 352
+// entity 348
 {
 "classname" "i_t_g"
 "origin" "896 -2240 128"
@@ -15790,7 +15738,7 @@
 "a_s" "20"
 "a_c" "15"
 }
-// entity 353
+// entity 349
 {
 "g_a" "1"
 "target" "bd1"
@@ -15799,13 +15747,13 @@
 "team_no" "1"
 "group_no" "888"
 }
-// entity 354
+// entity 350
 {
 "spawnflags" "1"
 "classname" "item_rockets"
 "origin" "1936 128 16"
 }
-// entity 355
+// entity 351
 {
 "g_a" "1"
 "message" "No friendly detpacks allowed.\n"
@@ -15816,13 +15764,13 @@
 "team_no" "1"
 "ammo_detpack" "-1"
 }
-// entity 356
+// entity 352
 {
 "spawnflags" "1"
 "classname" "item_rockets"
 "origin" "32 -128 208"
 }
-// entity 357
+// entity 353
 {
 "g_a" "1"
 "target" "bd3"
@@ -15832,7 +15780,7 @@
 "team_no" "1"
 "group_no" "888"
 }
-// entity 358
+// entity 354
 {
 "g_a" "1"
 "message" "You open the Red doors.\n"
@@ -15845,7 +15793,7 @@
 "frags" "2"
 "team_no" "1"
 }
-// entity 359
+// entity 355
 {
 "g_a" "1"
 "target" "rd1"
@@ -15854,7 +15802,7 @@
 "team_no" "2"
 "group_no" "889"
 }
-// entity 360
+// entity 356
 {
 "g_a" "1"
 "target" "rd2"
@@ -15863,7 +15811,7 @@
 "team_no" "2"
 "group_no" "889"
 }
-// entity 361
+// entity 357
 {
 "g_a" "1"
 "target" "rd4"
@@ -15872,7 +15820,7 @@
 "team_no" "2"
 "group_no" "889"
 }
-// entity 362
+// entity 358
 {
 "g_a" "1"
 "target" "rd3"
@@ -15881,7 +15829,7 @@
 "team_no" "2"
 "group_no" "889"
 }
-// entity 363
+// entity 359
 {
 "g_a" "1"
 "message" "No friendly detpacks allowed."
@@ -15892,19 +15840,19 @@
 "team_no" "2"
 "ammo_detpack" "-1"
 }
-// entity 364
+// entity 360
 {
 "spawnflags" "1"
 "classname" "item_spikes"
 "origin" "1872 128 16"
 }
-// entity 365
+// entity 361
 {
 "spawnflags" "2"
 "classname" "item_health"
 "origin" "64 352 240"
 }
-// entity 366
+// entity 362
 {
 "g_a" "4"
 "h_i_g" "200"
@@ -15915,7 +15863,7 @@
 "goal_no" "215"
 "rv_g" "214"
 }
-// entity 367
+// entity 363
 {
 "g_a" "1"
 "message" "Library - CP3"
@@ -15924,7 +15872,7 @@
 "wait" "1"
 "g_e" "1"
 }
-// entity 368
+// entity 364
 {
 "g_a" "1"
 "message" "Fountain - CP5"
@@ -15933,7 +15881,7 @@
 "wait" "1"
 "g_e" "1"
 }
-// entity 369
+// entity 365
 {
 "g_a" "1"
 "message" "Balcony - CP6"
@@ -15942,33 +15890,7 @@
 "wait" "1"
 "g_e" "1"
 }
-// entity 370
-{
-"owned_by" "1"
-"classname" "i_t_t"
-"origin" "1136 -2224 64"
-"n_b" "���� ���� �� ���� �� ������\n"
-"activate_group_no" "888"
-"b_o" "Doors open!\n"
-"search_time" "10"
-"group_no" "541"
-"goal_state" "3"
-}
-// entity 371
-{
-"rv_gr" "561"
-"rs_gr" "565"
-"increase_team2" "50"
-"classname" "i_t_t"
-"origin" "1072 2912 32"
-"n_b" "��� ��� ���� ����� ����\n������� ������ �����\n"
-"b_b" "RED has held their base!\nCommand Points reset.\n"
-"activate_goal_no" "566"
-"search_time" "180"
-"group_no" "561"
-"goal_state" "3"
-}
-// entity 372
+// entity 366
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15983,7 +15905,7 @@
 "mdl" "progs/armor.mdl"
 "a_c" "20"
 }
-// entity 373
+// entity 367
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -15998,90 +15920,14 @@
 "mdl" "progs/armor.mdl"
 "a_c" "20"
 }
-// entity 374
-{
-"rv_gr" "545"
-"if_group_is_inactive" "201"
-"owned_by" "1"
-"rs_gr" "541"
-"b_n" "Get a Command Marker\nand take the BLUE Command Center!\n"
-"classname" "i_t_t"
-"origin" "1152 -2176 64"
-"n_b" "��� �������� ��� ��\n��� ������� ������\n"
-"rs_g" "542"
-"b_o" "Defend your Command Center!\n"
-"search_time" "1"
-"group_no" "545"
-}
-// entity 375
-{
-"rv_gr" "541"
-"owned_by" "1"
-"rs_gr" "545"
-"increase_team1" "50"
-"classname" "i_t_t"
-"origin" "1152 -2208 80"
-"n_b" "���� ��� ���� ����� ����\n������� ������ �����\n"
-"b_b" "BLUE has held their base!\nCommand Points reset.\n"
-"activate_goal_no" "546"
-"search_time" "180"
-"group_no" "541"
-"goal_state" "3"
-}
-// entity 376
+// entity 368
 {
 "rv_gr" "201"
 "classname" "i_t_g"
 "origin" "1120 -2160 80"
 "goal_no" "546"
 }
-// entity 377
-{
-"g_a" "1"
-"h_i_g" "200"
-"classname" "i_t_g"
-"increase_team2" "50"
-"n_b" "RED has Captured the Blue Base!\nRED TEAM WINS!!!\n"
-"origin" "1248 -2248 -16"
-"b_b" "RED has Captured the Blue Base!\nRED TEAM WINS!!!\n"
-"g_e" "1"
-"frags" "5"
-"goal_result" "4"
-"team_no" "2"
-"r_i_g" "200"
-"goal_state" "3"
-"group_no" "541"
-}
-// entity 378
-{
-"g_a" "1"
-"target" "bfish"
-"message" "Your watch is a little fast.\nRight place... wrong time.\n"
-"h_i_g" "200"
-"classname" "i_t_g"
-"origin" "1240 -2240 -16"
-"g_e" "1"
-"frags" "5"
-"r_i_g" "200"
-"team_no" "2"
-"group_no" "545"
-}
-// entity 379
-{
-"rv_gr" "565"
-"if_group_is_inactive" "101"
-"owned_by" "2"
-"rs_gr" "561"
-"b_n" "Get a Command Marker\nand take the RED Command Center!\n"
-"classname" "i_t_t"
-"origin" "1104 2908 32"
-"n_b" "���� �������� ��� ��\n��� ������� ������\n"
-"b_b" "���� �������� ��� ��\n��� ������� ������\n"
-"b_o" "Defend your Command Center!\n"
-"search_time" "1"
-"group_no" "565"
-}
-// entity 380
+// entity 369
 {
 "g_a" "1"
 "classname" "i_t_g"
@@ -16096,169 +15942,119 @@
 "mdl" "progs/armor.mdl"
 "a_c" "20"
 }
-// entity 381
+// entity 370
 {
 "rv_gr" "101"
 "classname" "i_t_g"
 "origin" "1088 2928 48"
 "goal_no" "566"
 }
-// entity 382
-{
-"g_a" "1"
-"h_i_g" "100"
-"increase_team1" "50"
-"classname" "i_t_g"
-"n_b" "BLUE has Captured the Red Base!\nBLUE TEAM WINS!!!\n"
-"origin" "1248 2864 -32"
-"b_b" "BLUE has Captured the Red Base!\nBLUE TEAM WINS!!!\n"
-"g_e" "1"
-"frags" "5"
-"goal_result" "4"
-"team_no" "1"
-"r_i_g" "100"
-"goal_state" "3"
-"group_no" "561"
-}
-// entity 383
-{
-"owned_by" "2"
-"classname" "i_t_t"
-"origin" "1088 2896 16"
-"n_b" "��� ���� �� ���� �� ������\n"
-"activate_group_no" "889"
-"b_o" "Doors open!\n"
-"search_time" "10"
-"group_no" "561"
-"goal_state" "3"
-}
-// entity 384
-{
-"g_a" "1"
-"target" "rfish"
-"message" "Your watch is a little fast.\nRight place... wrong time.\n"
-"h_i_g" "100"
-"classname" "i_t_g"
-"origin" "1232 2848 -32"
-"g_e" "1"
-"frags" "5"
-"r_i_g" "100"
-"team_no" "1"
-"group_no" "565"
-}
-// entity 385
-{
-"classname" "info_teleport_destination"
-"origin" "640 288 288"
-"targetname" "fish"
-"angle" "180"
-}
-// entity 386
+// entity 371
 {
 "classname" "light"
 "origin" "1172 176 -96"
 "style" "0"
 "light" "300"
 }
-// entity 387
+// entity 372
 {
 "classname" "light"
 "origin" "1564 88 -224"
 "style" "0"
 "light" "300"
 }
-// entity 388
+// entity 373
 {
 "classname" "light"
 "origin" "1268 80 -96"
 "style" "0"
 "light" "300"
 }
-// entity 389
+// entity 374
 {
 "classname" "light"
 "origin" "1180 472 -224"
 "style" "0"
 "light" "300"
 }
-// entity 390
+// entity 375
 {
 "classname" "light"
 "origin" "1316 688 -128"
 "style" "0"
 "light" "300"
 }
-// entity 391
+// entity 376
 {
 "classname" "light"
 "origin" "1636 688 -128"
 "style" "0"
 "light" "300"
 }
-// entity 392
+// entity 377
 {
 "classname" "light"
 "origin" "1780 384 -128"
 "style" "0"
 "light" "300"
 }
-// entity 393
+// entity 378
 {
 "classname" "light"
 "origin" "1780 384 128"
 "style" "0"
 "light" "300"
 }
-// entity 394
+// entity 379
 {
 "classname" "light"
 "origin" "1452 864 112"
 "style" "0"
 "light" "300"
 }
-// entity 395
+// entity 380
 {
 "classname" "light"
 "origin" "1316 1072 112"
 "style" "0"
 "light" "300"
 }
-// entity 396
+// entity 381
 {
 "classname" "light"
 "origin" "1456 864 -124"
 "style" "0"
 "light" "300"
 }
-// entity 397
+// entity 382
 {
 "classname" "light"
 "origin" "1272 1072 -124"
 "style" "0"
 "light" "300"
 }
-// entity 398
+// entity 383
 {
 "classname" "light"
 "origin" "1200 1200 -36"
 "style" "0"
 "light" "300"
 }
-// entity 399
+// entity 384
 {
 "classname" "light"
 "origin" "1664 896 148"
 "style" "0"
 "light" "300"
 }
-// entity 400
+// entity 385
 {
 "classname" "light"
 "origin" "1528 864 116"
 "style" "0"
 "light" "300"
 }
-// entity 401
+// entity 386
 {
 "classname" "light"
 "origin" "424 1448 -224"
@@ -16266,7 +16062,7 @@
 "light" "300"
 "wait" ".8"
 }
-// entity 402
+// entity 387
 {
 "classname" "light"
 "origin" "776 1448 -224"
@@ -16274,7 +16070,7 @@
 "light" "300"
 "wait" ".8"
 }
-// entity 403
+// entity 388
 {
 "classname" "light"
 "origin" "1128 1448 -224"
@@ -16282,7 +16078,7 @@
 "light" "300"
 "wait" ".8"
 }
-// entity 404
+// entity 389
 {
 "classname" "light"
 "origin" "1480 1448 -224"
@@ -16290,7 +16086,7 @@
 "light" "300"
 "wait" ".8"
 }
-// entity 405
+// entity 390
 {
 "classname" "light"
 "origin" "1832 1448 -224"
@@ -16298,7 +16094,7 @@
 "light" "300"
 "wait" ".8"
 }
-// entity 406
+// entity 391
 {
 "classname" "light"
 "origin" "424 1776 -224"
@@ -16306,7 +16102,7 @@
 "light" "300"
 "wait" ".8"
 }
-// entity 407
+// entity 392
 {
 "classname" "light"
 "origin" "776 1776 -224"
@@ -16314,7 +16110,7 @@
 "light" "300"
 "wait" ".8"
 }
-// entity 408
+// entity 393
 {
 "classname" "light"
 "origin" "1128 1776 -224"
@@ -16322,7 +16118,7 @@
 "light" "300"
 "wait" ".8"
 }
-// entity 409
+// entity 394
 {
 "classname" "light"
 "origin" "1480 1776 -224"
@@ -16330,7 +16126,7 @@
 "light" "300"
 "wait" ".8"
 }
-// entity 410
+// entity 395
 {
 "classname" "light"
 "origin" "1832 1776 -224"
@@ -16339,7 +16135,7 @@
 "angle" "90"
 "wait" ".8"
 }
-// entity 411
+// entity 396
 {
 "classname" "light"
 "origin" "1832 2832 -224"
@@ -16348,7 +16144,7 @@
 "angle" "90"
 "wait" ".8"
 }
-// entity 412
+// entity 397
 {
 "classname" "light"
 "origin" "1832 2480 -224"
@@ -16357,7 +16153,7 @@
 "angle" "90"
 "wait" ".8"
 }
-// entity 413
+// entity 398
 {
 "classname" "light"
 "origin" "1832 2128 -224"
@@ -16366,14 +16162,14 @@
 "angle" "90"
 "wait" ".8"
 }
-// entity 414
+// entity 399
 {
 "classname" "light"
 "origin" "-496 -992 -176"
 "style" "0"
 "light" "300"
 }
-// entity 415
+// entity 400
 {
 "classname" "light"
 "origin" "1528 2128 -224"
@@ -16382,7 +16178,7 @@
 "angle" "90"
 "wait" ".8"
 }
-// entity 416
+// entity 401
 {
 "classname" "light"
 "origin" "1528 2480 -224"
@@ -16391,7 +16187,7 @@
 "angle" "90"
 "wait" ".8"
 }
-// entity 417
+// entity 402
 {
 "classname" "light"
 "origin" "1528 2832 -224"
@@ -16400,7 +16196,7 @@
 "angle" "90"
 "wait" ".8"
 }
-// entity 418
+// entity 403
 {
 "classname" "light"
 "origin" "72 1776 -224"
@@ -16408,7 +16204,7 @@
 "light" "300"
 "wait" ".8"
 }
-// entity 419
+// entity 404
 {
 "classname" "light"
 "origin" "-280 1776 -224"
@@ -16416,14 +16212,14 @@
 "light" "300"
 "wait" ".8"
 }
-// entity 420
+// entity 405
 {
 "classname" "light"
 "origin" "1480 384 -173"
 "style" "0"
 "light" "350"
 }
-// entity 421
+// entity 406
 {
 "classname" "light"
 "origin" "1832 -1752 -224"
@@ -16432,7 +16228,7 @@
 "angle" "270"
 "wait" ".8"
 }
-// entity 422
+// entity 407
 {
 "classname" "light"
 "origin" "1832 -2040 -224"
@@ -16441,7 +16237,7 @@
 "angle" "270"
 "wait" ".8"
 }
-// entity 423
+// entity 408
 {
 "classname" "light"
 "origin" "1832 -2328 -224"
@@ -16450,7 +16246,7 @@
 "angle" "270"
 "wait" ".8"
 }
-// entity 424
+// entity 409
 {
 "classname" "light"
 "origin" "1528 -1176 -224"
@@ -16459,7 +16255,7 @@
 "angle" "270"
 "wait" ".8"
 }
-// entity 425
+// entity 410
 {
 "classname" "light"
 "origin" "1528 -1464 -224"
@@ -16468,7 +16264,7 @@
 "angle" "270"
 "wait" ".8"
 }
-// entity 426
+// entity 411
 {
 "classname" "light"
 "origin" "1528 -1752 -224"
@@ -16477,7 +16273,7 @@
 "angle" "270"
 "wait" ".8"
 }
-// entity 427
+// entity 412
 {
 "classname" "light"
 "origin" "1528 -2040 -224"
@@ -16486,7 +16282,7 @@
 "angle" "270"
 "wait" ".8"
 }
-// entity 428
+// entity 413
 {
 "classname" "light"
 "origin" "1528 -2328 -224"
@@ -16495,7 +16291,7 @@
 "angle" "270"
 "wait" ".8"
 }
-// entity 429
+// entity 414
 {
 "classname" "light"
 "origin" "1832 -888 -224"
@@ -16504,7 +16300,7 @@
 "angle" "270"
 "wait" ".8"
 }
-// entity 430
+// entity 415
 {
 "classname" "light"
 "origin" "1832 -1176 -224"
@@ -16513,7 +16309,7 @@
 "angle" "270"
 "wait" ".8"
 }
-// entity 431
+// entity 416
 {
 "classname" "light"
 "origin" "1832 -1464 -224"
@@ -16522,7 +16318,7 @@
 "angle" "270"
 "wait" ".8"
 }
-// entity 432
+// entity 417
 {
 "classname" "light"
 "origin" "680 -848 -224"
@@ -16531,7 +16327,7 @@
 "angle" "-0"
 "wait" ".8"
 }
-// entity 433
+// entity 418
 {
 "classname" "light"
 "origin" "968 -848 -224"
@@ -16540,7 +16336,7 @@
 "angle" "-0"
 "wait" ".8"
 }
-// entity 434
+// entity 419
 {
 "classname" "light"
 "origin" "1256 -848 -224"
@@ -16549,7 +16345,7 @@
 "angle" "-0"
 "wait" ".8"
 }
-// entity 435
+// entity 420
 {
 "classname" "light"
 "origin" "1544 -848 -224"
@@ -16558,7 +16354,7 @@
 "angle" "-0"
 "wait" ".8"
 }
-// entity 436
+// entity 421
 {
 "classname" "light"
 "origin" "1256 -1160 -224"
@@ -16567,7 +16363,7 @@
 "angle" "-0"
 "wait" ".8"
 }
-// entity 437
+// entity 422
 {
 "classname" "light"
 "origin" "968 -1160 -224"
@@ -16576,7 +16372,7 @@
 "angle" "-0"
 "wait" ".8"
 }
-// entity 438
+// entity 423
 {
 "classname" "light"
 "origin" "680 -1160 -224"
@@ -16585,7 +16381,7 @@
 "angle" "-0"
 "wait" ".8"
 }
-// entity 439
+// entity 424
 {
 "classname" "light"
 "origin" "-184 -1160 -224"
@@ -16594,7 +16390,7 @@
 "angle" "-0"
 "wait" ".8"
 }
-// entity 440
+// entity 425
 {
 "classname" "light"
 "origin" "104 -1160 -224"
@@ -16603,7 +16399,7 @@
 "angle" "-0"
 "wait" ".8"
 }
-// entity 441
+// entity 426
 {
 "classname" "light"
 "origin" "104 -848 -224"
@@ -16612,7 +16408,7 @@
 "angle" "-0"
 "wait" ".8"
 }
-// entity 442
+// entity 427
 {
 "classname" "light"
 "origin" "-184 -848 -224"
@@ -16621,7 +16417,7 @@
 "angle" "-0"
 "wait" ".8"
 }
-// entity 443
+// entity 428
 {
 "classname" "light"
 "origin" "392 -848 -224"
@@ -16630,7 +16426,7 @@
 "angle" "-0"
 "wait" ".8"
 }
-// entity 444
+// entity 429
 {
 "classname" "light"
 "origin" "392 -1160 -224"
@@ -16639,7 +16435,7 @@
 "angle" "-0"
 "wait" ".8"
 }
-// entity 445
+// entity 430
 {
 "classname" "light"
 "origin" "-184 -2072 -224"
@@ -16648,7 +16444,7 @@
 "angle" "90"
 "wait" ".8"
 }
-// entity 446
+// entity 431
 {
 "classname" "light"
 "origin" "-184 -1784 -224"
@@ -16657,7 +16453,7 @@
 "angle" "90"
 "wait" ".8"
 }
-// entity 447
+// entity 432
 {
 "classname" "light"
 "origin" "-184 -1496 -224"
@@ -16666,7 +16462,7 @@
 "angle" "90"
 "wait" ".8"
 }
-// entity 448
+// entity 433
 {
 "classname" "light"
 "origin" "128 -1496 -224"
@@ -16675,7 +16471,7 @@
 "angle" "90"
 "wait" ".8"
 }
-// entity 449
+// entity 434
 {
 "classname" "light"
 "origin" "128 -1784 -224"
@@ -16684,7 +16480,7 @@
 "angle" "90"
 "wait" ".8"
 }
-// entity 450
+// entity 435
 {
 "classname" "light"
 "origin" "128 -2072 -224"
@@ -16693,7 +16489,7 @@
 "angle" "90"
 "wait" ".8"
 }
-// entity 451
+// entity 436
 {
 "classname" "light"
 "origin" "-184 -2320 -224"
@@ -16702,7 +16498,7 @@
 "angle" "90"
 "wait" ".8"
 }
-// entity 452
+// entity 437
 {
 "classname" "light"
 "origin" "128 -2320 -224"
