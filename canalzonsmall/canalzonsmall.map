@@ -5,7 +5,7 @@
 "classname" "worldspawn"
 "worldtype" "2"
 "message" "The Canal Zone - Small\nby lordy\nbased on the original Canal Zone\n"
-"wad" "../../wads/canalzon.wad"
+"wad" "../wads/canalzon.wad"
 "sounds" "1"
 // brush 0
 {
@@ -15386,6 +15386,8 @@
 "goal_no" "214"
 "team_no" "2"
 "mdl" "progs/w_g_key.mdl"
+"delay" "0"
+"pausetime" "0"
 }
 // entity 319
 {
@@ -15866,7 +15868,7 @@
 // entity 363
 {
 "g_a" "1"
-"message" "Library - CP3"
+"message" "Library - CP2"
 "classname" "i_t_g"
 "origin" "290 160 24"
 "wait" "1"
@@ -15875,7 +15877,7 @@
 // entity 364
 {
 "g_a" "1"
-"message" "Fountain - CP5"
+"message" "Fountain - CP1"
 "classname" "i_t_g"
 "origin" "1474 384 -240"
 "wait" "1"
@@ -15884,7 +15886,7 @@
 // entity 365
 {
 "g_a" "1"
-"message" "Balcony - CP6"
+"message" "Balcony - CP3"
 "classname" "i_t_g"
 "origin" "546 992 24"
 "wait" "1"
