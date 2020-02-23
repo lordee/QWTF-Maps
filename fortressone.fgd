@@ -31,6 +31,43 @@
 	_sun_mangle(string) : "Sun mangle (Yaw pitch roll)"
 ]
 
+
+
+//
+// TeamFortress Mixins
+//
+
+@baseclass = TFArmorClassFlags
+[
+	armorclass(flags) =
+	[
+		// APA's armorclass is set to this type(s).
+		1 : "Shell Resistant"
+		2 : "Nail Resistant"
+		4 : "Explosion Resistant"
+		8 : "Electricity Resistant"
+		16 : "Fire Resistant"
+	]
+]
+
+@baseclass = TFPlayerClassFilter
+[
+	playerclass(choices) : "Must be of this class(es)" : 0 =
+	[
+		1 : "Only allow a Scout to activate"
+		2 : "Only allow a Sniper to activate"
+		3 : "Only allow a Soldier to activate"
+		4 : "Only allow a Demolition Man to activate"
+		5 : "Only allow a Medic to activate"
+		6 : "Only allow a Heavy Weapons Guy to activate"
+		7 : "Only allow a Pyro to activate"
+		8 : "Only allow a Spy to activate"
+		9 : "Only allow an Engineer to activate"
+	]
+]
+
+
+
 //
 // base marker definitions
 //
@@ -169,11 +206,11 @@
 @PointClass size(-16 -16 -24, 16 16 32) base(Item, Appearflags) model({ "path": ":progs/invisibl.mdl" }) =
 	item_artifact_invisibility : "Ring of Shadows" []
 
-@PointClass size(-16 -16 0, 16 16 56) base(Item, Appearflags) model({ "path": ":progs/armor.mdl", "skin": 2 }) =
+@PointClass size(-16 -16 0, 16 16 56) base(Item, Appearflags, TFArmorClassFlags) model({ "path": ":progs/armor.mdl", "skin": 2 }) =
 	item_armorInv : "Red armor (200%)" []
-@PointClass size(-16 -16 0, 16 16 56) base(Item, Appearflags) model({ "path": ":progs/armor.mdl", "skin": 1 }) =
+@PointClass size(-16 -16 0, 16 16 56) base(Item, Appearflags, TFArmorClassFlags) model({ "path": ":progs/armor.mdl", "skin": 1 }) =
 	item_armor2 : "Yellow armor (150%)" []
-@PointClass size(-16 -16 0, 16 16 56) base(Item, Appearflags) model({ "path": ":progs/armor.mdl" }) =
+@PointClass size(-16 -16 0, 16 16 56) base(Item, Appearflags, TFArmorClassFlags) model({ "path": ":progs/armor.mdl" }) =
 	item_armor1 : "Green armor (100%)" []
 @PointClass size(-16 -16 -24, 16 16 32) base(Item, Appearflags) model({ "path": ":progs/w_s_key.mdl" }) =
 	item_key1 : "Silver key" []
@@ -378,7 +415,7 @@
 	speed(integer) : "Speed" : 100
 	sounds(choices) : "Sound" : 0 =
 	[
-			0: "Silent"
+		0: "Silent"
 		1: "Stone"
 		2: "Machine"
 		3: "Stone Chain"
@@ -394,8 +431,12 @@
 		1 : "Starts Open" : 0
 		4 : "Don't link" : 0
 		8 : "Gold Key required" : 0
-			16: "Silver Key required" : 0
-			32: "Toggle" : 0
+		16: "Silver Key required" : 0
+		32: "Toggle" : 0
+	]
+	goal_activation(flags) =
+	[
+		8 : "Only activated when hit by an engineer's spanner"
 	]
 ]
 
@@ -442,6 +483,10 @@
 	wait(string) : "Wait before reset" : "1"
 	delay(string) : "Delay before trigger"
 	message(string) : "Message"
+	goal_activation(flags) =
+	[
+		8 : "Only activated when hit by an engineer's spanner"
+	]
 ]
 
 @SolidClass base(Appearflags, Targetname) = func_train : "Moving platform"
@@ -496,7 +541,7 @@
 // triggers
 //
 
-@baseclass base(Appearflags, Target, Killarget, Targetname) = Trigger
+@baseclass base(Appearflags, Target, Killarget, Targetname, TFPlayerClassFilter) = Trigger
 [
 	sounds(choices) : "Sound style" : 0 =
 	[
@@ -597,34 +642,9 @@
 
 // TEAM FORTRESS BASE CLASSES
 
-@BaseClass = TFDetectflags [
-	impulse2(Flags) =
-	[
-		1 : "Episode 1" : 0
-		2 : "Episode 2" : 0
-		4 : "Episode 3" : 0
-		8 : "Episode 4" : 0
-	]
-
-]
-
-@baseclass = TFDetectflags2 [
-	spawnflags2(Flags) =
-	[
-		256 : "Not on Easy" : 0
-		512 : "Not on Normal" : 0
-		1024 : "Not on Hard" : 0
-		2048 : "Not in Deathmatch" : 0
-	]
-]
-
-@baseclass base (TFDetectflags) size(0 0 0, 24 24 24) color(255 128 0) = TfDClass
+@baseclass size(24 24 24) color(255 128 0) = TfClass
 [
-  netname(string) : "netname"
-]
-@baseclass size(0 0 0, 24 24 24) color(255 128 0) = TfClass
-[
-  netname(string) : "netname"
+	netname(string) : "netname"
 ]
 
 // MEGA-TF AMBIENT ADDONS
@@ -651,498 +671,763 @@
 [
 	impulse(flags) =
 	[
-		1   : "Class Skins" 		: 0
-		2   : "Class Persistence" 	: 0
-		4   : "Cheat Checking" 		: 0
-		8   : "Fortress Map" 		: 0
-		16  : "Respawn Delay" 		: 0
-		32  : "Respawn Delay" 		: 0
-		64  : "Auto Team" 		: 0
-		128 : "Individual Frags" 	: 0
+		// Initial Toggleflags status. Bitfield
+		1   : "Class Skins"       : 0
+		2   : "Class Persistence" : 0
+		4   : "Cheat Checking"    : 0
+		//8   : "Fortress Map"      : 0
+		16  : "Respawn Delay"     : 0
+		32  : "Respawn Delay"     : 0
+		64  : "Auto Team"         : 0
+		128 : "Individual Frags"  : 0
 	]
-	message(string) 		: "Localcmds to send to server on start"
-	ammo_shells(integer) 		: "Max lives for player in Team 1."
-	ammo_nails(integer) 		: "Max lives for player in Team 2."
-	ammo_rockets(integer) 		: "Max lives for player in Team 3."
-	ammo_cells(integer) 		: "Max lives for player in Team 4."
-	ammo_medikit(integer) 		: "Max players allowed in Team 1."
-	ammo_detpack(integer) 		: "Max players allowed in Team 2."
-	maxammo_medikit(integer)	: "Max players allowed in Team 3."
-	maxammo_detpack(integer)	: "Max players allowed in Team 4."
+	message(string)          : "Localcmds to send to server on start" : : "Commands that are localcmd'd into the server when the map first starts. e.g. 'sv_gravity 300\nsv_friction 0.1\n' Be sure to end all commands with '\n'."
+
+	ammo_shells(integer)     : "Max lives for player in Team 1." : 0 : "0 = Unlimited number of lives"
+	ammo_nails(integer)      : "Max lives for player in Team 2." : 0 : "0 = Unlimited number of lives"
+	ammo_rockets(integer)    : "Max lives for player in Team 3." : 0 : "0 = Unlimited number of lives"
+	ammo_cells(integer)      : "Max lives for player in Team 4." : 0 : "0 = Unlimited number of lives"
+
+	ammo_medikit(integer)    : "Max players allowed in Team 1." : 0 : "0 = Unlimited number of players"
+	ammo_detpack(integer)    : "Max players allowed in Team 2." : 0 : "0 = Unlimited number of players"
+	maxammo_medikit(integer) : "Max players allowed in Team 3." : 0 : "0 = Unlimited number of players"
+	maxammo_detpack(integer) : "Max players allowed in Team 4." : 0 : "0 = Unlimited number of players"
+
 	maxammo_shells(flags) =
 	[
 		// "Bitfield. Restricted Classes Team 1"
-		-1 : "Team 1: Civilian Only. (Cannot Specify Others)" : 0
-		1 : "Team 1: No Scout" : 0
-		2 : "Team 1: No Sniper" : 0
-		4 : "Team 1: No Soldier" : 0
-		8 : "Team 1: No Demolitions Man" : 0
-		16 : "Team 1: No Combat Medic" : 0
-		32 : "Team 1: No Heavy Weapons Guy" : 0
-		64 : "Team 1: No Pyro" : 0
-		128 : "Team 1: No Random PlayerClass" : 0
-		256 : "Team 1: No Spy" : 0
-		512 : "Team 1: No Engineer" : 0
+		-1  : "Team 1: Civilian Only. (Cannot Specify Others)" : 0
+		1   : "Team 1: No Scout"                               : 0
+		2   : "Team 1: No Sniper"                              : 0
+		4   : "Team 1: No Soldier"                             : 0
+		8   : "Team 1: No Demolitions Man"                     : 0
+		16  : "Team 1: No Combat Medic"                        : 0
+		32  : "Team 1: No Heavy Weapons Guy"                   : 0
+		64  : "Team 1: No Pyro"                                : 0
+		128 : "Team 1: No Random PlayerClass"                  : 0
+		256 : "Team 1: No Spy"                                 : 0
+		512 : "Team 1: No Engineer"                            : 0
 	]
 	maxammo_nails(flags) =
 	[
 		// "Bitfield. Restricted Classes Team 2"
-		-1 : "Team 2: Civilian Only. (Cannot Specify Others)"
-		1 : "Team 2: No Scout" : 0
-		2 : "Team 2: No Sniper" : 0
-		4 : "Team 2: No Soldier" : 0
-		8 : "Team 2: No Demolitions Man" : 0
-		16 : "Team 2: No Combat Medic" : 0
-		32 : "Team 2: No Heavy Weapons Guy" : 0
-		64 : "Team 2: No Pyro" : 0
-		128 : "Team 2: No Random PlayerClass" : 0
-		256 : "Team 2: No Spy" : 0
-		512 : "Team 2: No Engineer" : 0
+		-1  : "Team 2: Civilian Only. (Cannot Specify Others)" : 0
+		1   : "Team 2: No Scout"                               : 0
+		2   : "Team 2: No Sniper"                              : 0
+		4   : "Team 2: No Soldier"                             : 0
+		8   : "Team 2: No Demolitions Man"                     : 0
+		16  : "Team 2: No Combat Medic"                        : 0
+		32  : "Team 2: No Heavy Weapons Guy"                   : 0
+		64  : "Team 2: No Pyro"                                : 0
+		128 : "Team 2: No Random PlayerClass"                  : 0
+		256 : "Team 2: No Spy"                                 : 0
+		512 : "Team 2: No Engineer"                            : 0
 	]
 	maxammo_rockets(flags) =
 	[
 		// "Bitfield. Restricted Classes Team 3"
-		-1 : "Team 3: Civilian Only. (Cannot Specify Others)" : 0
-		1 : "Team 3: No Scout" : 0
-		2 : "Team 3: No Sniper" : 0
-		4 : "Team 3: No Soldier" : 0
-		8 : "Team 3: No Demolitions Man" : 0
-		16 : "Team 3: No Combat Medic" : 0
-		32 : "Team 3: No Heavy Weapons Guy" : 0
-		64 : "Team 3: No Pyro" : 0
-		128 : "Team 3: No Random PlayerClass" : 0
-		256 : "Team 3: No Spy" : 0
-		512 : "Team 3: No Engineer" : 0
+		-1  : "Team 3: Civilian Only. (Cannot Specify Others)" : 0
+		1   : "Team 3: No Scout"                               : 0
+		2   : "Team 3: No Sniper"                              : 0
+		4   : "Team 3: No Soldier"                             : 0
+		8   : "Team 3: No Demolitions Man"                     : 0
+		16  : "Team 3: No Combat Medic"                        : 0
+		32  : "Team 3: No Heavy Weapons Guy"                   : 0
+		64  : "Team 3: No Pyro"                                : 0
+		128 : "Team 3: No Random PlayerClass"                  : 0
+		256 : "Team 3: No Spy"                                 : 0
+		512 : "Team 3: No Engineer"                            : 0
 	]
 	maxammo_cells(flags) =
 	[
 		// "Bitfield. Restricted Classes Team 4"
 		-1 : "Team 4: Civilian Only. (Cannot Specify Others)" : 0
-		1 : "Team 4: No Scout" : 0
-		2 : "Team 4: No Sniper" : 0
-		4 : "Team 4: No Soldier" : 0
-		8 : "Team 4: No Demolitions Man" : 0
-		16 : "Team 4: No Combat Medic" : 0
-		32 : "Team 4: No Heavy Weapons Guy" : 0
-		64 : "Team 4: No Pyro" : 0
-		128 : "Team 4: No Random PlayerClass" : 0
-		256 : "Team 4: No Spy" : 0
-		512 : "Team 4: No Engineer" : 0
+		1 : "Team 4: No Scout"                                : 0
+		2 : "Team 4: No Sniper"                               : 0
+		4 : "Team 4: No Soldier"                              : 0
+		8 : "Team 4: No Demolitions Man"                      : 0
+		16 : "Team 4: No Combat Medic"                        : 0
+		32 : "Team 4: No Heavy Weapons Guy"                   : 0
+		64 : "Team 4: No Pyro"                                : 0
+		128 : "Team 4: No Random PlayerClass"                 : 0
+		256 : "Team 4: No Spy"                                : 0
+		512 : "Team 4: No Engineer"                           : 0
 	]
-	hook_out(choices) 		: "Grapple Hook Enabled?" : 0 =
+	hook_out(choices) : "Disable Grapple Hook?" : 0 =
 	[
-		0 : "Enabled"
-		1 : "Disabled"
+		0 : "Enable"
+		1 : "Disable"
 	]
-	display_item_status1(string) 	: "On FlagInfo, display this GoalItem status"
-	display_item_status2(string) 	: "On FlagInfo, display this GoalItem status"
-	display_item_status3(string) 	: "On FlagInfo, display this GoalItem status"
-	display_item_status4(string) 	: "On FlagInfo, display this GoalItem status"
-	team_str_home(string) 			: "Disp to owner if is at its origin."
-	team_str_moved(string) 			: "Disp to owner if is not at its origin."
-	team_str_carried(string) 		: "Disp to owner if being carried."
-	non_team_str_home(string) 		: "Disp to others if is at its origin."
-	non_team_str_moved(string) 		: "Disp to others if is not at its origin."
-	non_team_str_carried(string) 	: "Disp to others if is being carried."
-	team_broadcast(string) 			: "String that replaces the Team Menu."
-	non_team_broadcast(string) 		: "String that is the Map Help command."
-	noise1(string) 			: "Class Menu for Team 1."
-	noise2(string) 			: "Class Menu for Team 2."
-	noise3(string) 			: "Class Menu for Team 3."
-	noise4(string) 			: "Class Menu for Team 4."
+	display_item_status1(string) : "On FlagInfo, display this GoalItem status"
+	display_item_status2(string) : "On FlagInfo, display this GoalItem status"
+	display_item_status3(string) : "On FlagInfo, display this GoalItem status"
+	display_item_status4(string) : "On FlagInfo, display this GoalItem status"
+
+	team_str_home(string)        : "Disp to owner if is at its origin." : "Your flag is in it's base" : "String displayed to the owners of an Item in an Item Status if the Item is at it's origin. If not the owner of the Item, non_team_str_home will be used. Refer to the 'owned_by' variable for GoalItems."
+	team_str_moved(string)       : "Disp to owner if is not at its origin." : "Your flag is lying around" : "String displayed to the owners of an Item in an Item Status if the Item is not at it's origin. If not the owner of the Item, non_team_str_moved will be used. Refer to the 'owned_by' variable for GoalItems."
+	team_str_carried(string)     : "Disp to owner if being carried." : "Your flag is being carried by" : "String displayed to the owners of an Item in an Item Status if the Item is being carried by a player. The player's name is appended to the String. If not the owner of the Item, non_team_str_carried will be used. Refer to the 'owned_by' variable for GoalItems."
+
+	non_team_str_home(string)    : "Disp to others if is at its origin." : "The enemy flag is in it's base" : "String displayed to everyone except the owners of an Item in an Item Status if the Item is at it's origin. If they are owner of the Item, team_str_home will be used. Refer to the 'owned_by' variable for GoalItems."
+	non_team_str_moved(string)   : "Disp to others if is not at its origin." : "The enemy flag is lying around" : "String displayed to everyone except the owners of an Item in an Item Status if the Item is not at it's origin. If they are owner of the Item, team_str_moved will be used. Refer to the 'owned_by' variable for GoalItems."
+	non_team_str_carried(string) : "Disp to others if is being carried." : "The enemy flag is being carried by" : "String displayed to everyone except the owners of an Item in an Item Status if the Item is being carried by a player. The player's name is appended to the String. If they are owner of the Item, team_str_home will be used. Refer to the 'owned_by' variable for GoalItems."
+
+	team_broadcast(string)       : "String that replaces the Team Menu." : : "Line breaks should be used: \n"
+	non_team_broadcast(string)   : "String that is the Map Help command." : : "Line breaks should be used: \n"
+
+	noise1(string)               : "Class Menu for Team 1." : : "Line breaks should be used: \n"
+	noise2(string)               : "Class Menu for Team 2." : : "Line breaks should be used: \n"
+	noise3(string)               : "Class Menu for Team 3." : : "Line breaks should be used: \n"
+	noise4(string)               : "Class Menu for Team 4." : : "Line breaks should be used: \n"
 ]
 
-// INFO_TFGOAL
 
-@PointClass base(TfClass) = info_tfgoal : "TF Goal Entity"
+
+//
+// INFO_TFGOAL
+//
+
+@PointClass base(TfClass, TFArmorClassFlags, TFPlayerClassFilter) = info_tfgoal : "TF Goal Entity"
 [
-netname(string) : "The name of the Goal."
-goal_no(integer) : "Unique ID number of this goal."
-group_no(integer) : "ID Number of the goal group this goal belongs to."
-owned_by(integer) : "The Team that own this entity."
-goal_state(integer) : "Bitfield. The initial state."
-mdl(string) : "The mdl used by this Goal if any."
-skin(integer) : "The number of the skin on mdl."
-goal_activation(integer) : "Bitfield. Activation criteria."
-team_no(integer) : "AP must be of this team to activate."
-items_allowed(integer) : "AP must have this goal item no"
-has_item_from_group(integer) : "AP must have Item from group no"
-playerclass(integer) : "Bitfield. Must be of this class(es)."
-if_goal_is_active(integer) : "This Goal must be in ACTIVE state."
-if_goal_is_inactive(integer) : "This Goal must be in INACTIVE state."
-if_goal_is_removed(integer) : "This Goal must be in REMOVED state."
-if_group_is_active(integer) : "All Goals in Group must be in ACTIVE."
-if_group_is_inactive(integer) : "All Goals in Group must be in INACTIVE."
-if_group_is_removed(integer) : "All Goals in Group must be in REMOVED."
-if_item_has_moved(integer) : "This Item not moved or carried."
-if_item_hasnt_moved(integer) : "This Item must be moved or carried."
-else_goal(integer) : "If criteria fails, activate this goal no"
-goal_min(string) : "Bounding box min for goal, def is -16 -16 -24"
-goal_max(integer) : "Bounding box max for goal, def is 16 16 32"
-// When this Goal is successfully activated up, the following variables may be executed
-return_item_no(integer) : "Return this GoalItem if not carried"
-broadcast(string) : "Message centerprinted to everyone else."
-message(string) : "Message centerprinted to AP."
-team_broadcast(string) : "Message centerprinted to teammates"
-non_team_broadcast(string) : "Message centerprinted to other team"
-owners_team_broadcast(string) : "Centerprinted to all owning teammates"
-netname_broadcast(string) : "_____ activated this goal.\n"
-netname_team_broadcast(string) : "_____ activated your teams goal.\n"
-netname_non_team_broadcast(string) : "____ took an enemy flag!\n"
-netname_owners_team_broadcast(string) : "____ took your flag!\n"
-deathtype(string) : "___ was killed by this goal!\n"
-target(string) : "Activate goal with this targetname"
-killtarget(string) : "Remove goal with this targetname"
-ex_skill_min(integer) : "Skill Minimum"
-ex_skill_max(integer) : "Skill Maximum"
-goal_effects(integer) : "Bitfield. See TFEntRef"
-maxammo_shells(integer) : "All members of this team are affected."
-maxammo_nails(integer) : "All members not of this team are affected."
-t_length(integer) : "Everyone within this radius is affected."
-goal_results(integer) : "Bitfield. See TFEntRef"
-count(integer) : "Specified score given to the AP's team."
-increase_team1(integer) : "Specified score given to team 1"
-increase_team2(integer) : "Specified score given to team 2"
-increase_team3(integer) : "Specified score given to team 3"
-increase_team4(integer) : "Specified score given to team 4"
-noise(string) : "WAV file played when this Goal is activated."
-lives(integer) : "Added to APA's lives."
-health(integer) : "Added to APA's health."
-armortype(integer) : "Bitfield. The APAs armortype is set to."
-armorvalue(integer) : "APA's armorvalue is set to (0-250)"
-armorclass(choices) 		: "APA's armorclass is set to" : 0 =
+	netname(string) : "The name of the Goal."
+	goal_no(integer) : "Unique ID number of this goal."
+	group_no(integer) : "ID Number of the goal group this goal belongs to."
+	owned_by(integer) : "The Team that owns this entity."
+	goal_state(choices) : "Bitfield. The initial state." : 2 =
 	[
-		1 : "Shell Resistant"
-		2 : "Nail Resistant"
-		4 : "Explosion Resistant"
-		8 : "Electricity Resistant"
-		16 : "Fire Resistant"
+		1 : "Active (Already On)"
+		2 : "Inactive (Ready to be used)"
+		3 : "Removed (Unmanipulatable until restored)"
 	]
-frags(integer) : "Added to APA's frags."
-ammo_shells(integer) : "Added this number of shells."
-ammo_nails(integer) : "Added this number of nails."
-ammo_rockets(integer) : "Added this number of rockets."
-ammo_cells(integer) : "Added this number of cells."
-ammo_detpack(integer) : "Added this number of det packs."
-ammo_medikit(integer) : "Added this number of medikits."
-no_grenades_1(integer) : "Added to number type 1 TF grenades."
-no_grenades_2(integer) : "Added to number type 2 TF grenades."
-invincible_finished(integer) : "Number of seconds of invincibility."
-invisible_finished(integer) : "Number of seconds of invisibility."
-super_damage_finished(integer) : "Number of seconds of quad."
-radsuit_finished(integer) : "Number of seconds of radsuit."
-items(integer) : "Goal gives this GoalItem to APA."
-axhitme(integer) : "Goal removes this GoalItem from APA with it."
-delay_time(integer) : "Delay before activation."
-wait(integer) : "Goal stays ACTIVE for this long."
-activate_goal_no(integer) : "Activate this Goal."
-inactivate_goal_no(integer) : "Inactivate this Goal."
-remove_goal_no(integer) : "Remove this Goal."
-restore_goal_no(integer) : "Restore this Goal."
-activate_group_no(integer) : "Activate all Goals in this GoalGroup."
-inactivate_group_no(integer) : "Inactivate all Goals in this GoalGroup."
-remove_group_no(integer) : "Remove all Goals in this GoalGroup."
-restore_group_no(integer) : "Restore all Goals in this GoalGroup."
-remove_item_group(integer) : "Removes a GoalGroup from APA"
-all_active(integer) : "If whole group ACTIVE, activate last_impulse"
-last_impulse(integer) : "Activate goal based on all_active"
-remove_spawnpoint(integer) : "Remove spawnpoint with this goal_no."
-restore_spawnpoint(integer) : "Restore spawnpoint with this goal_no."
-remove_spawngroup(integer) : "Remove all spawnpoints  in group_no."
-restore_spawngroup(integer) : "Restore all spawnpoints in group_no."
-display_item_status1(string) : "Display this when activated"
-display_item_status2(string) : "Display this when activated"
-display_item_status3(string) : "Display this when activated"
-display_item_status4(string) : "Display this when activated"
-team_str_home(string) : "Your flag is in it's base"
-team_str_moved(string) : "Your flag is lying around"
-team_str_carried(string) : "Your flag is being carried by"
-non_team_str_home(string) : "The enemy flag is in it's base"
-non_team_str_moved(string) : "The enemy flag is lying around"
-non_team_str_carried(string) : "The enemy flag is being carried by"
+	mdl(string) : "The mdl used by this Goal if any." : : "Unspecified = Invisible Goal."
+	skin(integer) : "The number of the skin on mdl."
+	goal_activation(flags) =
+	[
+		// "Bitfield. Activation criteria."
+		1 : "Activated when touched by a player."
+		2 : "Activated when touched by a detpack explosion."
+		4 : "Only activated if the AP fails Criteria."
+		2048 : "If this bit is set, the Goal drops to the ground when it first spawns."
+	]
+	team_no(choices) : "AP must be of this team to activate." : 0 =
+	[
+		1 : "Team 1"
+		2 : "Team 2"
+		3 : "Team 3"
+		4 : "Team 4"
+	]
+	items_allowed(integer) : "AP must have this goal item no"
+	has_item_from_group(integer) : "AP must have Item from group no"
+
+	if_goal_is_active(integer) : "This Goal must be in ACTIVE state."
+	if_goal_is_inactive(integer) : "This Goal must be in INACTIVE state."
+	if_goal_is_removed(integer) : "This Goal must be in REMOVED state."
+	if_group_is_active(integer) : "All Goals in Group must be in ACTIVE."
+	if_group_is_inactive(integer) : "All Goals in Group must be in INACTIVE."
+	if_group_is_removed(integer) : "All Goals in Group must be in REMOVED."
+	if_item_has_moved(integer) : "This Item not moved or carried."
+	if_item_hasnt_moved(integer) : "This Item must be moved or carried."
+
+	else_goal(integer) : "If criteria fails, activate this goal no"
+
+	goal_min(string) : "Bounding box min for goal, def is -16 -16 -24"
+	goal_max(integer) : "Bounding box max for goal, def is 16 16 32"
+
+	//
+	// When this Goal is successfully activated up, the following variables may be executed
+	//
+	return_item_no(integer) : "Return this GoalItem if not carried"
+	broadcast(string) : "Message centerprinted to everyone else."
+	message(string) : "Message centerprinted to AP."
+	team_broadcast(string) : "Message centerprinted to teammates"
+	non_team_broadcast(string) : "Message centerprinted to other team"
+	owners_team_broadcast(string) : "Centerprinted to all owning teammates"
+	netname_broadcast(string) : "_____ activated this goal.\n" : : "Broadcast to all players, prepended to the AP's name. A line break should be used at the end. e.g. <player's_name> ' activated this goal!\n'"
+	netname_team_broadcast(string) : "_____ activated your teams goal.\n" : : "Broadcast to all players on the AP's team, except the AP, prepended by the AP's name. A line break should be used at the end. e.g. <player's_name> ' activated your team's goal!\n'"
+	netname_non_team_broadcast(string) : "____ took an enemy flag!\n" : : "Broadcast to all players on the AP's team, prepended by the AP's name.  If there is a 'netname_owners_team_broadcast' specified, this message isn't broadcast to the owners of the entity. A line break should be used at the end. e.g. <player's_name> ' took an enemy flag!\n'"
+	netname_owners_team_broadcast(string) : "____ took your flag!\n" : : "Broadcast to all members of the team that own this entity (see 'owned_by' above), prepended by the AP's name. e.g. <player's_name> ' took your flag!\n'"
+	deathtype(string) : "___ was killed by this goal!\n" : : "Death message appended to the AP's name and broadcasted, if the AP is killed by the Goal. A line break should be used at the end. e.g. <player's_name> ' was killed by this goal!\n'"
+
+	target(string) : "Activate goal with this targetname" : : "Activate any Goal/Quake Trigger with this targetname"
+	killtarget(string) : "Remove goal with this targetname" : : "Remove any Goal/Quake Trigger with this targetname"
+
+	ex_skill_min(integer) : "Skill Minimum" : : "This entity is removed when the map starts if the game's 'skill' variable is >= to this value. To specify a skill of 0, use -1 instead."
+	ex_skill_max(integer) : "Skill Maximum" : : "This entity is removed when the map starts if the game's 'skill' variable is <= to this value. To specify a skill of 0, use -1 instead."
+
+	goal_effects(Flags) =
+	[
+		// Bitfield. Determines what players are affected. If nothing is specified the goal will not effect anybody
+		1  : "AP is affected." : 0
+		2  : "Everyone on the AP's team is affected." : 0
+		4  : "Everyone not on the AP's team is affected." : 0
+		8  : "Everyone except the AP is affected." : 0
+		16 : "Radius effect (see 't_length') does not go through walls." : 0
+		32 : "If APA is not in the same environment as the Goal, don't affect him. Environments are air, water, slime, lava. e.g. If a Goal is above some water, and does a radius effect with 't_length', and a player in the water is within the radius, he won't be affected if this bit is set." : 0
+		64 : "If this bit is set, then instead of just applying this Goal's results to the group of players specified by the other 'goal_effects' variable, this Goal checks it's criteria for each player in the group and then applies it's results invididually to any of them that pass." : 0
+	]
+	maxammo_shells(integer) : "All members of this team are affected."
+	maxammo_nails(integer) : "All members not of this team are affected."
+
+	t_length(integer) : "Everyone within this radius is affected."
+
+	goal_result(flags) =
+	[
+		// Determines what results are applied to APA. Bitfield.
+		1  : "Goal is removed after activation."
+		2  : "Goals activated by this one apply their results to the AP."
+		4  : "Display scores and end the level."
+		8  : "Activated goals will not apply their results to the APA"
+		16 : "Disable/Stop the spy's undercover mask."
+		32 : "This forces APA to simply respawn. The player doesn't die... just respawns."
+	]
+
+	count(integer) : "Specified score given to the AP's team."
+
+	increase_team1(integer) : "Specified score given to team 1"
+	increase_team2(integer) : "Specified score given to team 2"
+	increase_team3(integer) : "Specified score given to team 3"
+	increase_team4(integer) : "Specified score given to team 4"
+
+	noise(string) : "WAV file played when this Goal is activated."
+
+	lives(integer) : "Added to APA's lives."
+	health(integer) : "Added to APA's health."
+
+	armortype(choices) : "Bitfield. The APAs armortype is set to." : 0 =
+	[
+		0.3 : "Green"
+		0.6 : "Yellow"
+		0.8 : "Red"
+	]
+	armorvalue(integer) : "APA's armorvalue is set to (0-250)"
+
+	frags(integer) : "Added to APA's frags."
+
+	ammo_shells(integer) : "Added this number of shells."
+	ammo_nails(integer) : "Added this number of nails."
+	ammo_rockets(integer) : "Added this number of rockets."
+	ammo_cells(integer) : "Added this number of cells."
+	ammo_detpack(integer) : "Added this number of det packs."
+	ammo_medikit(integer) : "Added this number of medikits."
+
+	no_grenades_1(integer) : "Added to number type 1 TF grenades."
+	no_grenades_2(integer) : "Added to number type 2 TF grenades."
+
+	invincible_finished(integer) : "Number of seconds of invincibility."
+	invisible_finished(integer) : "Number of seconds of invisibility."
+	super_damage_finished(integer) : "Number of seconds of quad."
+	radsuit_finished(integer) : "Number of seconds of radsuit."
+
+	items(integer) : "Goal gives this GoalItem to APA."
+	axhitme(integer) : "Goal removes this GoalItem from APA with it."
+
+	delay_time(integer) : "Delay before activation." : : "If the criteria is meant for activation, the goal waits this amount of time before activating, in seconds."
+	wait(integer) : "Goal stays ACTIVE for this long." : : "Goal stays ACTIVE for this amount of time, in seconds."
+
+	activate_goal_no(integer) : "Activate this Goal."
+	inactivate_goal_no(integer) : "Inactivate this Goal."
+	remove_goal_no(integer) : "Remove this Goal."
+	restore_goal_no(integer) : "Restore this Goal."
+
+	activate_group_no(integer) : "Activate all Goals in this GoalGroup."
+	inactivate_group_no(integer) : "Inactivate all Goals in this GoalGroup."
+	remove_group_no(integer) : "Remove all Goals in this GoalGroup."
+	restore_group_no(integer) : "Restore all Goals in this GoalGroup."
+
+	remove_item_group(integer) : "Removes a GoalGroup from APA"
+
+	all_active(integer) : "If whole group ACTIVE, activate last_impulse"
+	last_impulse(integer) : "Activate goal based on all_active"
+
+	remove_spawnpoint(integer) : "Remove spawnpoint with this goal_no."
+	restore_spawnpoint(integer) : "Restore spawnpoint with this goal_no."
+	remove_spawngroup(integer) : "Remove all spawnpoints  in group_no."
+	restore_spawngroup(integer) : "Restore all spawnpoints in group_no."
+
+	display_item_status1(string) : "Display this when activated"
+	display_item_status2(string) : "Display this when activated"
+	display_item_status3(string) : "Display this when activated"
+	display_item_status4(string) : "Display this when activated"
+
+	team_str_home(string) : : "Your flag is in it's base" : "String displayed to the owners of an Item in an Item Status if the Item is at it's origin. If not the owner of the Item, non_team_str_home will be used. Refer to the 'owned_by' variable for GoalItems."
+	team_str_moved(string) : : "Your flag is lying around" : "String displayed to the owners of an Item in an Item Status if the Item is not at it's origin. If not the owner of the Item, non_team_str_moved will be used. Refer to the 'owned_by' variable for GoalItems."
+	team_str_carried(string) : : "Your flag is being carried by" : "String displayed to the owners of an Item in an Item Status if the Item is being carried by a player. The player's name is appended to the String. If not the owner of the Item, non_team_str_carried will be used. Refer to the 'owned_by' variable for GoalItems."
+	non_team_str_home(string) : : "The enemy flag is in it's base" : "String displayed to everyone except the owners of an Item in an Item Status if the Item is at it's origin. If they are owner of the Item, team_str_home will be used. Refer to the 'owned_by' variable for GoalItems."
+	non_team_str_moved(string) : : "The enemy flag is lying around" : "String displayed to everyone except the owners of an Item in an Item Status if the Item is not at it's origin. If they are owner of the Item, team_str_moved will be used. Refer to the 'owned_by' variable for GoalItems."
+	non_team_str_carried(string) : : "The enemy flag is being carried by" : "String displayed to everyone except the owners of an Item in an Item Status if the Item is being carried by a player. The player's name is appended to the String. If they are owner of the Item, team_str_home will be used. Refer to the 'owned_by' variable for GoalItems."
 ]
 
 // INFO_TFGOAL_TIMER
 
-@PointClass base(TfClass) = info_tfgoal_timer : "TF Timer Goal"
+@PointClass base(TfClass, TFArmorClassFlags, TFPlayerClassFilter) = info_tfgoal_timer : "TF Timer Goal"
 [
-goal_effects(integer) : "Bitfield. See TFEntRef"
-search_time(integer) : "Time between iterations."
-netname(string) : "The name of the Goal."
-goal_no(integer) : "Unique ID number of this goal."
-group_no(integer) : "ID Number of the goal group this goal belongs to."
-goal_state(integer) : "Bitfield. The initial state."
-items_allowed(integer) : "AP must have this goal item no"
-playerclass(integer) : "Bitfield. Must be of this class(es)."
-if_goal_is_active(integer) : "This Goal must be in ACTIVE state."
-if_goal_is_inactive(integer) : "This Goal must be in INACTIVE state."
-if_goal_is_removed(integer) : "This Goal must be in REMOVED state."
-if_group_is_active(integer) : "All Goals in Group must be in ACTIVE."
-if_group_is_inactive(integer) : "All Goals in Group must be in INACTIVE."
-if_group_is_removed(integer) : "All Goals in Group must be in REMOVED."
-if_item_has_moved(integer) : "This Item not moved or carried."
-if_item_hasnt_moved(integer) : "This Item must be moved or carried."
-has_item_from_group(integer) : "AP must have Item from group no"
-maxammo_shells(integer) : "All members of this team are checked for criteria."
-maxammo_nails(integer) : "All member not on this team are checked for criteria."
-t_length(integer) : "Everyone within this radius is affected."
-// When this Goal is successfully activated up, the following variables may be executed
-return_item_no(integer) : "Return this GoalItem if not carried"
-deathtype(string) : "___ was killed by this goal!\n"
-target(string) : "Activate goal with this targetname"
-killtarget(string) : "Remove goal with this targetname"
-ex_skill_min(integer) : "Skill Minimum"
-ex_skill_max(integer) : "Skill Maximum"
-goal_results(integer) : "Bitfield. See TFEntRef"
-increase_team1(integer) : "Specified score given to team 1"
-increase_team2(integer) : "Specified score given to team 2"
-increase_team3(integer) : "Specified score given to team 3"
-increase_team4(integer) : "Specified score given to team 4"
-noise(string) : "WAV file played when this Goal is activated."
-lives(integer) : "Added to APA's lives."
-health(integer) : "Added to APA's health."
-armortype(integer) : "Bitfield. The APAs armortype is set to."
-armorvalue(integer) : "APA's armorvalue is set to (0-250)"
-armorclass(choices) 		: "APA's armorclass is set to" : 0 =
+	goal_effects(flags) =
 	[
-		1 : "Shell Resistant"
-		2 : "Nail Resistant"
-		4 : "Explosion Resistant"
-		8 : "Electricity Resistant"
-		16 : "Fire Resistant"
+		// Bitfield. Determines what players are affected. If nothing is specified the goal will not effect anybody.
+		1  : "Illegal for Timer Goals" : 0
+		2  : "Illegal for Timer Goals" : 0
+		4  : "Illegal for Timer Goals" : 0
+		8  : "Illegal for Timer Goals" : 0
+		16 : "Radius effect (see 't_length') does not go through walls." : 0
+		32 : "If APA is not in the same environment as the Goal, don't affect him. Environments are air, water, slime, lava. e.g. If a Goal is above some water, and does a radius effect with 't_length', and a player in the water is within the radius, he won't be affected if this bit is set." : 0
+		64 : "If this bit is set, then instead of just applying this Goal's results to the group of players specified by the other 'goal_effects' variable, this Goal checks it's criteria for each player in the group and then applies it's results invididually to any of them that pass." : 0
 	]
-frags(integer) : "Added to APA's frags."
-ammo_shells(integer) : "Added this number of shells."
-ammo_nails(integer) : "Added this number of nails."
-ammo_rockets(integer) : "Added this number of rockets."
-ammo_cells(integer) : "Added this number of cells."
-ammo_detpack(integer) : "Added this number of det packs."
-ammo_medikit(integer) : "Added this number of medikits."
-no_grenades_1(integer) : "Added to number type 1 TF grenades."
-no_grenades_2(integer) : "Added to number type 2 TF grenades."
-invincible_finished(integer) : "Number of seconds of invincibility."
-invisible_finished(integer) : "Number of seconds of invisibility."
-super_damage_finished(integer) : "Number of seconds of quad."
-radsuit_finished(integer) : "Number of seconds of radsuit."
-items(integer) : "Goal gives this GoalItem to APA."
-axhitme(integer) : "Goal removes this GoalItem from APA with it."
-delay_time(integer) : "Delay before activation."
-wait(integer) : "Goal stays ACTIVE for this long."
-activate_group_no(integer) : "Activate all Goals in this GoalGroup."
-inactivate_group_no(integer) : "Inactivate all Goals in this GoalGroup."
-remove_group_no(integer) : "Remove all Goals in this GoalGroup."
-restore_group_no(integer) : "Restore all Goals in this GoalGroup."
-activate_goal_no(integer) : "Activate this Goal."
-inactivate_goal_no(integer) : "Inactivate this Goal."
-remove_goal_no(integer) : "Remove this Goal."
-restore_goal_no(integer) : "Restore this Goal."
-all_active(integer) : "If whole group ACTIVE, activate last_impulse"
-last_impulse(integer) : "Activate goal based on all_active"
-remove_spawnpoint(integer) : "Remove spawnpoint with this goal_no."
-restore_spawnpoint(integer) : "Restore spawnpoint with this goal_no."
-remove_spawngroup(integer) : "Remove all spawnpoints  in group_no."
-restore_spawngroup(integer) : "Restore all spawnpoints in group_no."
-display_item_status1(string) : "Display this when activated"
-display_item_status2(string) : "Display this when activated"
-display_item_status3(string) : "Display this when activated"
-display_item_status4(string) : "Display this when activated"
-team_str_home(string) : "Your flag is in it's base"
-team_str_moved(string) : "Your flag is lying around"
-team_str_carried(string) : "Your flag is being carried by"
-non_team_str_home(string) : "The enemy flag is in it's base"
-non_team_str_moved(string) : "The enemy flag is lying around"
-non_team_str_carried(string) : "The enemy flag is being carried by"
+
+	search_time(integer) : "Time between iterations."
+
+	netname(string) : "The name of the Goal."
+
+	goal_no(integer) : "Unique ID number of this goal."
+	group_no(integer) : "ID Number of the goal group this goal belongs to."
+
+	goal_state(choices) : "Bitfield. The initial state." : 2 =
+	[
+		1 : "Active (Already On)"
+		2 : "Inactive (Ready to be used)"
+		3 : "Removed (Unmanipulatable until restored)"
+	]
+
+	items_allowed(integer) : "AP must have this goal item no"
+
+	if_goal_is_active(integer) : "This Goal must be in ACTIVE state."
+	if_goal_is_inactive(integer) : "This Goal must be in INACTIVE state."
+	if_goal_is_removed(integer) : "This Goal must be in REMOVED state."
+	if_group_is_active(integer) : "All Goals in Group must be in ACTIVE."
+	if_group_is_inactive(integer) : "All Goals in Group must be in INACTIVE."
+	if_group_is_removed(integer) : "All Goals in Group must be in REMOVED."
+
+	if_item_has_moved(integer) : "This Item not moved or carried."
+	if_item_hasnt_moved(integer) : "This Item must be moved or carried."
+	has_item_from_group(integer) : "AP must have Item from group no"
+
+	maxammo_shells(integer) : "All members of this team are checked for criteria."
+	maxammo_nails(integer) : "All member not on this team are checked for criteria."
+
+	t_length(integer) : "Everyone within this radius is affected."
+
+	//
+	// When this Goal is successfully activated up, the following variables may be executed
+	//
+	return_item_no(integer) : "Return this GoalItem if not carried"
+
+	deathtype(string) : "___ was killed by this goal!\n"
+
+	target(string) : "Activate goal with this targetname"
+	killtarget(string) : "Remove goal with this targetname"
+
+	ex_skill_min(integer) : "Skill Minimum" : : "This entity is removed when the map starts if the game's 'skill' variable is >= to this value. To specify a skill of 0, use -1 instead."
+	ex_skill_max(integer) : "Skill Maximum" : : "This entity is removed when the map starts if the game's 'skill' variable is <= to this value. To specify a skill of 0, use -1 instead."
+
+	goal_result(flags) =
+	[
+		// Determines what results are applied to APA. Bitfield.
+		1  : "Goal is removed after activation."
+		2  : "Goals activated by this one apply their results to APA."
+		4  : "Display scores and end the level."
+		8  : "Activated goals will not apply their results to the APA"
+		16 : "Disable/Stop the spy's undercover mask."
+		32 : "This forces APA to simply respawn. The player doesn't die... just respawns."
+		64 : "If this bit is set, the results are applied to all the players that do NOT fit the criteria."
+	]
+
+	increase_team1(integer) : "Specified score given to team 1"
+	increase_team2(integer) : "Specified score given to team 2"
+	increase_team3(integer) : "Specified score given to team 3"
+	increase_team4(integer) : "Specified score given to team 4"
+
+	noise(string) : "WAV file played when this Goal is activated."
+
+	lives(integer) : "Added to APA's lives."
+
+	health(integer) : "Added to APA's health."
+
+	armortype(choices) : "Bitfield. The APAs armortype is set to." : 0 =
+	[
+		0.3 : "Green"
+		0.6 : "Yellow"
+		0.8 : "Red"
+	]
+	armorvalue(integer) : "APA's armorvalue is set to (0-250)"
+
+	frags(integer) : "Added to APA's frags."
+
+	ammo_cells(integer) : "Added this number of cells."
+	ammo_detpack(integer) : "Added this number of det packs."
+	ammo_medikit(integer) : "Added this number of medikits."
+	ammo_nails(integer) : "Added this number of nails."
+	ammo_rockets(integer) : "Added this number of rockets."
+	ammo_shells(integer) : "Added this number of shells."
+
+	no_grenades_1(integer) : "Added to number type 1 TF grenades."
+	no_grenades_2(integer) : "Added to number type 2 TF grenades."
+
+	invincible_finished(integer) : "Number of seconds of invincibility."
+	invisible_finished(integer) : "Number of seconds of invisibility."
+	super_damage_finished(integer) : "Number of seconds of quad."
+	radsuit_finished(integer) : "Number of seconds of radsuit."
+
+	items(integer) : "Goal gives this GoalItem to APA."
+	axhitme(integer) : "Goal removes this GoalItem from APA with it."
+
+	delay_time(integer) : "Delay before activation."
+	wait(integer) : "Goal stays ACTIVE for this long."
+
+	activate_goal_no(integer) : "Activate this Goal."
+	inactivate_goal_no(integer) : "Inactivate this Goal."
+	remove_goal_no(integer) : "Remove this Goal."
+	restore_goal_no(integer) : "Restore this Goal."
+
+	activate_group_no(integer) : "Activate all Goals in this GoalGroup."
+	inactivate_group_no(integer) : "Inactivate all Goals in this GoalGroup."
+	remove_group_no(integer) : "Remove all Goals in this GoalGroup."
+	restore_group_no(integer) : "Restore all Goals in this GoalGroup."
+
+	all_active(integer) : "If whole group ACTIVE, activate last_impulse"
+	last_impulse(integer) : "Activate goal based on all_active"
+
+	remove_item_group(integer) : "Removes a GoalGroup from APA"
+
+	remove_spawnpoint(integer) : "Remove spawnpoint with this goal_no."
+	restore_spawnpoint(integer) : "Restore spawnpoint with this goal_no."
+	remove_spawngroup(integer) : "Remove all spawnpoints  in group_no."
+	restore_spawngroup(integer) : "Restore all spawnpoints in group_no."
+
+	display_item_status1(string) : "Display this when activated"
+	display_item_status2(string) : "Display this when activated"
+	display_item_status3(string) : "Display this when activated"
+	display_item_status4(string) : "Display this when activated"
+
+	team_str_home(string) : "Your flag is in it's base"
+	team_str_moved(string) : "Your flag is lying around"
+	team_str_carried(string) : "Your flag is being carried by"
+
+	non_team_str_home(string) : "The enemy flag is in it's base"
+	non_team_str_moved(string) : "The enemy flag is lying around"
+	non_team_str_carried(string) : "The enemy flag is being carried by"
 ]
+
+
 
 // ITEM_TFGOAL
 
-@PointClass base(TfClass) = item_tfgoal : "TF Goal Item"
+@PointClass base(TfClass, TFArmorClassFlags, TFPlayerClassFilter) = item_tfgoal : "TF Goal Item"
 [
-netname(string) : "The name of the Goal."
-goal_no(integer) : "Unique ID number of this goal."
-group_no(integer) : "ID Number of the goal group this goal belongs to."
-owned_by(integer) : "The Team that own this entity."
-goal_state(integer) : "Bitfield. The initial state."
-mdl(string) : "The mdl used by this Goal if any."
-skin(integer) : "The number of the skin on mdl."
-goal_activation(integer) : "Bitfield. Activation criteria."
-team_no(integer) : "AP must be of this team to activate."
-items_allowed(integer) : "AP must have this goal item no"
-has_item_from_group(integer) : "AP must have Item from group no"
-playerclass(integer) : "Bitfield. Must be of this class(es)."
-if_goal_is_active(integer) : "This Goal must be in ACTIVE state."
-if_goal_is_inactive(integer) : "This Goal must be in INACTIVE state."
-if_goal_is_removed(integer) : "This Goal must be in REMOVED state."
-if_group_is_active(integer) : "All Goals in Group must be in ACTIVE."
-if_group_is_inactive(integer) : "All Goals in Group must be in INACTIVE."
-if_group_is_removed(integer) : "All Goals in Group must be in REMOVED."
-if_item_has_moved(integer) : "This Item not moved or carried."
-if_item_hasnt_moved(integer) : "This Item must be moved or carried."
-else_goal(integer) : "If criteria fails, activate this goal no"
-goal_min(string) : "Bounding box min for goal, def is -16 -16 -24"
-goal_max(integer) : "Bounding box max for goal, def is 16 16 32"
-// When this Goal is successfully activated up, the following variables may be executed
-return_item_no(integer) : "Return this GoalItem if not carried"
-broadcast(string) : "Message centerprinted to everyone else."
-message(string) : "Message centerprinted to AP."
-team_broadcast(string) : "Message centerprinted to teammates"
-non_team_broadcast(string) : "Message centerprinted to other team"
-owners_team_broadcast(string) : "Centerprinted to all owning teammates"
-netname_broadcast(string) : "_____ activated this goal.\n"
-netname_team_broadcast(string) : "_____ activated your teams goal.\n"
-netname_non_team_broadcast(string) : "____ took an enemy flag!\n"
-netname_owners_team_broadcast(string) : "____ took your flag!\n"
-deathtype(string) : "___ was killed by this goal!\n"
-target(string) : "Activate goal with this targetname"
-killtarget(string) : "Remove goal with this targetname"
-ex_skill_min(integer) : "Skill Minimum"
-ex_skill_max(integer) : "Skill Maximum"
-goal_effects(integer) : "Bitfield. See TFEntRef"
-maxammo_shells(integer) : "All members of this team are affected."
-maxammo_nails(integer) : "All members not of this team are affected."
-t_length(integer) : "Everyone within this radius is affected."
-goal_results(integer) : "Bitfield. See TFEntRef"
-count(integer) : "Specified score given to the AP's team."
-increase_team1(integer) : "Specified score given to team 1"
-increase_team2(integer) : "Specified score given to team 2"
-increase_team3(integer) : "Specified score given to team 3"
-increase_team4(integer) : "Specified score given to team 4"
-noise(string) : "WAV file played when this Goal is activated."
-lives(integer) : "Added to APA's lives."
-health(integer) : "Added to APA's health."
-armortype(integer) : "Bitfield. The APAs armortype is set to."
-armorvalue(integer) : "APA's armorvalue is set to (0-250)"
-armorclass(choices) 		: "APA's armorclass is set to" : 0 =
+	netname(string) : "The name of the Goal."
+
+	goal_no(integer) : "Unique ID number of this goal."
+	group_no(integer) : "ID Number of the goal group this goal belongs to."
+	owned_by(integer) : "The Team that own this entity." : 0 =
 	[
-		1 : "Shell Resistant"
-		2 : "Nail Resistant"
-		4 : "Explosion Resistant"
-		8 : "Electricity Resistant"
-		16 : "Fire Resistant"
+		1 : "Team 1"
+		2 : "Team 2"
+		3 : "Team 3"
+		4 : "Team 4"
 	]
-frags(integer) : "Added to APA's frags."
-ammo_shells(integer) : "Added this number of shells."
-ammo_nails(integer) : "Added this number of nails."
-ammo_rockets(integer) : "Added this number of rockets."
-ammo_cells(integer) : "Added this number of cells."
-ammo_detpack(integer) : "Added this number of det packs."
-ammo_medikit(integer) : "Added this number of medikits."
-no_grenades_1(integer) : "Added to number type 1 TF grenades."
-no_grenades_2(integer) : "Added to number type 2 TF grenades."
-invincible_finished(integer) : "Number of seconds of invincibility."
-invisible_finished(integer) : "Number of seconds of invisibility."
-super_damage_finished(integer) : "Number of seconds of quad."
-radsuit_finished(integer) : "Number of seconds of radsuit."
-items(integer) : "Goal gives this GoalItem to APA."
-axhitme(integer) : "Goal removes this GoalItem from APA with it."
-delay_time(integer) : "Delay before activation."
-wait(integer) : "Goal stays ACTIVE for this long."
-activate_goal_no(integer) : "Activate this Goal."
-inactivate_goal_no(integer) : "Inactivate this Goal."
-remove_goal_no(integer) : "Remove this Goal."
-restore_goal_no(integer) : "Restore this Goal."
-activate_group_no(integer) : "Activate all Goals in this GoalGroup."
-inactivate_group_no(integer) : "Inactivate all Goals in this GoalGroup."
-remove_group_no(integer) : "Remove all Goals in this GoalGroup."
-restore_group_no(integer) : "Restore all Goals in this GoalGroup."
-remove_item_group(integer) : "Removes a GoalGroup from APA"
-all_active(integer) : "If whole group ACTIVE, activate last_impulse"
-last_impulse(integer) : "Activate goal based on all_active"
-remove_spawnpoint(integer) : "Remove spawnpoint with this goal_no."
-restore_spawnpoint(integer) : "Restore spawnpoint with this goal_no."
-remove_spawngroup(integer) : "Remove all spawnpoints  in group_no."
-restore_spawngroup(integer) : "Restore all spawnpoints in group_no."
-display_item_status1(string) : "Display this when activated"
-display_item_status2(string) : "Display this when activated"
-display_item_status3(string) : "Display this when activated"
-display_item_status4(string) : "Display this when activated"
-team_str_home(string) : "Your flag is in it's base"
-team_str_moved(string) : "Your flag is lying around"
-team_str_carried(string) : "Your flag is being carried by"
-non_team_str_home(string) : "The enemy flag is in it's base"
-non_team_str_moved(string) : "The enemy flag is lying around"
-non_team_str_carried(string) : "The enemy flag is being carried by"
+
+	goal_state(choices) : "The initial state." : 0 =
+	[
+		1 : "Active (Already On)"
+		2 : "Inactive (Ready to be used)"
+		3 : "Removed (Unmanipulatable until restored)"
+	]
+
+	mdl(string) : "The mdl used by this Goal if any."
+	skin(integer) : "The number of the skin on mdl."
+
+	goal_activation(flags) =
+	[
+		// Bitfield. Activation criteria.
+		1    : "Carrying Player glows." : 0
+		2    : "Carrying Player moves at half speed." : 0
+		4    : "Item is dropped when a player with it dies." : 0
+		8    : "Item is returned when dropped." : 0
+		16   : "Item is returned when removed from players by a Goal" : 0
+		32   : "Item is returned due to 'pausetime' (see below)" : 0
+		64   : "Only activated (picked-up) if AP fails Criteria." : 0
+		128  : "Enable 'pausetime' removing." : 0
+		256  : "Players keep this item when they die." : 0
+		512  : "If this Item isn't being carried, it glows dimly." : 0
+		1024 : "Don't remove the results of this Item when it's removed from a player." : 0
+		2048 : "If this bit is set, the GoalItem drops to the ground when it first spawns." : 0
+		8192 : "If this bit is set, the GoalItem is Solid while not being carried by a player. This means it blocks bullets, grenades, and those that do not pass it's criteria.  Others will simply pick it up." : 0
+	]
+
+	if_goal_is_active(integer) : "This Goal must be in ACTIVE state."
+	if_goal_is_inactive(integer) : "This Goal must be in INACTIVE state."
+	if_goal_is_removed(integer) : "This Goal must be in REMOVED state."
+
+	if_group_is_active(integer) : "All Goals in Group must be in ACTIVE."
+	if_group_is_inactive(integer) : "All Goals in Group must be in INACTIVE."
+	if_group_is_removed(integer) : "All Goals in Group must be in REMOVED."
+
+	if_item_has_moved(integer) : "This Item not moved or carried."
+	if_item_hasnt_moved(integer) : "This Item must be moved or carried."
+
+	else_goal(integer) : "If criteria fails, activate this goal no"
+
+	has_item_from_group(integer) : "AP must have Item from group no"
+
+	goal_min(string) : "Bounding box min for goal, def is -16 -16 -24"
+	goal_max(integer) : "Bounding box max for goal, def is 16 16 32"
+
+	//
+	// When this Goal is successfully activated up, the following variables may be executed
+	//
+
+	return_item_no(integer) : "Return this GoalItem if not carried"
+
+	target(string) : "Activate goal with this targetname"
+	killtarget(string) : "Remove goal with this targetname"
+
+	ex_skill_min(integer) : "Skill Minimum" : : "This entity is removed when the map starts if the game's 'skill' variable is >= to this value. To specify a skill of 0, use -1 instead."
+	ex_skill_max(integer) : "Skill Maximum" : : "This entity is removed when the map starts if the game's 'skill' variable is <= to this value. To specify a skill of 0, use -1 instead."
+
+	goal_effects(flags) =
+	[
+		// Determines what players are affected. If nothing is specified the goal will not effect anybody.
+		1  : "AP is affected." : 0
+		2  : "Everyone on the AP's team is affected." : 0
+		4  : "Everyone not on the AP's team is affected." : 0
+		8  : "Everyone except the AP is affected." : 0
+		16 : "Radius effect (see 't_length') does not go through walls." : 0
+		32 : "If APA is not in the same environment as the Goal, don't affect him. Environments are air, water, slime, lava. e.g. If a Goal is above some water, and does a radius effect with 't_length', and a player in the water is within the radius, he won't be affected if this bit is set." : 0
+		64 : "If this bit is set, then instead of just applying this Goal's results to the group of players specified by the other 'goal_effects' variable, this Goal checks it's criteria for each player in the group and then applies it's results invididually to any of them that pass." : 0
+	]
+
+	maxammo_shells(integer) : "All members of this team are affected."
+	maxammo_nails(integer) : "All members not of this team are affected."
+
+	goal_result(flags) =
+	[
+		// Determines what results are applied to APA.
+		1    : "Goal is removed after activation." : 0
+		2    : "Goals activated by this one apply their results to the AP." : 0
+		4    : "Display scores and end the level." : 0
+		8    : "Activated goals will not apply their results to the APA" : 0
+		16   : "Disable/Stop the spy's undercover mask." : 0
+		32   : "This forces APA to simply respawn. The player doesn't die... just respawns." : 0
+		4096 : "If this bit is set, any player carrying this item can drop it using the 'dropitems' command." : 0
+	]
+
+	t_length(integer) : "Everyone within this radius is affected."
+
+	impulse(integer) : "When the GoalItem is Returned, activate this Goal."
+
+	pausetime(integer) : : : "Item is removed if not touched for this time after being dropped by a dying player. Also, see bit 32 in 'goal_activation' above. N.B. This will not be used if bit 128 in 'goal_activation' is not enabled."
+
+	count(integer) : "Specified score given to the AP's team."
+
+	increase_team1(integer) : "Specified score given to team 1"
+	increase_team2(integer) : "Specified score given to team 2"
+	increase_team3(integer) : "Specified score given to team 3"
+	increase_team4(integer) : "Specified score given to team 4"
+
+	noise(string) : "WAV file played when this Goal is activated."
+
+	lives(integer) : "Added to APA's lives."
+
+	health(integer) : "Added to APA's health."
+
+
+	armortype(choices) : "Bitfield. The APAs armortype is set to." : 0 =
+	[
+		0.3 : "Green"
+		0.6 : "Yellow"
+		0.8 : "Red"
+	]
+	armorvalue(integer) : "APA's armorvalue is set to (0-250)"
+
+	frags(integer) : "Added to APA's frags."
+
+	ammo_cells(integer) : "Added this number of cells."
+	ammo_detpack(integer) : "Added this number of det packs."
+	ammo_medikit(integer) : "Added this number of medikits."
+	ammo_nails(integer) : "Added this number of nails."
+	ammo_rockets(integer) : "Added this number of rockets."
+	ammo_shells(integer) : "Added this number of shells."
+
+	no_grenades_1(integer) : "Added to number type 1 TF grenades."
+	no_grenades_2(integer) : "Added to number type 2 TF grenades."
+
+	invincible_finished(integer) : "Number of seconds of invincibility."
+	invisible_finished(integer) : "Number of seconds of invisibility."
+	super_damage_finished(integer) : "Number of seconds of quad."
+	radsuit_finished(integer) : "Number of seconds of radsuit."
+
+	delay_time(integer) : "Delay before activation."
+
+	items(integer) : "Goal gives this GoalItem to APA."
+	axhitme(integer) : "Goal removes this GoalItem from APA with it."
+
+	distance(integer) : : : "If all GoalItems in this GoalItem Group are being carried by players, activate the Goal in the 'pain_finished' variable."
+	pain_finished(integer) : : : "If all GoalItems in the GoalItem Group specified in the 'distance' variable are being carried by players, activate this Goal."
+	speed(integer) : : : "If all GoalItems in this GoalItem Group are being carried by one player, activate the Goal in the 'attack_finished' variable."
+	attack_finished(integer) : : : "If all GoalItems in the GoalItem Group specified in the 'speed' variable are being carried by one player, activate this Goal."
+
+	noise3(string) : : : "String centerprinted to the all the members of the team that own this GoalItem whenever it returns. e.g. 'Your flag has been returned to base\n'"
+	noise4(string) : : : "String centerprinted to the everyone except all the members of the team that own this GoalItem whenever it returns. e.g. 'An enemy flag has been returned to base\n'"
+
+	team_drop(string) : : : "Centerprinted to all members of the team that own this Item, whenever this Item is dropped by a player. e.g. 'Your flag is lying around!\n'"
+	non_team_drop(string) : : : "Centerprinted to all members not in the team that own this Item, whenever this Item is dropped by a player. e.g. 'An enemy flag is lying around!\n'"
+	netname_team_drop(string) : : : "Broadcast to all members of the team that own this item, prepended by the name of the player who dropped the item. A line break should be used at the end. e.g. <player's_name> ' lost your flag!\n'"
+	netname_non_team_drop(string) : : : "Broadcast to all members not in the team that own this item, prepended by the name of the player who dropped the item. A line break should be used at the end. e.g. <player's_name> ' lost the enemy flag!\n'"
+
+	broadcast(string) : "Message centerprinted to everyone else."
+	message(string) : "Message centerprinted to AP."
+
+	team_broadcast(string) : "Message centerprinted to teammates"
+	non_team_broadcast(string) : "Message centerprinted to other team"
+	owners_team_broadcast(string) : "Centerprinted to all owning teammates"
+	netname_broadcast(string) : "_____ activated this goal.\n"
+	netname_team_broadcast(string) : "_____ activated your teams goal.\n"
+	netname_non_team_broadcast(string) : "____ took an enemy flag!\n"
+	netname_owners_team_broadcast(string) : "____ took your flag!\n"
+	deathtype(string) : "___ was killed by this goal!\n"
+
+	activate_goal_no(integer) : "Activate this Goal."
+	inactivate_goal_no(integer) : "Inactivate this Goal."
+	remove_goal_no(integer) : "Remove this Goal."
+	restore_goal_no(integer) : "Restore this Goal."
+
+	activate_group_no(integer) : "Activate all Goals in this GoalGroup."
+	inactivate_group_no(integer) : "Inactivate all Goals in this GoalGroup."
+	remove_group_no(integer) : "Remove all Goals in this GoalGroup."
+	restore_group_no(integer) : "Restore all Goals in this GoalGroup."
+
+	remove_item_group(integer) : "Removes a GoalGroup from APA"
+
+	all_active(integer) : "If whole group ACTIVE, activate last_impulse"
+	last_impulse(integer) : "Activate goal based on all_active"
+
+	remove_spawnpoint(integer) : "Remove spawnpoint with this goal_no."
+	restore_spawnpoint(integer) : "Restore spawnpoint with this goal_no."
+	remove_spawngroup(integer) : "Remove all spawnpoints  in group_no."
+	restore_spawngroup(integer) : "Restore all spawnpoints in group_no."
+
+	display_item_status1(string) : "Display this when activated"
+	display_item_status2(string) : "Display this when activated"
+	display_item_status3(string) : "Display this when activated"
+	display_item_status4(string) : "Display this when activated"
+
+	team_str_home(string) : : "Your flag is in it's base" : "String displayed to the owners of an Item in an Item Status if the Item is at it's origin. If not the owner of the Item, non_team_str_home will be used. Refer to the 'owned_by' variable for GoalItems."
+	team_str_moved(string) : : "Your flag is lying around" : "String displayed to the owners of an Item in an Item Status if the Item is not at it's origin. If not the owner of the Item, non_team_str_moved will be used. Refer to the 'owned_by' variable for GoalItems."
+	team_str_carried(string) : : "Your flag is being carried by" : "String displayed to the owners of an Item in an Item Status if the Item is being carried by a player. The player's name is appended to the String. If not the owner of the Item, non_team_str_carried will be used. Refer to the 'owned_by' variable for GoalItems. e.g. 'Your flag is being carried by' < players's_name>"
+
+	non_team_str_home(string) : : "The enemy flag is in it's base" : "String displayed to everyone except the owners of an Item in an Item Status if the Item is at it's origin. If they are owner of the Item, team_str_home will be used. Refer to the 'owned_by' variable for GoalItems."
+	non_team_str_moved(string) : : "The enemy flag is lying around" : "String displayed to everyone except the owners of an Item in an Item Status if the Item is not at it's origin. If they are owner of the Item, team_str_moved will be used. Refer to the 'owned_by' variable for GoalItems."
+	non_team_str_carried(string) : : "The enemy flag is being carried by" : "String displayed to everyone except the owners of an Item in an Item Status if the Item is being carried by a player. The player's name is appended to the String. If they are owner of the Item, team_str_home will be used. Refer to the 'owned_by' variable for GoalItems."
+
+
+	// Unused
+	// items_allowed(integer) : "AP must have this goal item no"
+	// team_no(integer) : "AP must be of this team to activate."
+	// wait(integer) : "Goal stays ACTIVE for this long."
 ]
 
 // INFO_PLAYER_TEAMSPAWN
 
-@PointClass size(-16 -16 -24, 16 15 24) color(128 0 128) base(Appearflags) = info_player_teamspawn : "TF Player Start"
+@PointClass base(PlayerClass, TFArmorClassFlags, TFPlayerClassFilter) = info_player_teamspawn : "TF Player Start"
 [
-netname(string) : "netname"
-goal_no(integer) : "Goal Number"
-group_no(integer) : "Group Number"
-team_no(integer) : "Team to Spawn Here"
-items(integer) : "Goal given to first to spawn here."
-axhitme(integer) : "Removes this GoalItem from APA."
-message(string) : "Disp to the first to spawn here."
-goal_activation(integer) : "Bitfields. See TFEntRef."
-goal_effects(choices) 		: "Remove spawnpoint after first use." : 0 =
+	netname(string) : "netname" : : "Spawn point name"
+	goal_no(integer) : "Goal Number" : : "Unique ID number of this spawn."
+	group_no(integer) : "Group Number" : : "ID Number of the spawn group this spawn belongs to."
+	team_no(integer) : "Team" : : "Only players on this team spawn here."
+	items(integer) : "Goal given to first to spawn here." : : "GoalItem ID is given to the first player who spawn here."
+	axhitme(integer) : "Removes this GoalItem from APA." : : "Goal removes this GoalItem from APA that has it."
+	message(string) : "Disp to the first to spawn here." : : "A String displayed to the first player who spawns here."
+	goal_activation(flags) =
 	[
-		0 : "Enabled"
-		1 : "Disabled"
+		1 : "Give the GoalItem in 'items' to every player who spawns here instead of just the first player." : 0
+		2 : "Display the 'message' to every player who spawns here instead of just the first player." : 0
 	]
-activate_goal_no(integer) : "Activate this Goal."
-items_allowed(integer) : "AP needs this GoalItem."
-has_item_from_group(integer) : "AP must have Item from group_no"
-playerclass(integer) : "Bitfield. Must be of this class(es)"
-if_goal_is_active(integer) : "This Goal must be in ACTIVE state."
-if_goal_is_inactive(integer) : "This Goal must be in INACTIVE state."
-if_goal_is_removed(integer) : "This Goal must be in REMOVED state."
-if_group_is_active(integer) : "All Goals in Group must be in ACTIVE."
-if_group_is_inactive(integer) : "All Goals in Group must be in INACTIVE."
-if_group_is_removed(integer) : "All Goals in Group must be in REMOVED."
-if_item_has_moved(integer) : "This Item not moved or carried."
-if_item_hasnt_moved(integer) : "This Item must be moved or carried."
-target(string) : "Activate any target with this name"
-killtarget(string) : "Remove any target with this name"
-goal_state(integer) : "Bitfield. The initial state."
-ex_skill_min(integer) : "Skill Minimum"
-ex_skill_max(integer) : "Skill Maximum"
-count(integer) : "Specified score given to the AP's team."
-increase_team1(integer) : "Specified score given to team 1"
-increase_team2(integer) : "Specified score given to team 2"
-increase_team3(integer) : "Specified score given to team 3"
-increase_team4(integer) : "Specified score given to team 4"
-noise(string) : "WAV file played when this Goal is activated."
-lives(integer) : "Added to APA's lives."
-health(integer) : "Added to APA's health."
-armortype(integer) : "Bitfield. The APAs armortype is set to."
-armorvalue(integer) : "APA's armorvalue is set to (0-250)"
-armorclass(choices) 		: "APA's armorclass is set to" : 0 =
+	goal_effects(choices) : "The spawnpoint removes itself after the first player has spawned here." : 0 =
 	[
-		1 : "Shell Resistant"
-		2 : "Nail Resistant"
-		4 : "Explosion Resistant"
-		8 : "Electricity Resistant"
-		16 : "Fire Resistant"
+		0 : "Remain"
+		1 : "Remove"
 	]
-frags(integer) : "Added to APA's frags."
-ammo_shells(integer) : "Added this number of shells."
-ammo_nails(integer) : "Added this number of nails."
-ammo_rockets(integer) : "Added this number of rockets."
-ammo_cells(integer) : "Added this number of cells."
-ammo_detpack(integer) : "Added this number of det packs."
-ammo_medikit(integer) : "Added this number of medikits."
-no_grenades_1(integer) : "Added to number type 1 TF grenades."
-no_grenades_2(integer) : "Added to number type 2 TF grenades."
-invincible_finished(integer) : "Number of seconds of invincibility."
-invisible_finished(integer) : "Number of seconds of invisibility."
-super_damage_finished(integer) : "Number of seconds of quad."
-radsuit_finished(integer) : "Number of seconds of radsuit."
-activate_goal_no(integer) : "Activate this Goal."
-inactivate_goal_no(integer) : "Inactivate this Goal."
-remove_goal_no(integer) : "Remove this Goal."
-restore_goal_no(integer) : "Restore this Goal."
-activate_group_no(integer) : "Activate all Goals in this GoalGroup."
-inactivate_group_no(integer) : "Inactivate all Goals in this GoalGroup."
-remove_group_no(integer) : "Remove all Goals in this GoalGroup."
-restore_group_no(integer) : "Restore all Goals in this GoalGroup."
-remove_item_group(integer) : "Removes a Items APA has from GoalGroup"
-all_active(integer) : "If all Group ACTIVE, activate last_impulse goal."
-last_impulse(integer) : "If all Group are ACTIVE, activate this Goal."
-remove_spawnpoint(integer) : "Remove the spawnpoint with this goal_no."
-restore_spawnpoint(integer) : "Restore the spawnpoint with this goal_no."
-remove_spawngroup(integer) : "Remove all spawnpoints with this group_no."
-restore_spawngroup(integer) : "Restore all spawnpoints with this group_no."
+	activate_goal_no(integer) : "Activate this Goal."
+	items_allowed(integer) : "AP needs this GoalItem." : : "AP needs this GoalItem to meet this Goal's criteria."
+	has_item_from_group(integer) : "AP must have Item from group_no" : : "AP must have GoalItem from group 'group_no'."
+
+	if_goal_is_active(integer) : "This Goal must be in ACTIVE state."
+	if_goal_is_inactive(integer) : "This Goal must be in INACTIVE state."
+	if_goal_is_removed(integer) : "This Goal must be in REMOVED state."
+	if_group_is_active(integer) : "All Goals in Group must be in ACTIVE."
+	if_group_is_inactive(integer) : "All Goals in Group must be in INACTIVE."
+	if_group_is_removed(integer) : "All Goals in Group must be in REMOVED."
+	if_item_has_moved(integer) : "This Item not moved or carried."
+	if_item_hasnt_moved(integer) : "This Item must be moved or carried."
+
+	target(string) : "Activate any target with this name" : : "Activate any Goal/Quake Trigger with this targetname"
+	killtarget(string) : "Remove any target with this name" : : "Remove any Goal/Quake Trigger with this targetname"
+	goal_state(integer) : "Bitfield. The initial state."
+	goal_state(choices) : "The initial state of this entity." : 2 =
+	[
+		1 : "Active (Already On)"
+		2 : "Inactive (Ready to be used)"
+		3 : "Removed (Unmanipulatable until restored)"
+	]
+	ex_skill_min(integer) : "Skill Minimum" : : "This entity is removed when the map starts if the game's 'skill' variable is >= to this value. To specify a skill of 0, use -1 instead."
+	ex_skill_max(integer) : "Skill Maximum" : : "This entity is removed when the map starts if the game's 'skill' variable is <= to this value. To specify a skill of 0, use -1 instead."
+
+	count(integer) : "Specified score given to the AP's team."
+
+	increase_team1(integer) : "Specified score given to team 1"
+	increase_team2(integer) : "Specified score given to team 2"
+	increase_team3(integer) : "Specified score given to team 3"
+	increase_team4(integer) : "Specified score given to team 4"
+
+	noise(string) : "WAV file played when this Goal is activated."
+
+	lives(integer) : "Added to APA's lives."
+
+	health(integer) : "Added to APA's health."
+
+	armortype(choices) : "The APA's armortype is set to the Goals 'armortype'." : 0 =
+	[
+		0.3 : "Green"
+		0.6 : "Yellow"
+		0.8 : "Red"
+	]
+	armorvalue(integer) : "APA's armorvalue is set to (0-250)"
+
+	frags(integer) : "Added to APA's frags."
+
+	ammo_shells(integer) : "Added this number of shells."
+	ammo_nails(integer) : "Added this number of nails."
+	ammo_rockets(integer) : "Added this number of rockets."
+	ammo_cells(integer) : "Added this number of cells."
+	ammo_detpack(integer) : "Added this number of det packs."
+	ammo_medikit(integer) : "Added this number of medikits."
+
+	no_grenades_1(integer) : "Added to number type 1 TF grenades."
+	no_grenades_2(integer) : "Added to number type 2 TF grenades."
+
+	invincible_finished(integer) : "Number of seconds of invincibility."
+	invisible_finished(integer) : "Number of seconds of invisibility."
+	super_damage_finished(integer) : "Number of seconds of quad."
+	radsuit_finished(integer) : "Number of seconds of radsuit."
+
+	activate_goal_no(integer) : "Activate this Goal."
+	inactivate_goal_no(integer) : "Inactivate this Goal."
+	remove_goal_no(integer) : "Remove this Goal."
+	restore_goal_no(integer) : "Restore this Goal."
+
+	activate_group_no(integer) : "Activate all Goals in this GoalGroup."
+	inactivate_group_no(integer) : "Inactivate all Goals in this GoalGroup."
+	remove_group_no(integer) : "Remove all Goals in this GoalGroup."
+	restore_group_no(integer) : "Restore all Goals in this GoalGroup."
+
+	remove_item_group(integer) : "Removes a Items APA has from GoalGroup"
+
+	all_active(integer) : "If all Group ACTIVE, activate last_impulse goal." : : "If all Goals in this GoalGroup are ACTIVE, activate the Goal in the 'last_impulse' variable."
+	last_impulse(integer) : "If all Group are ACTIVE, activate this Goal." : : "If all Goals in the 'all_active' GoalGroup are ACTIVE, activate this Goal."
+
+	remove_spawnpoint(integer) : "Remove the spawnpoint with this goal_no."
+	restore_spawnpoint(integer) : "Restore the spawnpoint with this goal_no."
+	remove_spawngroup(integer) : "Remove all spawnpoints with this group_no."
+	restore_spawngroup(integer) : "Restore all spawnpoints with this group_no."
 ]
 
+@PointClass base(info_player_teamspawn) = i_p_t : "TF Player Start" [ ]
+@PointClass base(info_tfgoal) = i_t_g : "TF Goal Entity" [ ]
+@PointClass base(info_tfgoal_timer) = i_t_t : "TF Timer Goal" [ ]
