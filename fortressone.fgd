@@ -104,54 +104,54 @@
 ]
 
 @PointClass
-    base(Ammo)
-    model(
-        {{
-            spawnflags & 1 ->   ":maps/b_batt1.bsp",
-                                ":maps/b_batt0.bsp"
-        }}
-    ) =
-    item_cells : "Thunderbolt ammo" []
+	base(Ammo)
+	model(
+		{{
+			spawnflags & 1 ->   ":maps/b_batt1.bsp",
+								":maps/b_batt0.bsp"
+		}}
+	) =
+	item_cells : "Thunderbolt ammo" []
 
 @PointClass
-    base(Ammo)
-    model(
-        {{
-            spawnflags & 1 ->   ":maps/b_rock1.bsp",
-                                ":maps/b_rock0.bsp"
-        }}
-    ) =
-    item_rockets : "Rockets" []
+	base(Ammo)
+	model(
+		{{
+			spawnflags & 1 ->   ":maps/b_rock1.bsp",
+								":maps/b_rock0.bsp"
+		}}
+	) =
+	item_rockets : "Rockets" []
 
 @PointClass
-    base(Ammo)
-    model(
-        {{
-            spawnflags & 1 ->   ":maps/b_shell1.bsp",
-                                ":maps/b_shell0.bsp"
-        }}
-    ) = item_shells : "Shells" []
+	base(Ammo)
+	model(
+		{{
+			spawnflags & 1 ->   ":maps/b_shell1.bsp",
+								":maps/b_shell0.bsp"
+		}}
+	) = item_shells : "Shells" []
 
 @PointClass
-    base(Ammo)
-    model(
-        {{
-            spawnflags & 1 ->   ":maps/b_nail1.bsp",
-                                ":maps/b_nail0.bsp"
-        }}
-    ) = item_spikes : "Nailgun/Perforator ammo" []
+	base(Ammo)
+	model(
+		{{
+			spawnflags & 1 ->   ":maps/b_nail1.bsp",
+								":maps/b_nail0.bsp"
+		}}
+	) = item_spikes : "Nailgun/Perforator ammo" []
 
 @PointClass
-    size(0 0 0, 32 32 56)
-    base(Appearflags)
-    model(
-        {{
-            spawnflags & 2 ->   ":maps/b_bh100.bsp",
-            spawnflags & 1 ->   ":maps/b_bh10.bsp",
-                                ":maps/b_bh25.bsp"
-        }}
-    ) =
-    item_health : "Health pack"
+	size(0 0 0, 32 32 56)
+	base(Appearflags)
+	model(
+		{{
+			spawnflags & 2 ->   ":maps/b_bh100.bsp",
+			spawnflags & 1 ->   ":maps/b_bh10.bsp",
+								":maps/b_bh25.bsp"
+		}}
+	) =
+	item_health : "Health pack"
 [
 	spawnflags(flags) =
 	[
@@ -350,7 +350,9 @@
 ]
 
 @SolidClass = func_group : "Group of brushes for in-editor use" []
-@SolidClass = func_detail : "Group of brushes for certain compilers " []
+@SolidClass = func_detail : "Group of brushes for certain compilers" []
+@SolidClass = func_detail_illusionary : "func_detail variant with no collision (players / monsters / gunfire) and doesn't split world faces." []
+@SolidClass = func_detail_wall : "func_detail variant that doesn't split world faces." []
 
 //
 // ambient sounds
@@ -376,7 +378,7 @@
 	speed(integer) : "Speed" : 100
 	sounds(choices) : "Sound" : 0 =
 	[
-        	0: "Silent"
+			0: "Silent"
 		1: "Stone"
 		2: "Machine"
 		3: "Stone Chain"
@@ -392,8 +394,8 @@
 		1 : "Starts Open" : 0
 		4 : "Don't link" : 0
 		8 : "Gold Key required" : 0
-        	16: "Silver Key required" : 0
-        	32: "Toggle" : 0
+			16: "Silver Key required" : 0
+			32: "Toggle" : 0
 	]
 ]
 
@@ -417,7 +419,7 @@
 		2 : "Move left first" : 0
 		4 : "Move down first" : 0
 		8 : "Not shootable" : 0
-        16 : "Always shootable" : 0
+		16 : "Always shootable" : 0
 	]
 ]
 
@@ -555,10 +557,10 @@
 [
 	message(choices) : "Skill to change to" : 1 =
 	[
-        0 : "Easy"
-        1 : "Medium"
-        2 : "Hard"
-        3 : "Nightmare!"
+		0 : "Easy"
+		1 : "Medium"
+		2 : "Hard"
+		3 : "Nightmare!"
 	]
 ]
 @PointClass base(Trigger) = trigger_relay : "Trigger: Relay"
@@ -595,7 +597,27 @@
 
 // TEAM FORTRESS BASE CLASSES
 
-@BaseClass = TFDetectflags [ ]
+@BaseClass = TFDetectflags [
+	impulse2(Flags) =
+	[
+		1 : "Episode 1" : 0
+		2 : "Episode 2" : 0
+		4 : "Episode 3" : 0
+		8 : "Episode 4" : 0
+	]
+
+]
+
+@baseclass = TFDetectflags2 [
+	spawnflags2(Flags) =
+	[
+		256 : "Not on Easy" : 0
+		512 : "Not on Normal" : 0
+		1024 : "Not on Hard" : 0
+		2048 : "Not in Deathmatch" : 0
+	]
+]
+
 @baseclass base (TFDetectflags) size(0 0 0, 24 24 24) color(255 128 0) = TfDClass
 [
   netname(string) : "netname"
@@ -627,7 +649,7 @@
 
 @PointClass base(TfClass) = info_tfdetect : "TF Detection Entity"
 [
-	impulse(Flags) =
+	impulse(flags) =
 	[
 		1   : "Class Skins" 		: 0
 		2   : "Class Persistence" 	: 0
@@ -647,10 +669,66 @@
 	ammo_detpack(integer) 		: "Max players allowed in Team 2."
 	maxammo_medikit(integer)	: "Max players allowed in Team 3."
 	maxammo_detpack(integer)	: "Max players allowed in Team 4."
-	maxammo_shells(integer) 	: "Bitfield. Restricted Classes Team 1"
-        maxammo_nails(integer)  	: "Bitfield. Restricted Classes Team 2"
-        maxammo_rockets(integer) 	: "Bitfield. Restricted Classes Team 3"
-        maxammo_cells(integer) 		: "Bitfield. Restricted Classes Team 4"
+	maxammo_shells(flags) =
+	[
+		// "Bitfield. Restricted Classes Team 1"
+		-1 : "Team 1: Civilian Only. (Cannot Specify Others)" : 0
+		1 : "Team 1: No Scout" : 0
+		2 : "Team 1: No Sniper" : 0
+		4 : "Team 1: No Soldier" : 0
+		8 : "Team 1: No Demolitions Man" : 0
+		16 : "Team 1: No Combat Medic" : 0
+		32 : "Team 1: No Heavy Weapons Guy" : 0
+		64 : "Team 1: No Pyro" : 0
+		128 : "Team 1: No Random PlayerClass" : 0
+		256 : "Team 1: No Spy" : 0
+		512 : "Team 1: No Engineer" : 0
+	]
+	maxammo_nails(flags) =
+	[
+		// "Bitfield. Restricted Classes Team 2"
+		-1 : "Team 2: Civilian Only. (Cannot Specify Others)"
+		1 : "Team 2: No Scout" : 0
+		2 : "Team 2: No Sniper" : 0
+		4 : "Team 2: No Soldier" : 0
+		8 : "Team 2: No Demolitions Man" : 0
+		16 : "Team 2: No Combat Medic" : 0
+		32 : "Team 2: No Heavy Weapons Guy" : 0
+		64 : "Team 2: No Pyro" : 0
+		128 : "Team 2: No Random PlayerClass" : 0
+		256 : "Team 2: No Spy" : 0
+		512 : "Team 2: No Engineer" : 0
+	]
+	maxammo_rockets(flags) =
+	[
+		// "Bitfield. Restricted Classes Team 3"
+		-1 : "Team 3: Civilian Only. (Cannot Specify Others)" : 0
+		1 : "Team 3: No Scout" : 0
+		2 : "Team 3: No Sniper" : 0
+		4 : "Team 3: No Soldier" : 0
+		8 : "Team 3: No Demolitions Man" : 0
+		16 : "Team 3: No Combat Medic" : 0
+		32 : "Team 3: No Heavy Weapons Guy" : 0
+		64 : "Team 3: No Pyro" : 0
+		128 : "Team 3: No Random PlayerClass" : 0
+		256 : "Team 3: No Spy" : 0
+		512 : "Team 3: No Engineer" : 0
+	]
+	maxammo_cells(flags) =
+	[
+		// "Bitfield. Restricted Classes Team 4"
+		-1 : "Team 4: Civilian Only. (Cannot Specify Others)" : 0
+		1 : "Team 4: No Scout" : 0
+		2 : "Team 4: No Sniper" : 0
+		4 : "Team 4: No Soldier" : 0
+		8 : "Team 4: No Demolitions Man" : 0
+		16 : "Team 4: No Combat Medic" : 0
+		32 : "Team 4: No Heavy Weapons Guy" : 0
+		64 : "Team 4: No Pyro" : 0
+		128 : "Team 4: No Random PlayerClass" : 0
+		256 : "Team 4: No Spy" : 0
+		512 : "Team 4: No Engineer" : 0
+	]
 	hook_out(choices) 		: "Grapple Hook Enabled?" : 0 =
 	[
 		0 : "Enabled"
@@ -660,14 +738,14 @@
 	display_item_status2(string) 	: "On FlagInfo, display this GoalItem status"
 	display_item_status3(string) 	: "On FlagInfo, display this GoalItem status"
 	display_item_status4(string) 	: "On FlagInfo, display this GoalItem status"
-	team_str_home(string) 		: "Disp to owner if is at its origin."
-	team_str_moved(string) 		: "Disp to owner if is not at its origin."
-	team_str_carried(string) 	: "Disp to owner if being carried."
-	non_team_str_home(string) 	: "Disp to others if is at its origin."
-	non_team_str_moved(string) 	: "Disp to others if is not at its origin."
+	team_str_home(string) 			: "Disp to owner if is at its origin."
+	team_str_moved(string) 			: "Disp to owner if is not at its origin."
+	team_str_carried(string) 		: "Disp to owner if being carried."
+	non_team_str_home(string) 		: "Disp to others if is at its origin."
+	non_team_str_moved(string) 		: "Disp to others if is not at its origin."
 	non_team_str_carried(string) 	: "Disp to others if is being carried."
-	team_broadcast(string) 		: "String that replaces the Team Menu."
-	non_team_broadcast(string) 	: "String that is the Map Help command."
+	team_broadcast(string) 			: "String that replaces the Team Menu."
+	non_team_broadcast(string) 		: "String that is the Map Help command."
 	noise1(string) 			: "Class Menu for Team 1."
 	noise2(string) 			: "Class Menu for Team 2."
 	noise3(string) 			: "Class Menu for Team 3."
