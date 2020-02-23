@@ -1115,7 +1115,7 @@
 
 	goal_no(integer) : "Unique ID number of this goal."
 	group_no(integer) : "ID Number of the goal group this goal belongs to."
-	owned_by(integer) : "The Team that own this entity." : 0 =
+	owned_by(choices) : "The Team that own this entity." : 0 =
 	[
 		1 : "Team 1"
 		2 : "Team 2"
