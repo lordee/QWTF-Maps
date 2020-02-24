@@ -672,12 +672,9 @@
 	impulse(flags) =
 	[
 		// Initial Toggleflags status. Bitfield
-		1   : "Class Skins"       : 0
-		2   : "Class Persistence" : 0
-		4   : "Cheat Checking"    : 0
-		//8   : "Fortress Map"      : 0
-		16  : "Respawn Delay"     : 0
-		32  : "Respawn Delay"     : 0
+		1   : "Class Persistence" : 0
+		2   : "Cheat Checking"    : 0
+		4   : "Respawn Delay"     : 0
 		64  : "Auto Team"         : 0
 		128 : "Individual Frags"  : 0
 	]
