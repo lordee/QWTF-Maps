@@ -71,6 +71,7 @@
 		2 : "Team 2 (Red)"
 		3 : "Team 3 (Yellow)"
 		4 : "Team 4 (Green)"
+	]
 ]
 
 @baseclass = TFGoalState
@@ -99,9 +100,41 @@
 		2 : "Base"
 	]
 	sounds(integer) : "CD track to play" : 0
-	light(integer) : "Ambient light"
-	_sunlight(integer) : "Sunlight"
-	_sun_mangle(string) : "Sun mangle (Yaw pitch roll)"
+	light(integer) : "Ambient light" : 0 : "Set a global minimum light level across the whole map."
+	_minlight_color(string) : "Ambient light color" : "255 255 255" : ""
+	_minlight_dirt(integer) : "Dirtmapping" : : "1 enables dirtmapping (ambient occlusion) on minlight, -1 to disable. Default is to use the value of '_dirt'."
+
+	_sunlight(integer) : "Sunlight brightness" : 0 : "Set the brightness of the sunlight coming from an unseen sun in the sky."
+	_sunlight_color(string) : "Sunlight color" : "255 255 255" : "Specify red(r), green(g) and blue(b) components for the colour of the sunlight. RGB component values are between 0 and 255 (between 0 and 1 is also accepted)."
+	_sun_mangle(string) : "Sun mangle (Yaw pitch roll)" : "0 -90 0" : "Specifies the direction of sunlight using yaw, pitch and roll in degrees. Yaw specifies the angle around the Z-axis from 0 to 359 degrees and pitch specifies the angle from 90 (shining straight up) to -90 (shining straight down from above). Roll has no effect, so use any value (e.g. 0)."
+
+	_sunlight2(integer) : "Sunlight2 brightness" : 0 : "Set the brightness of a dome of lights arranged around the upper hemisphere."
+	_sunlight_color2(string) : "Sunlight2 color" : "255 255 255" : "Specifies the colour of _sunlight2, same format as '_sunlight_color'."
+	_sunlight2_dirt(integer) : "Sunlight2 dirtmapping" : : "1 enables dirtmapping (ambient occlusion) on sunlight2/3, -1 to disable. Default is to use the value of '_dirt'."
+
+	_sunlight3(integer) : "Sunlight3 brightness" : 0 : "Same as '_sunlight2', but for the bottom hemisphere (i.e. ambient light, coming from below the horizon). Combine '_sunlight2' and '_sunlight3' to have light coming equally from all directions, e.g. for levels floating in the clouds."
+	_sunlight_color3(string) : "Sunlight3 color" : "255 255 255" : "Specifies the colour of '_sunlight3'."
+
+	_dirt(choices) : "Dirtmapping" : -1 : "1 enables dirtmapping (ambient occlusion) on all lights, borrowed from q3map2. This adds shadows to corners and crevices. You can override the global setting for specific lights with the '_dirt' light entitiy key or '_sunlight_dirt', '_sunlight2_dirt', and '_minlight_dirt' worldspawn keys." = [
+		1  : "Enabled"
+		-1 : "No dirtmapping"
+	]
+
+	_bounce(choices) : "Bounce" : 0 : "1 enables bounce lighting, disabled by default." = [
+		1 : "Enabled"
+		0 : "Disabled"
+	]
+	_bouncescale(integer) : "Bounce scale" : 1 : "Scales brightness of bounce lighting, default 1."
+	_bouncecolorscale(choices) : "Bounce Color Scale" : 0 : "Weight for bounce lighting to use texture colors from the map: 0=ignore map textures (default), 1=multiply bounce light color by texture color." = [
+		1 : "Enabled"
+		0 : "Disabled"
+	]
+	_bouncestyled(choices) : "Bounce Styled" : 0 : "1 makes styled lights bounce (e.g. flickering or switchable lights), default is 0, they do not bounce." = [
+		1 : "Enabled"
+		0 : "Disabled"
+	]
+
+	_spotlightautofalloff(integer) : "Spotlight Auto Falloff" : 0 : "When set to 1, spotlight falloff is calculated from the distance to the targeted info_null. Ignored when '_falloff' is not 0. Default 0."
 ]
 
 //
@@ -124,6 +157,43 @@
 @baseclass = Target [
 	target(target_destination) : "Target"
 	killtarget(target_destination) : "Killtarget"
+]
+
+@baseclass = ModelEntity [
+	_minlight(integer) : "" : 0 : "Set the minimum light level for any surface of the brush model."
+	_minlight_exclude(string) : "" : "" : "Faces with the given texture are excluded from receiving minlight on this brush model."
+	_minlight_color(string) : "" : "255 255 255" : "Specify red(r), green(g) and blue(b) components for the colour of the minlight. RGB component values are between 0 and 255 (between 0 and 1 is also accepted)."
+	_shadow(choices) : "Shadow" : 0 : "If n is 1, this model will cast shadows on other models and itself (i.e. '_shadow' implies '_shadowself'). Note that this doesn’t magically give Quake dynamic lighting powers, so the shadows will not move if the model moves. Set to -1 on func_detail/func_group to prevent them from casting shadows." = [
+		1  : "Enabled"
+		0  : "Disabled"
+		-1 : "No shadows"
+	]
+	_shadowself(choices) : "" : 0 : "If n is 1, this model will cast shadows on itself if one part of the model blocks the light from another model surface. This can be a better compromise for moving models than full shadowing." = [
+		1 : "Enabled"
+		0 : "Disabled"
+	]
+	_shadowworldonly(choices) : "" : 0 : "If n is 1, this model will cast shadows on the world only (not other bmodels)." = [
+		1 : "Enabled"
+		0 : "Disabled"
+	]
+	_switchableshadow(choices) : "" :  : "If n is 1, this model casts a shadow that can be switched on/off using QuakeC. To make this work, a lightstyle is automatically assigned and stored in a key called 'switchshadstyle', which the QuakeC will need to read and call the 'lightstyle()' builtin with 'a' or 'm' to switch the shadow on or off. Entities sharing the same targetname, and with '_switchableshadow' set to 1, will share the same lightstyle." = [
+		1 : "Enabled"
+		0 : "Disabled"
+	]
+	_dirt(choices) : "" : 0 : "For brush models, -1 prevents dirtmapping on the brush model. Useful it the bmodel touches or sticks into the world, and you want to those ares from turning black." = [
+		1 : "Enabled"
+		0 : "Disabled"
+	]
+	_phong(choices) : "Phong Shading" : 0 : "1 enables phong shading on this model with a default _phong_angle of 89 (softens columns etc)." = [
+		1 : "Enabled"
+		0 : "Disabled"
+	]
+	_phong_angle(integer) : "Phong Shading Angle" : 89 : "Enables phong shading on faces of this model with a custom angle. Adjacent faces with normals this many degrees apart (or less) will be smoothed. Consider setting '_anglescale' to '1' on lights or worldspawn to make the effect of phong shading more visible. Use the '-phongdebug' command-line flag to save the interpolated normals to the lightmap for previewing (use 'r_lightmap 1' or 'gl_lightmaps 1' in your engine to preview.)"
+	_phong_angle_concave(integer) : "" : : "Optional key for setting a different angle threshold for concave joints. A pair of faces will either use '_phong_angle' or '_phong_angle_concave' as the smoothing threshold, depending on whether the joint between the faces is concave or not. '_phong_angle(_concave)' is the maximum angle (in degrees) between the face normals that will still cause the pair of faces to be smoothed. The minimum setting for '_phong_angle_concave' is 1, this should make all concave joints non-smoothed (unless they’re less than 1 degree apart, almost a flat plane.) If it’s 0 or unset, the same value as '_phong_angle' is used."
+	_lightignore(choices) : "Ignore Light" : 0 : "1 makes a model receive minlight only, ignoring all lights / sunlight. Could be useful on rotators / trains." = [
+		1 : "Enabled"
+		0 : "Disabled"
+	]
 ]
 
 
@@ -320,7 +390,7 @@
 @baseclass color(255 255 40) = Light [
 	light(integer) : "Brightness" : 300
 	wait(integer) : "Fade distance multiplier" : 1
-	delay(choices) : "Attenuation" =
+	delay(choices) : "Attenuation" : 0 =
 	[
 		0 : "Linear falloff (Default)"
 		1 : "Inverse distance falloff"
@@ -329,7 +399,7 @@
 		4 : "Local minlight"
 		5 : "Inverse distance squared B"
 	]
-	mangle(string) : "Spotlight angle"
+	mangle(string) : "Spotlight angle" : : "Turns the light into a spotlight and specifies the direction of light using yaw, pitch and roll in degrees. Yaw specifies the angle around the Z-axis from 0 to 359 degrees and pitch specifies the angle from 90 (straight up) to -90 (straight down). Roll has no effect, so use any value (e.g. 0). Often easier than the 'target' method."
 	style(Choices) : "Appearance" : 0 =
 	[
 		0 : "Normal"
@@ -345,6 +415,10 @@
 		4 : "Fast strobe"
 		9 : "Slow strobe"
 	]
+	_surface(string) : "Surface" : : "Makes surfaces with the given texture name emit light, by using this light as a template which is copied across those surfaces. Lights are spaced about 128 units (though possibly closer due to bsp splitting) apart and positioned 2 units above the surfaces."
+	_surface_offset(integer) : "Surface offset" : 2 : "Controls the offset lights are placed above surfaces for '_surface'."
+	_falloff(integer) : "Falloff" : : "Sets the distance at which the light drops to 0, in map units. In this mode, 'wait' is ignored and 'light' only controls the brightness at the center of the light, and no longer affects the falloff distance."
+	_color(string) : "Color" : "255 255 255" : "Specify red(r), green(g) and blue(b) components for the colour of the light. RGB component values are between 0 and 255 (between 0 and 1 is also accepted)."
 ]
 
 @PointClass size(-8 -8 -8, 8 8 8) base(Light, Target, Targetname) =
@@ -422,8 +496,14 @@
 	]
 ]
 
-@SolidClass = func_group : "Group of brushes for in-editor use" []
-@SolidClass = func_detail : "Group of brushes for certain compilers " []
+
+@SolidClass base(ModelEntity) = func_group : "Group of brushes for in-editor use" []
+@SolidClass base(ModelEntity) = func_detail : "Group of brushes for certain compilers " []
+@SolidClass base(ModelEntity) = func_detail_illusionary : "func_detail variant with no collision (players / monsters / gunfire) and doesn’t split world faces." []
+@SolidClass base(ModelEntity) = func_detail_wall : "func_detail variant that doesn’t split world faces." []
+@SolidClass base(ModelEntity) = func_detail_fence : "Similar to func_detail_wall except it’s suitable for fence textures, never clips away world faces." []
+@SolidClass base(Appearflags, ModelEntity) = func_illusionary_visblocker : "For creating vis-blocking illusionary brushes (similar to 'func_detail_illusionary' or 'func_illusionary'." []
+
 
 //
 // ambient sounds
@@ -494,7 +574,7 @@
 	]
 ]
 
-@SolidClass base(Appearflags, Targetname) = func_wall : "Wall, starts animation when triggered (if supporting texture)" []
+@SolidClass base(Appearflags, Targetname, ModelEntity) = func_wall : "Wall, starts animation when triggered (if supporting texture)" []
 
 
 @SolidClass base(Angle, Appearflags, Targetname) = func_button : "Button"
